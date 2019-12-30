@@ -21,9 +21,14 @@ public class NPCBase : MonoBehaviour
 
     public void OpenDialog()
     {
-        for(int i = 0; dialogue.sentences[this.dialogueState][i] != null; i++)
+        GameManager.inst.ChangeState(State.Talk);
+
+        for(int i = 0; i < dialogue.sentences[this.dialogueState].Length; i++)
             Debug.Log(dialogue.sentences[this.dialogueState][i]);
+
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;
+
+        GameManager.inst.ChangeState(State.Search);
     }
 }

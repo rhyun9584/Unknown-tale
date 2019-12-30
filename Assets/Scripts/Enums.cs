@@ -15,3 +15,8 @@ public enum State
     Talk
 }
 
+public enum MapCode
+{
+    MAP1,
+    MAP2
+}
