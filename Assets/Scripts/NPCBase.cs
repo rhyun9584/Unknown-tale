@@ -11,9 +11,7 @@ public class NPCBase : MonoBehaviour
     private Dialogue dialogue;
     
     void Start()
-    {
-        LoadDialogue.LoadDialogueData(); // 임시
-
+    { 
         dialogue = LoadDialogue.dialogue[(int)NPCCode];
         dialogueState = 0;
 
