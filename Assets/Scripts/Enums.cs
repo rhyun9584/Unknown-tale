@@ -5,6 +5,7 @@ using UnityEngine;
 public enum NPCCode
 {
     SAMPLE1,
+    SAMPLE2,
     TURTLE,
     RABBIT
 }
