@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
     {
         if (GameManager.inst == null)
             GameManager.inst = this;
-
-        LoadDialogue.LoadDialogueData();
     }
 
     void Start()

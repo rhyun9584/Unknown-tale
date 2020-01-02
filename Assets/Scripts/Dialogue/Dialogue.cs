@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Dialogue
 {
-    public string name;
     public int maxState;
     public string[][] sentences;
 }

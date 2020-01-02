@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager inst;
 
-    public GameObject[] MAP;
+    public GameObject[] map;
 
     void Awake()
     {
@@ -16,11 +17,11 @@ public class UIManager : MonoBehaviour
 
     public void OnUI(MapCode mapcode)
     {
-        MAP[(int)mapcode].SetActive(true);
+        map[(int)mapcode].SetActive(true);
     }
 
     public void OffUI(MapCode mapcode)
     {
-        MAP[(int)mapcode].SetActive(false);
+        map[(int)mapcode].SetActive(false);
     }
 }

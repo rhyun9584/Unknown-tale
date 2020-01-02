@@ -6,20 +6,21 @@ using Newtonsoft.Json;
 
 public class LoadDialogue
 {
-    public static int numOfNpc = 1;
+    public static int numOfNpc = 2;
 
-    public static Dialogue[] dialogue = new Dialogue[numOfNpc];
+    public static Dialogue[] dialogues = new Dialogue[numOfNpc];
 
     /// <summary>
     /// Load Dialogue saved as Json
+    /// 각 NPC가 처음 활성화될때 각자의 dialogue를 불러옴
     /// </summary>
-    public static void LoadDialogueData()
+    public static void LoadDialogueData(string name, NPCCode npcCode)
     {
-        for(int i = 0; i < numOfNpc; i++)
-        {
-            string loadString = Resources.Load<TextAsset>("Dialogue/sample1").text;
-            var data = JsonConvert.DeserializeObject<Dialogue>(loadString);
-            dialogue[i] = data;
-        }
+        Debug.Log("Loading " + name + "'s dialogues");
+        string loadString = Resources.Load<TextAsset>("Dialogue/" + name).text;
+        var data = JsonConvert.DeserializeObject<Dialogue>(loadString);
+        dialogues[(int)npcCode] = data;
+
+        Debug.Log("Load Complete " + name + "'s dialogues");
     }
 }
