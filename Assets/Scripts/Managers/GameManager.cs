@@ -45,4 +45,13 @@ public class GameManager : MonoBehaviour
 
         // 각 State에 맞는 UI or 동작제어 <- UI Manager function 호출
     }
+
+    /// <summary>
+    /// ReturnState를 private 상태에서 값을 받아오기 위함
+    /// </summary>
+    /// <returns></returns>
+    public State ReturnState()
+    {
+        return currentState;
+    }
 }
