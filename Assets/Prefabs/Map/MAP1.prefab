@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5b31e36247bf54f95ec2da7836da64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextMap: 1
+  nextLocation: 1
 --- !u!114 &4284777724026201108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4284777724026201110}
-        m_MethodName: MoveMap
+        m_MethodName: MoveLocation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

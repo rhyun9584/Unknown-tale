@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapMoveButton : MonoBehaviour
+public class MoveLocationButton : MonoBehaviour
 {
-    public MapCode nextMap;
-    public void MoveMap()
+    public MapCode nextLocation;
+    public void MoveLocation()
     {
         // 대화 진행 중 이동 불가
         if(GameManager.inst.ReturnState() != State.Talk)
-        GameManager.inst.ChangeLocation(nextMap);
+        GameManager.inst.ChangeLocation(nextLocation);
     }
 }
