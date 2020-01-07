@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class NPCBase : MonoBehaviour
 {
-    public NPCCode NPCCode;
-    public string NPCName;
+    [SerializeField]
+    private NPCCode NPCCode;
+    [SerializeField]
+    private string NPCName;
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;

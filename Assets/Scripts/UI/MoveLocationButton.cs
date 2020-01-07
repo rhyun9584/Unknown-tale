@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MoveLocationButton : MonoBehaviour
 {
-    public MapCode nextLocation;
+    [SerializeField]
+    private MapCode nextLocation;
+
     public void MoveLocation()
     {
         // 대화 진행 중 이동 불가
