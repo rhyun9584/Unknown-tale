@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationCode: 0
-  locationName: 
+  locationName: LOCATION1
 --- !u!1 &4284777724026201107
 GameObject:
   m_ObjectHideFlags: 0

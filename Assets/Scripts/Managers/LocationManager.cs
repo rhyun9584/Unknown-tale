@@ -6,7 +6,7 @@ public class LocationManager : MonoBehaviour
 {
     public static LocationManager inst;
 
-    [Tooltip("LocationCode 순서대로 매칭")]
+    [Tooltip("LocationCode 순서대로 Scene에서 매칭")]
     public GameObject[] location;
 
     [HideInInspector]
@@ -16,6 +16,7 @@ public class LocationManager : MonoBehaviour
     {
         inst = this;
 
+        locationScript = new LocationBase[GameManager.locationCount];
         for(int i = 0; i < GameManager.locationCount; i++)
         {
             locationScript[i] = location[i].GetComponent<LocationBase>();

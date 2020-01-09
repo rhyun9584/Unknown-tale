@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationCode: 1
-  locationName: 
+  locationName: LOCATION2
 --- !u!1001 &6626691113339738410
 PrefabInstance:
   m_ObjectHideFlags: 0
