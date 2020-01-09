@@ -13,7 +13,8 @@ public enum NPCCode
 public enum State
 {
     Search,
-    Talk
+    Talk,
+    Map
 }
 
 public enum LocationCode
