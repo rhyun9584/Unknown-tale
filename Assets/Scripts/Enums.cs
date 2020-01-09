@@ -16,8 +16,8 @@ public enum State
     Talk
 }
 
-public enum MapCode
+public enum LocationCode
 {
-    MAP1,
-    MAP2
+    LOCATION1,
+    LOCATION2
 }

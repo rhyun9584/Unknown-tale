@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4284777723571583747}
   - component: {fileID: 3624494379242910503}
   m_Layer: 5
-  m_Name: MAP1
+  m_Name: LOCATION1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3195edf6fb8a1744d9771eab3ee38c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapName: MAP1
+  locationCode: 0
+  mapName: LOCATION1
 --- !u!1 &4284777724026201107
 GameObject:
   m_ObjectHideFlags: 0

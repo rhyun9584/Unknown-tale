@@ -6,35 +6,44 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager inst;
 
-    private MapCode currentMap;     // 인게임에서 현재 위치(맵)
+    private LocationCode currentLocation;     // 인게임에서 현재 위치
     private State currentState;
+
+    public static int locationCount = System.Enum.GetValues(typeof(LocationCode)).Length;
+    public static int npcCount = System.Enum.GetValues(typeof(NPCCode)).Length;
 
     void Awake()
     {
         if (GameManager.inst == null)
             GameManager.inst = this;
+
     }
 
     void Start()
     {
-        ChangeLocation(MapCode.MAP1);
+        ChangeLocation(LocationCode.LOCATION1);
         ChangeState(State.Search);
     }
 
     /// <summary>
     /// 플레이어의 맵 이동
     /// </summary>
-    public void ChangeLocation(MapCode nextLocation)
+    public void ChangeLocation(LocationCode nextLocation)
     {
-        UIManager.inst.OffUI(currentMap);
+        LocationManager.inst.OffLocationUI(currentLocation);
 
-        currentMap = nextLocation;
+        currentLocation = nextLocation;
+        LocationBase currentLocationScript = LocationManager.inst.locationScript[(int)currentLocation];
 
-        Debug.Log("Change Map: " + currentMap);
+        Debug.Log("Change Location: " + currentLocation);
 
-        UIManager.inst.OnUI(currentMap);
+        LocationManager.inst.OnLocationUI(currentLocation);
+        
+        if(currentLocationScript.GetActive() == false)
+        {
+            currentLocationScript.SetActive();
+        }
 
-        // 이후 지도 UI가 생기면 처음 접근했을때 활성화시키는 코드
     }
 
     public void ChangeState(State nextState)

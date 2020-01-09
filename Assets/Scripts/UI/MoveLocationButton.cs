@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLocationButton : MonoBehaviour
 {
     [SerializeField]
-    private MapCode nextLocation;
+    private LocationCode nextLocation;
 
     public void MoveLocation()
     {
