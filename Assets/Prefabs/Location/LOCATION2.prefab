@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: < MAP1
+  m_Text: < Location1
 --- !u!1 &1385573861184706708
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 1385573861184706697}
   - component: {fileID: 1385573861184706710}
   m_Layer: 5
-  m_Name: moveMAP1
+  m_Name: moveLocation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,8 +114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -770, y: -22.95}
-  m_SizeDelta: {x: 246.9, y: 145.9}
+  m_AnchoredPosition: {x: -680, y: -23}
+  m_SizeDelta: {x: 433.7, y: 107.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1385573861184706699
 CanvasRenderer:
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationCode: 1
-  mapName: LOCATION2
+  locationName: 
 --- !u!1001 &6626691113339738410
 PrefabInstance:
   m_ObjectHideFlags: 0
