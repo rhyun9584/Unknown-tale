@@ -32,6 +32,8 @@ public class MapUI : MonoBehaviour
 
             showButton.SetActive(!isActive);
             mapUI.SetActive(isActive);
+
+            GameManager.inst.ChangeState(State.Map);
         }
     }
 
@@ -43,6 +45,8 @@ public class MapUI : MonoBehaviour
 
             showButton.SetActive(!isActive);
             mapUI.SetActive(isActive);
+
+            GameManager.inst.ChangeState(State.Search);
         }
     }
 }

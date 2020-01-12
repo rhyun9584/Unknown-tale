@@ -9,13 +9,13 @@ public class LocationBase : MonoBehaviour
     [SerializeField]
     private string locationName;
 
+    // 한 번이라도 활성화된 적 있는지
     private bool isActive;
 
-    private void Start()
+    public void Awake()
     {
         isActive = false;
     }
-
     public bool GetActive()
     {
         return isActive;

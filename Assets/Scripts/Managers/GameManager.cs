@@ -30,19 +30,18 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ChangeLocation(LocationCode nextLocation)
     {
+        LocationBase nextLocationScript = LocationManager.inst.locationScript[(int)nextLocation];
+
         LocationManager.inst.OffLocationUI(currentLocation);
-
-        currentLocation = nextLocation;
-        LocationBase currentLocationScript = LocationManager.inst.locationScript[(int)currentLocation];
-
-        Debug.Log("Change Location: " + currentLocation);
-
-        LocationManager.inst.OnLocationUI(currentLocation);
+        LocationManager.inst.OnLocationUI(nextLocation);
         
-        if(currentLocationScript.GetActive() == false)
+        Debug.Log("Change Location: " + nextLocation);
+        
+        // 처음 방문 시 location의 isActive(방문 유무) true
+        if(nextLocationScript.GetActive() == false)
         {
-            currentLocationScript.SetActive();
-        }
+            nextLocationScript.SetActive();
+        }   
 
     }
 
@@ -51,8 +50,6 @@ public class GameManager : MonoBehaviour
         currentState = nextState;
 
         Debug.Log("Change State: " + currentState);
-
-        // 각 State에 맞는 UI or 동작제어 <- UI Manager function 호출
     }
 
     /// <summary>
