@@ -34,8 +34,10 @@ public class GameManager : MonoBehaviour
 
         LocationManager.inst.OffLocationUI(currentLocation);
         LocationManager.inst.OnLocationUI(nextLocation);
-        
-        Debug.Log("Change Location: " + nextLocation);
+
+        currentLocation = nextLocation;
+
+        Debug.Log("Change Location: " + currentLocation);
         
         // 처음 방문 시 location의 isActive(방문 유무) true
         if(nextLocationScript.GetActive() == false)
@@ -59,5 +61,10 @@ public class GameManager : MonoBehaviour
     public State ReturnState()
     {
         return currentState;
+    }
+    
+    public LocationCode ReturnLocation()
+    {
+        return currentLocation;
     }
 }
