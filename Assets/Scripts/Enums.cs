@@ -14,7 +14,8 @@ public enum State
 {
     Search,
     Talk,
-    Map
+    Map,
+    Phone
 }
 
 public enum LocationCode

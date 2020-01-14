@@ -20,7 +20,7 @@ public class MoveLocationButton : MonoBehaviour
     {
         // Debug.Log(GameManager.inst.ReturnState() + " " + LocationManager.inst.locationScript[(int)nextLocation].GetActive()
         //     + " " + LocationManager.inst.location[(int)nextLocation].GetComponent<LocationBase>().GetActive());
-        if(GameManager.inst.ReturnLocation() == nextLocation)
+        if(GameManager.inst.ReturnLocation() == nextLocation) // current Location == next Location
         {
             Debug.Log(nextLocation.ToString() + " is here");
         }
@@ -29,7 +29,7 @@ public class MoveLocationButton : MonoBehaviour
             GameManager.inst.ChangeLocation(nextLocation);
             MapUI.inst.CloseMapUI();
         }
-        else
+        else // next Location is not activated 한 번도 방문한 적 없는 장소로 이동 시에
         {
             Debug.Log(nextLocation.ToString() + " is not activated");
         }

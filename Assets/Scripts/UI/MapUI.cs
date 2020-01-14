@@ -46,7 +46,7 @@ public class MapUI : MonoBehaviour
             showButton.SetActive(!isActive);
             mapUI.SetActive(isActive);
 
-            GameManager.inst.ChangeState(State.Search);
+            GameManager.inst.ChangeState(State.Phone);
         }
     }
 }
