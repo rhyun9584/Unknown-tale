@@ -18,16 +18,23 @@ public class PhoneUI : MonoBehaviour
         inst = this;
     }
 
-    public void OpenPhoneUI()
+    /// <summary>
+    /// Show Button에 할당하는 함수, open->close close->open
+    /// </summary>
+    public void OpenClosePhoneUI()
     {
-        if (!isActive)
-        {
-            isActive = true;
+            isActive = !isActive;
 
-            phoneShowButton.SetActive(!isActive);
+            //phoneShowButton.SetActive(!isActive);
             phone.SetActive(isActive);
 
+        if (isActive)
+        {
             GameManager.inst.ChangeState(State.Phone);
+        }
+        else
+        {
+            GameManager.inst.ChangeState(State.Search);
         }
     }
 
@@ -37,7 +44,7 @@ public class PhoneUI : MonoBehaviour
         {
             isActive = false;
 
-            phoneShowButton.SetActive(!isActive);
+            //phoneShowButton.SetActive(!isActive);
             phone.SetActive(isActive);
 
             MapUI.inst.CloseMapUI();

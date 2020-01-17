@@ -1708,8 +1708,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2100909078}
   - {fileID: 1557116514}
+  - {fileID: 2100909078}
   m_Father: {fileID: 220713714}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2195,7 +2195,7 @@ RectTransform:
   - {fileID: 735583674}
   - {fileID: 1947152713}
   m_Father: {fileID: 1106428987}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3044,11 +3044,11 @@ RectTransform:
   m_Children:
   - {fileID: 1493435993}
   m_Father: {fileID: 1106428987}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: -380}
+  m_AnchoredPosition: {x: 809, y: 426}
   m_SizeDelta: {x: 173.7, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100909079
@@ -3095,7 +3095,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106428988}
-        m_MethodName: OpenPhoneUI
+        m_MethodName: OpenClosePhoneUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
