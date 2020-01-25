@@ -23,10 +23,10 @@ public class PhoneUI : MonoBehaviour
     /// </summary>
     public void OpenClosePhoneUI()
     {
-            isActive = !isActive;
+        isActive = !isActive;
 
-            //phoneShowButton.SetActive(!isActive);
-            phone.SetActive(isActive);
+        //phoneShowButton.SetActive(!isActive);
+        phone.SetActive(isActive);
 
         if (isActive)
         {
