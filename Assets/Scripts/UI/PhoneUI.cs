@@ -12,6 +12,7 @@ public class PhoneUI : MonoBehaviour
     public GameObject phone;
 
     private bool isActive = false;
+    private State beforeState;
 
     private void Awake()
     {
@@ -23,6 +24,10 @@ public class PhoneUI : MonoBehaviour
     /// </summary>
     public void OpenClosePhoneUI()
     {
+        if(GameManager.inst.ReturnState() != State.Phone)
+        {
+            beforeState = GameManager.inst.ReturnState();
+        }
         isActive = !isActive;
 
         //phoneShowButton.SetActive(!isActive);
@@ -34,7 +39,7 @@ public class PhoneUI : MonoBehaviour
         }
         else
         {
-            GameManager.inst.ChangeState(State.Search);
+            GameManager.inst.ChangeState(beforeState);
         }
     }
 
@@ -59,7 +64,7 @@ public class PhoneUI : MonoBehaviour
                     break;
             }
 
-            GameManager.inst.ChangeState(State.Search);
+            GameManager.inst.ChangeState(beforeState);
         }
     }
 

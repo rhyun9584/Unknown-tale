@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class NPCBase : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class NPCBase : MonoBehaviour
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;
-   
+
     void Start()
     {
         LoadDialogue.LoadDialogueData(npcname, npccode);
@@ -39,7 +40,7 @@ public class NPCBase : MonoBehaviour
                 DialogueUI.inst.ChangeDialogueText(npcname, dialogue.sentences[this.dialogueState][i]);
                 next = false;
             }
-            else if(!next && Input.GetMouseButtonUp(0))
+            else if(!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
             {
                 next = true;
                 i++;
