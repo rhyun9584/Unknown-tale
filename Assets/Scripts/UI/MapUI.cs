@@ -25,9 +25,10 @@ public class MapUI : MonoBehaviour
     {
         if (!isActive)
         {
-            isActive = !isActive;
+            isActive = true;
 
             PhoneUI.inst.HideMain();
+            PhoneUI.inst.HideBackround();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Map);
@@ -38,9 +39,10 @@ public class MapUI : MonoBehaviour
     {
         if (isActive)
         {
-            isActive = !isActive;
+            isActive = false;
 
             PhoneUI.inst.ShowMain();
+            PhoneUI.inst.ShowBackround();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);

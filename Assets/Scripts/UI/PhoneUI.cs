@@ -7,10 +7,11 @@ public class PhoneUI : MonoBehaviour
     public static PhoneUI inst;
 
     public GameObject phoneShowButton;
-    public GameObject phone, main;
+    public GameObject phone, main, background, blur;
 
     private bool isActive = false;
-    private bool mainActive = false;
+    private bool isMainActive = false;
+    private bool isBackgroundActive = false;
     private State beforeState;
 
     private void Awake()
@@ -31,8 +32,11 @@ public class PhoneUI : MonoBehaviour
         if (!isActive)
         {
             isActive = true;
-            mainActive = true;
+            isMainActive = true;
+            isBackgroundActive = true;
+
             phone.SetActive(isActive);
+            blur.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
         }
@@ -50,6 +54,7 @@ public class PhoneUI : MonoBehaviour
 
             //phoneShowButton.SetActive(!isActive);
             phone.SetActive(isActive);
+            blur.SetActive(isActive);
 
             // 인물, 증거, 지도 창을 켜놓은 경우 해당 UI부터 먼저 OFF
             switch (GameManager.inst.ReturnState())
@@ -73,21 +78,41 @@ public class PhoneUI : MonoBehaviour
 
     public void ShowMain()
     {
-        if (!mainActive)
+        if (!isMainActive)
         {
-            mainActive = true;
+            isMainActive = true;
             
-            main.SetActive(mainActive);
+            main.SetActive(isMainActive);
         }
     }
 
     public void HideMain()
     {
-        if (mainActive)
+        if (isMainActive)
         {
-            mainActive = false;
+            isMainActive = false;
             
-            main.SetActive(mainActive);
+            main.SetActive(isMainActive);
         }        
+    }
+
+    public void ShowBackround()
+    {
+        if (!isBackgroundActive)
+        {
+            isBackgroundActive = true;
+
+            background.SetActive(isBackgroundActive);
+        }
+    }
+
+    public void HideBackround()
+    {
+        if (isBackgroundActive)
+        {
+            isBackgroundActive = false;
+
+            background.SetActive(isBackgroundActive);
+        }
     }
 }
