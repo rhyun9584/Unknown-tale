@@ -7,9 +7,6 @@ public class MapUI : MonoBehaviour
 {
     public static MapUI inst;
 
-    public GameObject showButton;
-
-    [Header("map UI")]
     public GameObject mapUI;
     public GameObject exitButton, moveButton, background;
 
@@ -30,7 +27,7 @@ public class MapUI : MonoBehaviour
         {
             isActive = !isActive;
 
-            showButton.SetActive(!isActive);
+            PhoneUI.inst.HideMain();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Map);
@@ -43,7 +40,7 @@ public class MapUI : MonoBehaviour
         {
             isActive = !isActive;
 
-            showButton.SetActive(!isActive);
+            PhoneUI.inst.ShowMain();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);

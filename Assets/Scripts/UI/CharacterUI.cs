@@ -7,7 +7,7 @@ public class CharacterUI : MonoBehaviour
 {
     public static CharacterUI inst;
 
-    public GameObject showButton, detailView;
+    public GameObject detailView;
     public GameObject detailName, detailContent;
 
     //private ScrollRect scrollRect;
@@ -33,7 +33,7 @@ public class CharacterUI : MonoBehaviour
         {
             isActive = true;
 
-            showButton.SetActive(!isActive);
+            PhoneUI.inst.HideMain();
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Character);
@@ -46,7 +46,7 @@ public class CharacterUI : MonoBehaviour
         {
             isActive = false;
 
-            showButton.SetActive(!isActive);
+            PhoneUI.inst.ShowMain();
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
