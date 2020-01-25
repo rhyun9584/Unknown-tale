@@ -27,7 +27,8 @@ public class MoveLocationButton : MonoBehaviour
         else if(GameManager.inst.ReturnState() == State.Map && LocationManager.inst.locationScript[(int)nextLocation].GetActive() == true)
         {
             GameManager.inst.ChangeLocation(nextLocation);
-            MapUI.inst.CloseMapUI();
+            //MapUI.inst.CloseMapUI();
+            PhoneUI.inst.ClosePhoneUI();
         }
         else // next Location is not activated 한 번도 방문한 적 없는 장소로 이동 시에
         {
