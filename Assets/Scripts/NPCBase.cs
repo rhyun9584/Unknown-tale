@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class NPCBase : MonoBehaviour
 {
     [SerializeField]
-    private NPCCode NPCCode;
+    private NPCCode npccode;
     [SerializeField]
-    private string NPCName;
+    private string npcname;
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;
    
     void Start()
     {
-        LoadDialogue.LoadDialogueData(NPCName, NPCCode);
-        dialogue = LoadDialogue.dialogues[(int)NPCCode];
+        LoadDialogue.LoadDialogueData(npcname, npccode);
+        dialogue = LoadDialogue.dialogues[(int)npccode];
         dialogueState = 0;
     }
 
@@ -36,7 +36,7 @@ public class NPCBase : MonoBehaviour
         {
             if (next)
             {
-                DialogueUI.inst.ChangeDialogueText(NPCName, dialogue.sentences[this.dialogueState][i]);
+                DialogueUI.inst.ChangeDialogueText(npcname, dialogue.sentences[this.dialogueState][i]);
                 next = false;
             }
             else if(!next && Input.GetMouseButtonUp(0))
