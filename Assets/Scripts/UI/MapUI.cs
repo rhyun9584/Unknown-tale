@@ -13,15 +13,15 @@ public class MapUI : MonoBehaviour
     public GameObject mapUI;
     public GameObject exitButton, moveButton, background;
 
-    private bool isActive;
+    private bool isActive = false;
 
     void Awake()
     {
         if (inst == null)
             inst = this;
 
-        isActive = true;
-        CloseMapUI();
+        //isActive = false;
+        //CloseMapUI();
     }
 
     public void OpenMapUI()

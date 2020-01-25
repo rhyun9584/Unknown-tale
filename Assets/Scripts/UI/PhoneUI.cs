@@ -28,18 +28,17 @@ public class PhoneUI : MonoBehaviour
         {
             beforeState = GameManager.inst.ReturnState();
         }
-        isActive = !isActive;
 
-        //phoneShowButton.SetActive(!isActive);
-        phone.SetActive(isActive);
-
-        if (isActive)
+        if (!isActive)
         {
+            isActive = true;
+            phone.SetActive(isActive);
+
             GameManager.inst.ChangeState(State.Phone);
         }
         else
         {
-            GameManager.inst.ChangeState(beforeState);
+            ClosePhoneUI();
         }
     }
 
