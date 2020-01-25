@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,7 +47,11 @@ public class NPCBase : MonoBehaviour
 
             yield return null;
         }
-
+        
+        if (dialogueState == 0)
+        {
+            NPCManager.inst.SetNpcActive(npccode);
+        }
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;
 

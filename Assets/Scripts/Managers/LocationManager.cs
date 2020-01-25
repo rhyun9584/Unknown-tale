@@ -6,6 +6,8 @@ public class LocationManager : MonoBehaviour
 {
     public static LocationManager inst;
 
+    public static int locationCount = System.Enum.GetValues(typeof(LocationCode)).Length;
+
     [Tooltip("LocationCode 순서대로 Scene에서 매칭")]
     public GameObject[] location;
 
@@ -16,8 +18,8 @@ public class LocationManager : MonoBehaviour
     {
         inst = this;
 
-        locationScript = new LocationBase[GameManager.locationCount];
-        for(int i = 0; i < GameManager.locationCount; i++)
+        locationScript = new LocationBase[locationCount];
+        for(int i = 0; i < locationCount; i++)
         {
             locationScript[i] = location[i].GetComponent<LocationBase>();
         }

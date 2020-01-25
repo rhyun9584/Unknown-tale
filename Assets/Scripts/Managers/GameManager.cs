@@ -9,20 +9,17 @@ public class GameManager : MonoBehaviour
     private LocationCode currentLocation;     // 인게임에서 현재 위치
     private State currentState;
 
-    public static int locationCount = System.Enum.GetValues(typeof(LocationCode)).Length;
-    public static int npcCount = System.Enum.GetValues(typeof(NPCCode)).Length;
-
     void Awake()
     {
         if (GameManager.inst == null)
             GameManager.inst = this;
-
     }
 
     void Start()
     {
         ChangeLocation(LocationCode.LOCATION1);
         ChangeState(State.Search);
+
     }
 
     /// <summary>

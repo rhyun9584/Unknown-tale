@@ -7,15 +7,24 @@ public class CharacterUI : MonoBehaviour
 {
     public static CharacterUI inst;
 
-    public GameObject showButton;
+    public GameObject showButton, detailView;
+    public GameObject detailName, detailContent;
 
-    private ScrollRect scrollRect;
-    private bool isActive;
+    //private ScrollRect scrollRect;
+    private Text detailNameText, detailContentText;
+    private bool isActive = false;
+    private bool detailActive = false;
 
     private void Awake()
     {
         inst = this;
-        scrollRect = GetComponent<ScrollRect>();
+        //scrollRect = GetComponent<ScrollRect>();
+    }
+
+    private void Start()
+    {
+        detailNameText = detailName.GetComponent<Text>();
+        detailContentText = detailContent.GetComponent<Text>();
     }
 
     public void OpenCharacterUI()
@@ -41,6 +50,29 @@ public class CharacterUI : MonoBehaviour
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
+        }
+    }
+
+    public void OnDetailUI(NPCCode npccode)
+    {
+        if (!detailActive)
+        {
+            detailActive = true;
+
+            detailView.SetActive(detailActive);
+
+            detailNameText.text = npccode.ToString();
+            // detailContentText.text
+        }
+    }
+
+    public void OffDetailUI()
+    {
+        if (detailActive)
+        {
+            detailActive = false;
+
+            detailView.SetActive(detailActive);
         }
     }
 }
