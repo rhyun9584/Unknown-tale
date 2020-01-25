@@ -61,6 +61,10 @@ public class PhoneUI : MonoBehaviour
                 case State.Character:
                     CharacterUI.inst.CloseCharacterUI();
                     break;
+
+                case State.Clue:
+                    ClueUI.inst.CloseClueUI();
+                    break;
             }
 
             GameManager.inst.ChangeState(beforeState);

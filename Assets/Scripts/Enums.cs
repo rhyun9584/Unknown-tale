@@ -16,7 +16,8 @@ public enum State
     Talk,
     Map,
     Phone,
-    Character
+    Character,
+    Clue
 }
 
 public enum LocationCode
