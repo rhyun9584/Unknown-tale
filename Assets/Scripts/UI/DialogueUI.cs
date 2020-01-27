@@ -18,7 +18,7 @@ public class DialogueUI : MonoBehaviour
 
     void Start()
     {
-        OnOffDialogue();
+        OffDialogue();
         nameText = dialogueName.GetComponent<Text>();
         sentenceText = dialogueSentence.GetComponentInChildren<Text>();
     }
@@ -27,11 +27,33 @@ public class DialogueUI : MonoBehaviour
     /// <summary>
     /// dialogue UI ON/OFF
     /// </summary>
-    public void OnOffDialogue()
+//    public void OnOffDialogue()
+//    {
+//        isActive = !isActive;
+//        dialogueName.SetActive(isActive);
+//        dialogueSentence.SetActive(isActive);
+//    }
+
+    public void OnDialogue()
     {
-        isActive = !isActive;
-        dialogueName.SetActive(isActive);
-        dialogueSentence.SetActive(isActive);
+        if (!isActive)
+        {
+            isActive = true;
+
+            dialogueName.SetActive(isActive);
+            dialogueSentence.SetActive(isActive);
+        }
+    }
+
+    public void OffDialogue()
+    {
+        if (isActive)
+        {
+            isActive = false;
+
+            dialogueName.SetActive(isActive);
+            dialogueSentence.SetActive(isActive);
+        }
     }
 
     /// <summary>

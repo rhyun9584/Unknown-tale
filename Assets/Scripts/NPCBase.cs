@@ -24,7 +24,7 @@ public class NPCBase : MonoBehaviour
     public void OpenDialog()
     {
         GameManager.inst.ChangeState(State.Talk);
-        DialogueUI.inst.OnOffDialogue();
+        DialogueUI.inst.OnDialogue();
         
         StartCoroutine(Talking());
     }
@@ -56,7 +56,7 @@ public class NPCBase : MonoBehaviour
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;
 
-        DialogueUI.inst.OnOffDialogue();
+        DialogueUI.inst.OffDialogue();
         GameManager.inst.ChangeState(State.Search);
     }
 }
