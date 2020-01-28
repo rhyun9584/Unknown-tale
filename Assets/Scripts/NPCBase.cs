@@ -42,8 +42,12 @@ public class NPCBase : MonoBehaviour
             }
             else if(!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
             {
-                next = true;
-                i++;
+                // UI 버튼 클릭 시 대화가 넘어가지 않도록, 대화창은 Raycast Target을 false로 전환하여 제외
+                if (EventSystem.current.IsPointerOverGameObject() == false) 
+                {
+                    next = true;
+                    i++;
+                }
             }
 
             yield return null;
