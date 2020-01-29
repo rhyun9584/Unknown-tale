@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -96,7 +96,7 @@ public class PhoneUI : MonoBehaviour
         }        
     }
 
-    public void ShowBackround()
+    public void ShowBackground()
     {
         if (!isBackgroundActive)
         {
@@ -106,7 +106,7 @@ public class PhoneUI : MonoBehaviour
         }
     }
 
-    public void HideBackround()
+    public void HideBackground()
     {
         if (isBackgroundActive)
         {

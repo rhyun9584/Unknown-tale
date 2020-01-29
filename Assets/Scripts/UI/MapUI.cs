@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +28,7 @@ public class MapUI : MonoBehaviour
             isActive = true;
 
             PhoneUI.inst.HideMain();
-            PhoneUI.inst.HideBackround();
+            PhoneUI.inst.HideBackground();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Map);
@@ -42,7 +42,7 @@ public class MapUI : MonoBehaviour
             isActive = false;
 
             PhoneUI.inst.ShowMain();
-            PhoneUI.inst.ShowBackround();
+            PhoneUI.inst.ShowBackground();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
