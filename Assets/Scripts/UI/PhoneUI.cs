@@ -36,6 +36,7 @@ public class PhoneUI : MonoBehaviour
             isBackgroundActive = true;
 
             phone.SetActive(isActive);
+            blur.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
         }
