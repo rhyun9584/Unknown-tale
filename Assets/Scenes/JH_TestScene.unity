@@ -1383,6 +1383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543810620}
+  - component: {fileID: 543810624}
   - component: {fileID: 543810623}
   - component: {fileID: 543810622}
   - component: {fileID: 543810621}
@@ -1455,7 +1456,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 543810622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543810624}
+        m_MethodName: MoveLocationInMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &543810622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1504,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543810619}
   m_CullTransparentMesh: 0
+--- !u!114 &543810624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543810619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b31e36247bf54f95ec2da7836da64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLocation: 0
 --- !u!1 &547435090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,8 +3098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapUI: {fileID: 1949825062}
   exitButton: {fileID: 640693536}
-  moveButton: {fileID: 1795165719}
-  background: {fileID: 1443513261}
+  moveButton: {fileID: 543810619}
   simpleUI: {fileID: 1869340201}
   simpleName: {fileID: 1432002313}
   simpleExplain: {fileID: 1208556841}

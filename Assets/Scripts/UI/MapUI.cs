@@ -8,7 +8,7 @@ public class MapUI : MonoBehaviour
     public static MapUI inst;
 
     public GameObject mapUI;
-    public GameObject exitButton, moveButton, background;
+    public GameObject exitButton, moveButton; //, background;
 
     // 상세히 창 이전의 정보 창 -> simple
     // 상세히 창                -> detail
@@ -16,6 +16,7 @@ public class MapUI : MonoBehaviour
 
     private Text simpleNameText, simpleExplainText;
     private Sprite simpleImageSprite;
+    private MoveLocationButton moveButtonScript;
 
     private bool isActive = false;
     private bool isSimpleActive = false;
@@ -70,6 +71,10 @@ public class MapUI : MonoBehaviour
             simpleNameText.text = locationCode.ToString();
             //simpleExplainText.text = ;
             //simpleImageSprite = Resources.Load("");
+
+            // 이동 버튼 활성화
+            moveButtonScript = moveButton.GetComponentInChildren<MoveLocationButton>();
+            moveButtonScript.ChangeNextLocation(locationCode);
 
             simpleUI.SetActive(isSimpleActive);
         }

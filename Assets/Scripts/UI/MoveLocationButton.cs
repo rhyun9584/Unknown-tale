@@ -49,4 +49,16 @@ public class MoveLocationButton : MonoBehaviour
     {
         MapUI.inst.OnSimpleUI(nextLocation);
     }
+
+    /// <summary>
+    /// Map UI의 Simple UI를 켜는 경우 moveLocationButton의 nextLocation을 수정
+    /// State가 Map인 경우만 동작하도록 설정하여 다른 상황에서 이용 불가
+    /// </summary>
+    public void ChangeNextLocation(LocationCode locationCode)
+    {
+        if(GameManager.inst.ReturnState() == State.Map)
+        {
+            this.nextLocation = locationCode;
+        }
+    }
 }
