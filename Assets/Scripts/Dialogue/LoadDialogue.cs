@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 public class LoadDialogue
 {
-    private static int npcCount = 2; //System.Enum.GetValues(typeof(NPCCode)).Length;
+    private static int npcCount = 3; //System.Enum.GetValues(typeof(NPCCode)).Length;
     public static Dialogue[] dialogues = new Dialogue[npcCount];
 
     /// <summary>

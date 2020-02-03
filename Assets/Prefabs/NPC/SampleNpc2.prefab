@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 1
+  npccode: 2
   npcname: SAMPLE2
 --- !u!222 &5245620857521035111
 CanvasRenderer:

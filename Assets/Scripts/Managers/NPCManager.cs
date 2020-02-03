@@ -25,6 +25,8 @@ public class NPCManager : MonoBehaviour
         {
             npcActive[i] = false;
         }
+
+        SetNpcActive(NPCCode.MAIN); // 주인공은 바로 active
     }
 
     /// <summary>

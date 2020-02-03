@@ -4,10 +4,9 @@ using UnityEngine;
 
 public enum NPCCode
 {
+    MAIN,
     SAMPLE1,
-    SAMPLE2,
-    TURTLE,
-    RABBIT
+    SAMPLE2
 }
 
 public enum State
