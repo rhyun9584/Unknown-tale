@@ -10,6 +10,7 @@ public class TitleUIManager : MonoBehaviour
     public GameObject optionCanvas;
     public GameObject creditCanvas;
     public GameObject selectCanvas;
+    public GameObject[] storyCanvas;
 
     //아무 키나 누르십시오
     public void OnPressAnyKey() 
@@ -45,6 +46,16 @@ public class TitleUIManager : MonoBehaviour
         optionCanvas.SetActive(false);
         creditCanvas.SetActive(false);
         selectCanvas.SetActive(false);
+    }
+
+    public void onStoryButtonClicked(int a)
+    {
+        storyCanvas[a].SetActive(true);
+    }
+
+    public void onStoryBackButtonClicked(int a)
+    {
+        storyCanvas[a].SetActive(false);
     }
 
     public void Update()
