@@ -24,13 +24,14 @@ public class PhoneUI : MonoBehaviour
     /// </summary>
     public void OpenClosePhoneUI()
     {
-        if(GameManager.inst.ReturnState() != State.Phone)
-        {
-            beforeState = GameManager.inst.ReturnState();
-        }
 
         if (!isActive)
         {
+            if(GameManager.inst.ReturnState() != State.Phone)
+            {
+                beforeState = GameManager.inst.ReturnState();
+            }
+
             isActive = true;
             isMainActive = true;
             isBackgroundActive = true;

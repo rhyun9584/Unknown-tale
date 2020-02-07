@@ -66,6 +66,9 @@ public class MapUI : MonoBehaviour
 
             PhoneUI.inst.ShowMain();
             PhoneUI.inst.ShowBackground();
+
+            OffDetailUI();
+            OffSimpleUI();
             mapUI.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Phone);
