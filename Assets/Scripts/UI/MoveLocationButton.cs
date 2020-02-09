@@ -12,8 +12,9 @@ public class MoveLocationButton : MonoBehaviour
     /// </summary>
     public void MoveLocation()
     {
+        State currentState = GameManager.inst.ReturnState();
         // 조사 상태에서만 이동 가능
-        if(GameManager.inst.ReturnState() == State.Search)
+        if (currentState == State.ClueSearch || currentState == State.NpcSearch)
         {
             GameManager.inst.ChangeLocation(nextLocation);
         }

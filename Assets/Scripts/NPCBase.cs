@@ -61,6 +61,6 @@ public class NPCBase : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
-        GameManager.inst.ChangeState(State.Search);
+        GameManager.inst.ChangeState(State.NpcSearch);
     }
 }

@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         ChangeLocation(LocationCode.LOCATION1);
-        ChangeState(State.Search);
+        ChangeState(State.ClueSearch);
 
     }
 

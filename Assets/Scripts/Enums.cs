@@ -11,7 +11,8 @@ public enum NPCCode
 
 public enum State
 {
-    Search,
+    ClueSearch,
+    NpcSearch,
     Talk,
     Map,
     Phone,
