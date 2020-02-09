@@ -45,6 +45,8 @@ public class ClueUI : MonoBehaviour
         {
             isActive = false;
 
+            CloseDetailUI();
+
             PhoneUI.inst.ShowMain();
             gameObject.SetActive(isActive);
 

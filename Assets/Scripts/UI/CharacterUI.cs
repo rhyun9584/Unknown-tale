@@ -46,6 +46,8 @@ public class CharacterUI : MonoBehaviour
         {
             isActive = false;
 
+            OffDetailUI();
+
             PhoneUI.inst.ShowMain();
             gameObject.SetActive(isActive);
 
