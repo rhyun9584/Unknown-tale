@@ -14,6 +14,8 @@ public class LocationManager : MonoBehaviour
     [HideInInspector]
     public LocationBase[] locationScript;
 
+    private GameObject currentLocation, currentNPC, currentClue;
+
     private void Awake()
     {
         inst = this;
@@ -28,6 +30,7 @@ public class LocationManager : MonoBehaviour
     public void OnLocationUI(LocationCode locationCode)
     {
         location[(int)locationCode].SetActive(true);
+        SearchUIChange();
     }
 
     public void OffLocationUI(LocationCode locationCode)
@@ -35,4 +38,35 @@ public class LocationManager : MonoBehaviour
         location[(int)locationCode].SetActive(false);
     }
 
+    /// <summary>
+    /// Location이 변경되면 해당 location에 맞는 gameobject 매핑
+    /// </summary>
+    /// <param name="locationCode"></param>
+    public void CurrentLocationMapping(LocationCode locationCode)
+    {
+        currentLocation = location[(int)locationCode];
+
+        currentNPC = currentLocation.transform.Find("npc").gameObject;
+        currentClue = currentLocation.transform.Find("clue").gameObject;
+    }
+
+    /// <summary>
+    /// 화면에 npc 혹은 clue가 state에 맞게 끄고 켬
+    /// </summary>
+    public void SearchUIChange()
+    {
+        State currentState = GameManager.inst.ReturnState();
+
+        // 현장수사로 전환
+        if(currentState == State.ClueSearch)
+        {
+            currentNPC.SetActive(false);
+            currentClue.SetActive(true);
+        }
+        else if(currentState == State.NpcSearch)
+        {
+            currentNPC.SetActive(true);
+            currentClue.SetActive(false);
+        }
+    }
 }
