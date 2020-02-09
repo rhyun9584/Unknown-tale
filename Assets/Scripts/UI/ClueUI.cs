@@ -74,4 +74,16 @@ public class ClueUI : MonoBehaviour
             detailUI.SetActive(isDetail);
         }
     }
+
+    public void BackButton()
+    {
+        if (isDetail)
+        {
+            CloseDetailUI();
+        }
+        else if (isActive)
+        {
+            CloseClueUI();
+        }
+    }
 }
