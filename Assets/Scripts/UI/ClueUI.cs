@@ -1,16 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClueUI : MonoBehaviour
 {
     public static ClueUI inst;
 
+    public GameObject detailUI, detailImage, detailName, detailExplain;
+    public GameObject[] clueSlots;
+
+    private Text nameText, explainText;
+
     private bool isActive = false;
+    private bool isDetail = false;
 
     private void Awake()
     {
         inst = this;
+    }
+
+    private void Start()
+    {
+        nameText = detailName.GetComponent<Text>();
+        explainText = detailExplain.GetComponent<Text>();
     }
 
     public void OpenClueUI()
@@ -38,5 +51,27 @@ public class ClueUI : MonoBehaviour
             GameManager.inst.ChangeState(State.Phone);
         }
 
+    }
+
+    public void OpenDetailUI(int clueNumber, string clueName)
+    {
+        if (!isDetail)
+        {
+            isDetail = true;
+
+            nameText.text = clueName;
+
+            detailUI.SetActive(isDetail);
+        }
+    }
+
+    public void CloseDetailUI()
+    {
+        if (isDetail)
+        {
+            isDetail = false;
+
+            detailUI.SetActive(isDetail);
+        }
     }
 }

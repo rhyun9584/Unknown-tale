@@ -6,7 +6,8 @@ public class ClueManager : MonoBehaviour
 {
     public static ClueManager inst;
 
-    public GameObject[] clues;
+    public static int clueCount = 4;
+    
     public GameObject obtainUI, obtainScript, obtainPopUp;
 
     private void Awake()
@@ -20,8 +21,9 @@ public class ClueManager : MonoBehaviour
     /// 2. 획득하는 화면 표시
     /// </summary>
     /// <param name="Clue"></param>
-    public void ObtainClue(ClueBase clue)
+    public void ObtainClue(int clueNumber, string clueName)
     {
+        ClueUI.inst.clueSlots[clueNumber].GetComponent<ClueSlot>().OpenButton(clueName);
 
         StartCoroutine(OpenObtainUI());
     }
@@ -60,6 +62,5 @@ public class ClueManager : MonoBehaviour
         obtainUI.SetActive(false);
         obtainScript.SetActive(false);
         obtainPopUp.SetActive(false);
-
     }
 }

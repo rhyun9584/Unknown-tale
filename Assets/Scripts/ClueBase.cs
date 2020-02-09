@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClueBase : MonoBehaviour
 {
     public string clueName;
+    public int clueNumber;
 
     private bool isObtain = false;
 
@@ -14,7 +15,7 @@ public class ClueBase : MonoBehaviour
         {
             isObtain = true;
 
-            ClueManager.inst.ObtainClue(this);
+            ClueManager.inst.ObtainClue(clueNumber, clueName);
         }
     }
 }
