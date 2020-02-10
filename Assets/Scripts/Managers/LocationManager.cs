@@ -14,7 +14,13 @@ public class LocationManager : MonoBehaviour
     [HideInInspector]
     public LocationBase[] locationScript;
 
+    [SerializeField]
     private GameObject currentLocation, currentNPC, currentClue;
+    [SerializeField]
+    private GameObject[] views;
+
+    [SerializeField]
+    private int currentViewNum = 0;
 
     private void Awake()
     {
@@ -46,8 +52,19 @@ public class LocationManager : MonoBehaviour
     {
         currentLocation = location[(int)locationCode];
 
-        currentNPC = currentLocation.transform.Find("npc").gameObject;
-        currentClue = currentLocation.transform.Find("clue").gameObject;
+        int viewCount = currentLocation.GetComponent<LocationBase>().GetViewCount(); // currentLocation의 viewCount
+
+        views = new GameObject[viewCount];
+        for(int i = 0; i < viewCount; i++)
+        {
+            views[i] = currentLocation.transform.Find("View" + i.ToString()).gameObject;
+            views[i].SetActive(false);
+        }
+
+        // location 변경 이후 첫 시점은 View0
+        SetView(0);
+
+        Debug.Log("Location Mapping Complete");
     }
 
     /// <summary>
@@ -68,5 +85,21 @@ public class LocationManager : MonoBehaviour
             currentNPC.SetActive(true);
             currentClue.SetActive(false);
         }
+    }
+
+    /// <summary>
+    /// View 변경
+    /// </summary>
+    public void SetView(int viewNum)
+    {
+        views[currentViewNum].SetActive(false);
+        views[viewNum].SetActive(true);
+
+        currentNPC = currentLocation.transform.Find("View" + viewNum.ToString() + "/npc").gameObject;
+        currentClue = currentLocation.transform.Find("View" + viewNum.ToString() + "/clue").gameObject;
+
+        SearchUIChange();
+
+        currentViewNum = viewNum;
     }
 }

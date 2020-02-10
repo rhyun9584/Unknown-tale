@@ -6,7 +6,8 @@ public enum NPCCode
 {
     MAIN,
     SAMPLE1,
-    SAMPLE2
+    SAMPLE2,
+    SAMPLE3
 }
 
 public enum State
