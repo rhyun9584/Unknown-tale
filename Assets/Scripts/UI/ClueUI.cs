@@ -12,7 +12,7 @@ public class ClueUI : MonoBehaviour
 
     private Text nameText, explainText;
 
-    private bool isActive = false;
+    private bool isActive = true;
     private bool isDetail = false;
 
     private void Awake()

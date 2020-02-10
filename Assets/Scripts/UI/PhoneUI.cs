@@ -19,12 +19,20 @@ public class PhoneUI : MonoBehaviour
         inst = this;
     }
 
+    private void Start()
+    {
+        isActive = true;
+
+        ClueUI.inst.CloseClueUI();
+        CharacterUI.inst.CloseCharacterUI();
+        OpenClosePhoneUI();
+    }
+
     /// <summary>
     /// Show Button에 할당하는 함수, open->close close->open
     /// </summary>
     public void OpenClosePhoneUI()
     {
-
         if (!isActive)
         {
             if(GameManager.inst.ReturnState() != State.Phone)

@@ -3233,7 +3233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &735583674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3766,9 +3766,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &903289759
 MonoBehaviour:
@@ -3928,8 +3928,8 @@ RectTransform:
   m_Father: {fileID: 2094431246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.38376498}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5035,7 +5035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1059741967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5561,8 +5561,8 @@ RectTransform:
   m_Father: {fileID: 1248019709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.05756098}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6182,9 +6182,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1327617473
 MonoBehaviour:
@@ -7399,7 +7399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1557116514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10742,6 +10742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
         type: 3}
+      propertyPath: clueSlots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
+        type: 3}
       propertyPath: obtainImage
       value: 
       objectReference: {fileID: 503529729}
@@ -10760,6 +10765,26 @@ PrefabInstance:
       propertyPath: obtainUI
       value: 
       objectReference: {fileID: 429570550}
+    - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
+        type: 3}
+      propertyPath: clueSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 496649801}
+    - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
+        type: 3}
+      propertyPath: clueSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 42857788}
+    - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
+        type: 3}
+      propertyPath: clueSlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 386546670}
+    - target: {fileID: 6736072447594581741, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
+        type: 3}
+      propertyPath: clueSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 1624193857}
     - target: {fileID: 9158476946788788803, guid: a1db428c65ffbbd419fd21f7fc00bc6c,
         type: 3}
       propertyPath: m_Name
