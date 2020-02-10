@@ -13,9 +13,9 @@ public class ClueBase : MonoBehaviour
     {
         if (!isObtain)
         {
-            isObtain = true;
-
             ClueManager.inst.ObtainClue(clueNumber, clueName);
+            
+            isObtain = true;
         }
     }
 }
