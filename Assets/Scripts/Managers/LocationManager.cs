@@ -62,7 +62,8 @@ public class LocationManager : MonoBehaviour
         }
 
         // location 변경 이후 첫 시점은 View0
-        SetView(0);
+        currentViewNum = 0;
+        SetView(currentViewNum);
 
         Debug.Log("Location Mapping Complete");
     }
