@@ -1,0 +1,161 @@
+﻿{
+  "MaxState": 1,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": 1,
+        "face": 0,
+        "speaker": "용궁 무리들",
+        "sentence": "웅성 웅성 수근 수근"
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "모두 조용히 하시오!"
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "지금 유력한 용의자를 심문할 터이니 모두 정숙하시오. "
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "네놈의 이름은 무엇이냐?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "그, 어.. 주인공 입니다."
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "몸에 비늘이나 지느러미도 없고, 털도 안나있는것이 도대체 어디서 온 놈인지도 알 수 없을 뿐더러, 이 곳에는 어떻게 들어온것이냐?"
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "똑바로 밝히지 못한다면 네놈의 목숨은 온전하지 못할 것이다!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 여긴 대체 어디야? 웬 문어가 사람 말을 하고.. )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 일단 빨리 무죄를 입증할 증거를 찾아보자. )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "수사를 통해서, 증거나 증언 등 추리에 필요한 정보들을 입수 할 수 있습니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "수사에는 현장 수사와 탐문 수사, 두가지 종류가 있으며 각기 얻을 수 있는 증거의 종류가 다릅니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "현재의 수사 방식은 위의 아이콘으로 표시 됩니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "현장 수사는 현장을 수사하여 증거물을 찾는 수사 방식입니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "배경에 보이는 수상한 부분을 확대하여 볼 수 있으며, 올바르게 증거를 찾았다면 증거물을 획득하게 됩니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "탐문 수사는 인물들에게 질문을 걸거나 대화를 하며 여러 유용한 정보들을 얻는 수사 방식입니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "배경에 있는 인물들에게 말을 걸어 대화를 진행할 수 있고, 대화 도중 얻게 된 증언은 자동으로 기록됩니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 으, 끈적거려. )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 신발에 진흙이 잔뜩.. 그러고보니 비가 엄청 왔었지.. )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( ?! 그렇다면, 내 발자국이 바닥에 찍혔지 않았을까? )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "바닥에 찍혀 있는 발자국에 포인터를 가져가세요."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "수상한 장소에 포인터를 가져가게 되면, 포인터가 돋보기로 변합니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "돋보기를 클릭하면 해당 장소를 확대하여 살펴볼 수 있습니다."
+      }
+    ]
+  ]
+}

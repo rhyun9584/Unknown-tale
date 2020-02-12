@@ -12,6 +12,10 @@ public class TutorialManager : MonoBehaviour
     private string scriptName;
     private int dialogueState;
     private Dialogue dialogue;
+    public ClueBase footprint;
+    public ClueBase clear;
+
+    private bool[] checkClueObtain = {true, true, true, true, true};
 
     private void Awake()
     {
@@ -23,12 +27,44 @@ public class TutorialManager : MonoBehaviour
         TutorialStart();
     }
 
+    private void Update()
+    {
+        if (footprint.isObtain && checkClueObtain[0])
+        {
+            TutorialSecond();
+        }else if (clear.isObtain && checkClueObtain[1])
+        {
+            TutorialThird();
+        }
+
+    }
+
     public void TutorialStart()
     {
         scriptName = "Tutorial1";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
         
+        StartCoroutine(Talking());
+    }
+
+    public void TutorialSecond()
+    {
+        checkClueObtain[0] = false;
+        scriptName = "Tutorial2";
+        dialogue = LoadDialogue.LoadDialogueData(scriptName);
+        dialogueState = 0;
+
+        StartCoroutine(Talking());
+    }
+
+    public void TutorialThird()
+    {
+        checkClueObtain[1] = false;
+        scriptName = "Tutorial3";
+        dialogue = LoadDialogue.LoadDialogueData(scriptName);
+        dialogueState = 0;
+
         StartCoroutine(Talking());
     }
 
@@ -56,27 +92,31 @@ public class TutorialManager : MonoBehaviour
 
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
-
-                if (i == 11)
-                    TemporaryImage.gameObject.SetActive(true);
-                else if(i == 12)
+                if (checkClueObtain[0])
                 {
-                    TemporaryImage.gameObject.SetActive(false);
-                    TemporaryImage.gameObject.SetActive(true);
-                }
-                else if (i == 14)
+                    if (i == 11)
+                        TemporaryImage.gameObject.SetActive(true);
+                    else if (i == 12)
+                    {
+                        TemporaryImage.gameObject.SetActive(false);
+                        TemporaryImage.gameObject.SetActive(true);
+                    }
+                    else if (i == 14)
+                    {
+                        TemporaryImage.gameObject.SetActive(false);
+                        TemporaryImage.gameObject.SetActive(true);
+                    }
+                    else if (i == 16)
+                        TemporaryImage.gameObject.SetActive(false);
+                    else if (i == 17)
+                        TemporaryImage.gameObject.SetActive(true);
+                    else if (i == 19)
+                        TemporaryImage.gameObject.SetActive(false);
+                } else if (checkClueObtain[0] != checkClueObtain[1])
                 {
-                    TemporaryImage.gameObject.SetActive(false);
-                    TemporaryImage.gameObject.SetActive(true);
+                    if (i == 1)
+                        TemporaryImage.gameObject.SetActive(true);
                 }
-                else if (i == 16)
-                    TemporaryImage.gameObject.SetActive(false);
-                else if (i == 17)
-                    TemporaryImage.gameObject.SetActive(true);
-                else if (i == 19)
-                    TemporaryImage.gameObject.SetActive(false);
-                //else if (i == 24)
-                  //  TemporaryImage.gameObject.SetActive(true);
                 next = false;
             }
             else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)

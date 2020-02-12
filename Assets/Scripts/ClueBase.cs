@@ -7,7 +7,7 @@ public class ClueBase : MonoBehaviour
     public string clueName;
     public int clueNumber;
 
-    private bool isObtain = false;
+    public bool isObtain = false;
 
     public void Obtain()
     {
