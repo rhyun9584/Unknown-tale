@@ -66,7 +66,6 @@ public class DialogueUI : MonoBehaviour
     /// </summary>
     public void ChangeDialogueText(string name, string sentence)
     {
-        Debug.Log(name + " " + sentence);
         nameText.text = name;
         sentenceText.text = sentence;
     }

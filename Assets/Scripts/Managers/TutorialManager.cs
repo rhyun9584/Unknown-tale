@@ -73,6 +73,9 @@ public class TutorialManager : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
-        GameManager.inst.ChangeState(State.NpcSearch);
+        if(scriptName == "Tutorial1")
+        {
+            GameManager.inst.ChangeState(State.ClueSearch);
+        }
     }
 }

@@ -32,19 +32,34 @@ public class NPCBase : MonoBehaviour
 
     IEnumerator Talking()
     {
+        GameManager.inst.ChangeState(State.Talk);
+        DialogueUI.inst.OnDialogue();
+
         bool next = true;
 
-        for(int i = 0; i < dialogue.talks.Length;)
+        for (int i = 0; i < dialogue.talks.Length;)
         {
             if (next)
             {
+                if (dialogue.talks[i].portrait == "left")
+                {
+                    DialogueUI.inst.leftPortrait.SetActive(true);
+                    DialogueUI.inst.rightPortrait.SetActive(false);
+                }
+                else if (dialogue.talks[i].portrait == "right")
+                {
+                    DialogueUI.inst.leftPortrait.SetActive(false);
+                    DialogueUI.inst.rightPortrait.SetActive(true);
+                }
+
+                DialogueUI.inst.ChangePortraitImage(dialogue.talks[i].portrait == "left", dialogue.talks[i].npccode, dialogue.talks[i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[i].speaker, dialogue.talks[i].sentence);
                 next = false;
             }
-            else if(!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
+            else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
             {
                 // UI 버튼 클릭 시 대화가 넘어가지 않도록, 대화창은 Raycast Target을 false로 전환하여 제외
-                if (EventSystem.current.IsPointerOverGameObject() == false) 
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
                     next = true;
                     i++;
@@ -53,7 +68,7 @@ public class NPCBase : MonoBehaviour
 
             yield return null;
         }
-        
+
         if (dialogueState == 0)
         {
             NPCManager.inst.SetNpcActive(npccode);
