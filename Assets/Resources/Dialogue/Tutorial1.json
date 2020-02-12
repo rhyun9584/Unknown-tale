@@ -155,13 +155,6 @@
         "face": 0,
         "speaker": " ",
         "sentence": "돋보기를 클릭하면 해당 장소를 확대하여 살펴볼 수 있습니다."
-      },
-      {
-        "portrait": "left",
-        "npccode": 2,
-        "face": 0,
-        "speaker": " ",
-        "sentence": "바닥에 찍혀 있는 발자국에 포인터를 가져가세요."
       }
     ]
   ]

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager inst;
+    public TemporaryImage TemporaryImage;
 
     private string scriptName;
     private int dialogueState;
@@ -54,6 +56,27 @@ public class TutorialManager : MonoBehaviour
 
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
+
+                if (i == 11)
+                    TemporaryImage.gameObject.SetActive(true);
+                else if(i == 12)
+                {
+                    TemporaryImage.gameObject.SetActive(false);
+                    TemporaryImage.gameObject.SetActive(true);
+                }
+                else if (i == 14)
+                {
+                    TemporaryImage.gameObject.SetActive(false);
+                    TemporaryImage.gameObject.SetActive(true);
+                }
+                else if (i == 16)
+                    TemporaryImage.gameObject.SetActive(false);
+                else if (i == 17)
+                    TemporaryImage.gameObject.SetActive(true);
+                else if (i == 19)
+                    TemporaryImage.gameObject.SetActive(false);
+                //else if (i == 24)
+                  //  TemporaryImage.gameObject.SetActive(true);
                 next = false;
             }
             else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
