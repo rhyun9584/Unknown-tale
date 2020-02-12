@@ -37,23 +37,23 @@ public class TutorialManager : MonoBehaviour
 
         bool next = true;
 
-        for (int i = 0; i < dialogue.talks.Length;)
+        for (int i = 0; i < dialogue.talks[dialogueState].Length;)
         {
             if (next)
             {
-                if(dialogue.talks[i].portrait == "left")
+                if(dialogue.talks[dialogueState][i].portrait == "left")
                 {
                     DialogueUI.inst.leftPortrait.SetActive(true);
                     DialogueUI.inst.rightPortrait.SetActive(false);
                 }
-                else if(dialogue.talks[i].portrait == "right")
+                else if(dialogue.talks[dialogueState][i].portrait == "right")
                 {
                     DialogueUI.inst.leftPortrait.SetActive(false);
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
-                DialogueUI.inst.ChangePortraitImage(dialogue.talks[i].portrait == "left", dialogue.talks[i].npccode, dialogue.talks[i].face);
-                DialogueUI.inst.ChangeDialogueText(dialogue.talks[i].speaker, dialogue.talks[i].sentence);
+                DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
+                DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
                 next = false;
             }
             else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)

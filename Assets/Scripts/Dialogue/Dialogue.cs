@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialogue
 {
     public int maxState;
-    public Talks[] talks;
+    public Talks[][] talks; // 첫 번째는 state, 두 번째는 한 state에서 이어지는 대화
 }
 
 public class Talks

@@ -1,13 +1,31 @@
 {
-	"MaxState": 1,
+	"MaxState": 2,
 	"Talks":
 	[
-		{
-			"portrait": "left",
-			"npccode" : 0,
-			"face": 0,
-			"speaker": "용왕",
-			"sentence": "용왕"
-		}
+		[ 
+			{
+				"portrait": "left",
+				"npccode" : 0,
+				"face": 0,
+				"speaker": "문어",
+				"sentence": "문어"
+			},
+			{
+				"portrait": "left",
+				"npccode" : 0,
+				"face": 0,
+				"speaker": "문어어",
+				"sentence": "문어"
+			}
+		],
+		[
+			{
+				"portrait": "left",
+				"npccode" : 0,
+				"face": 0,
+				"speaker": "문어",
+				"sentence": "어문"
+			}
+		]
 	]
 }
