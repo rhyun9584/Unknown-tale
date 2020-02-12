@@ -11,7 +11,7 @@ public class ClueSlot : MonoBehaviour
     private Image clueImage;
     private bool isObtain = false;
 
-    private void Start()
+    private void Awake()
     {
         clueImage = GetComponentInChildren<Image>();
     }
