@@ -52,6 +52,7 @@ public class TutorialManager : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                DialogueUI.inst.ChangePortraitImage(dialogue.talks[i].portrait == "left", dialogue.talks[i].npccode, dialogue.talks[i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[i].speaker, dialogue.talks[i].sentence);
                 next = false;
             }

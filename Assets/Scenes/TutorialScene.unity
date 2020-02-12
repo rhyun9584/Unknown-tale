@@ -1493,6 +1493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PartyHall
       objectReference: {fileID: 0}
+    - target: {fileID: 8819136958302731357, guid: 5b51c6965948c864fbeb56608c3cc1c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b51c6965948c864fbeb56608c3cc1c5, type: 3}
 --- !u!1001 &6412632342646365756

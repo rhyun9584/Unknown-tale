@@ -70,4 +70,16 @@ public class DialogueUI : MonoBehaviour
         nameText.text = name;
         sentenceText.text = sentence;
     }
+
+    public void ChangePortraitImage(bool isLeft, int npcCode, int face)
+    {
+        if (isLeft)
+        {
+            leftPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString());
+        }
+        else
+        {
+            rightPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString());
+        }
+    }
 }

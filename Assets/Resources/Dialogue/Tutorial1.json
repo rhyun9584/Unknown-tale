@@ -4,26 +4,36 @@
 	[
 		{
 			"portrait": "left",
+			"npccode" : 0,
+			"face": 0,
 			"speaker": "t",
 			"sentence": "Talks1"
 		},
 		{
 			"portrait": "right",
+			"npccode" : 0,
+			"face": 0,
 			"speaker": "a",
 			"sentence": "T a l k s 1"
 		},
 		{
-			"portrait": "left",		
+			"portrait": "left",
+			"npccode" : 0,
+			"face": 0,
 			"speaker": "s",
 			"sentence": "TALKS1"
 		},
 		{
-			"portrait": "left",		
+			"portrait": "left",	
+			"npccode" : 0,
+			"face": 0,
 			"speaker": "l",
 			"sentence": "talks1"
 		},
 		{
-			"portrait": "right",		
+			"portrait": "right",
+			"npccode" : 0,
+			"face": 0,
 			"speaker": "",
 			"sentence": ""
 		}
