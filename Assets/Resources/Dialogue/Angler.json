@@ -4,25 +4,18 @@
 	[
     [
       {
-        "portrait": "left",
-        "npccode": 0,
-        "face": 0,
-        "speaker": "주인공",
-        "sentence": "저기, 혹시 연회 중에 저를 본 기억이 있으신가요?"
-      },
-      {
         "portrait": "right",
         "npccode": 7,
         "face": 0,
         "speaker": "아귀 대신",
-        "sentence": "내가 눈이 잘 안보이긴 하지만- 확실히 본 기억은 없긴 하네."
+        "sentence": "왜 또 뭐 물어볼거 있는가?"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( 좋았어! 이것도 서둘러 기록해 두어야겠다. )"
+        "sentence": "아, 아니에요"
       }
     ],
     [
