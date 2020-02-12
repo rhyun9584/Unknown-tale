@@ -1,31 +1,38 @@
-{
+﻿{
 	"MaxState": 2,
 	"Talks":
 	[
-		[ 
-			{
-				"portrait": "left",
-				"npccode" : 0,
-				"face": 0,
-				"speaker": "문어",
-				"sentence": "문어"
-			},
-			{
-				"portrait": "left",
-				"npccode" : 0,
-				"face": 0,
-				"speaker": "문어어",
-				"sentence": "문어"
-			}
+		[
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "그래서 네놈이 범인이 아니라는 증거를 찾아 온거냐?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아니요. 조금만 더 시간을 주세요."
+      }
 		],
 		[
-			{
-				"portrait": "left",
-				"npccode" : 0,
-				"face": 0,
-				"speaker": "문어",
-				"sentence": "어문"
-			}
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "그래서 네놈이 범인이 아니라는 증거를 찾아 온거냐?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아니요. 조금만 더 시간을 주세요."
+      }
 		]
 	]
 }
