@@ -1,0 +1,31 @@
+{
+	"MaxState": 1,
+	"Talks":
+	[
+		{
+			"portrait": "left",
+			"speaker": "t",
+			"sentence": "Talks1"
+		},
+		{
+			"portrait": "right",
+			"speaker": "a",
+			"sentence": "T a l k s 1"
+		},
+		{
+			"portrait": "left",		
+			"speaker": "s",
+			"sentence": "TALKS1"
+		},
+		{
+			"portrait": "left",		
+			"speaker": "l",
+			"sentence": "talks1"
+		},
+		{
+			"portrait": "right",		
+			"speaker": "",
+			"sentence": ""
+		}
+	]
+}

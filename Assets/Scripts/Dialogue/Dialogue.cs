@@ -5,5 +5,12 @@ using UnityEngine;
 public class Dialogue
 {
     public int maxState;
-    public string[][] sentences;
+    public Talks[] talks;
+}
+
+public class Talks
+{
+    public string portrait;
+    public string speaker;
+    public string sentence;
 }

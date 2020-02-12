@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
     {
         if (GameManager.inst == null)
             GameManager.inst = this;
+
+        ChangeState(State.ClueSearch);
     }
 
     void Start()
     {
         ChangeLocation(LocationCode.LOCATION1);
-        ChangeState(State.ClueSearch);
-
     }
 
     /// <summary>

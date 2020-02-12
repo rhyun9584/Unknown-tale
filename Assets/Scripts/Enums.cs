@@ -24,5 +24,6 @@ public enum State
 public enum LocationCode
 {
     LOCATION1,
-    LOCATION2
+    LOCATION2,
+    PartyHall
 }

@@ -16,8 +16,9 @@ public class NPCBase : MonoBehaviour
 
     void Start()
     {
-        LoadDialogue.LoadDialogueData(npcname, npccode);
-        dialogue = LoadDialogue.dialogues[(int)npccode];
+        //LoadDialogue.LoadDialogueData(npcname, npccode);
+        //dialogue = LoadDialogue.dialogues[(int)npccode];
+        dialogue = LoadDialogue.LoadDialogueData(npcname);
         dialogueState = 0;
     }
 
@@ -33,11 +34,11 @@ public class NPCBase : MonoBehaviour
     {
         bool next = true;
 
-        for(int i = 0; i < dialogue.sentences[this.dialogueState].Length;)
+        for(int i = 0; i < dialogue.talks.Length;)
         {
             if (next)
             {
-                DialogueUI.inst.ChangeDialogueText(npcname, dialogue.sentences[this.dialogueState][i]);
+                DialogueUI.inst.ChangeDialogueText(dialogue.talks[i].speaker, dialogue.talks[i].sentence);
                 next = false;
             }
             else if(!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)

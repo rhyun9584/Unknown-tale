@@ -16,19 +16,15 @@ public class DialogueUI : MonoBehaviour
     void Awake()
     {
         inst = this;
-    }
-
-    void Start()
-    {
-        OffDialogue();
 
         nameText = dialogueName.GetComponent<Text>();
         sentenceText = dialogueSentence.GetComponentInChildren<Text>();
 
         leftPortraitImage = leftPortrait.GetComponent<Image>();
         rightPortraitImage = rightPortrait.GetComponent<Image>();
+        
+        OffDialogue();
     }
-
 
     /// <summary>
     /// dialogue UI ON/OFF
@@ -70,6 +66,7 @@ public class DialogueUI : MonoBehaviour
     /// </summary>
     public void ChangeDialogueText(string name, string sentence)
     {
+        Debug.Log(name + " " + sentence);
         nameText.text = name;
         sentenceText.text = sentence;
     }
