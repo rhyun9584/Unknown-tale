@@ -114,8 +114,10 @@ public class TutorialManager : MonoBehaviour
                         TemporaryImage.gameObject.SetActive(false);
                 } else if (checkClueObtain[0] != checkClueObtain[1])
                 {
-                    if (i == 1)
+                    if (i == 2)
                         TemporaryImage.gameObject.SetActive(true);
+                    else if (i == 3)
+                        TemporaryImage.gameObject.SetActive(false);
                 }
                 next = false;
             }
