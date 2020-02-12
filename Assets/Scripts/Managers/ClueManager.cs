@@ -8,12 +8,21 @@ public class ClueManager : MonoBehaviour
 
     public static int clueCount = 4;
     
-    public GameObject obtainUI, obtainScript, obtainPopUp;
+    public GameObject obtainUI, obtainScript, obtainPopUp; // 스크립트로 매핑
 
     private void Awake()
     {
         inst = this;
+
+        obtainUI = GameObject.Find("ObtainUI").gameObject;
+        obtainScript = GameObject.Find("Script").gameObject;
+        obtainPopUp = GameObject.Find("Popup").gameObject;
+    
+        obtainUI.SetActive(false);
+        obtainScript.SetActive(false);
+        obtainPopUp.SetActive(false);
     }
+
 
     /// <summary>
     /// 단서 획득

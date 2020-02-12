@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI inst;
-    public GameObject dialogueName, dialogueSentence;
+    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait;
 
     private Text nameText, sentenceText;
+    private Image leftPortraitImage, rightPortraitImage;
+
     private bool isActive = true;
 
     void Awake()
@@ -19,8 +21,12 @@ public class DialogueUI : MonoBehaviour
     void Start()
     {
         OffDialogue();
+
         nameText = dialogueName.GetComponent<Text>();
         sentenceText = dialogueSentence.GetComponentInChildren<Text>();
+
+        leftPortraitImage = leftPortrait.GetComponent<Image>();
+        rightPortraitImage = rightPortrait.GetComponent<Image>();
     }
 
 
@@ -53,6 +59,9 @@ public class DialogueUI : MonoBehaviour
 
             dialogueName.SetActive(isActive);
             dialogueSentence.SetActive(isActive);
+
+            leftPortrait.SetActive(isActive);
+            rightPortrait.SetActive(isActive);
         }
     }
 
