@@ -62,6 +62,7 @@ public class ClueUI : MonoBehaviour
             isDetail = true;
 
             nameText.text = clueName;
+            explainText.text = ClueManager.inst.clueExplainTexts[clueNumber];
 
             detailUI.SetActive(isDetail);
         }
