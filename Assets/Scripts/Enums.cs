@@ -22,8 +22,8 @@ public enum State
     Talk,
     Map,
     Phone,
-    Character,
-    Clue
+    Character,  // Phone UI 내부 Character UI를 켠 state
+    Clue        // Phone UI 내부 Clue UI를 켠 state
 }
 
 public enum LocationCode
