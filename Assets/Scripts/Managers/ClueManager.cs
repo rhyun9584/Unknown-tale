@@ -9,6 +9,10 @@ public class ClueManager : MonoBehaviour
     public static int clueCount = 4;
     
     public GameObject obtainUI, obtainScript, obtainPopUp; // 스크립트로 매핑
+    [HideInInspector]
+    public bool[] isObtain = new bool[clueCount];
+
+    private int clueNum;
 
     private void Awake()
     {
@@ -21,6 +25,11 @@ public class ClueManager : MonoBehaviour
         obtainUI.SetActive(false);
         obtainScript.SetActive(false);
         obtainPopUp.SetActive(false);
+
+        for(int i = 0; i < clueCount; i++)
+        {
+            isObtain[i] = false;
+        }
     }
 
 
@@ -34,6 +43,7 @@ public class ClueManager : MonoBehaviour
     {
         ClueUI.inst.clueSlots[clueNumber].GetComponent<ClueSlot>().OpenButton(clueName);
 
+        clueNum = clueNumber; // OpenObtainUI에 clue number 정보를 넘기기 위한 값
         StartCoroutine(OpenObtainUI());
     }
     
@@ -67,6 +77,8 @@ public class ClueManager : MonoBehaviour
 
             yield return null;
         }
+
+        isObtain[clueNum] = true;
 
         obtainUI.SetActive(false);
         obtainScript.SetActive(false);

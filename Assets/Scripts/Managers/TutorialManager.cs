@@ -29,10 +29,10 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        if (footprint.isObtain && checkClueObtain[0])
+        if (ClueManager.inst.isObtain[2] && checkClueObtain[0]) // 2 -> foot print
         {
             TutorialSecond();
-        }else if (clear.isObtain && checkClueObtain[1])
+        }else if (ClueManager.inst.isObtain[3] && checkClueObtain[1]) // 3 -> clean floor 
         {
             TutorialThird();
         }
