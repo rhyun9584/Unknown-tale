@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClueManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ClueManager : MonoBehaviour
     public GameObject obtainUI, obtainScript, obtainPopUp; // 스크립트로 매핑
     [HideInInspector]
     public bool[] isObtain = new bool[clueCount];
+
+    //clue 획득 시 뜨는 획득 스크립트
+    private string[] obtainSciptContent = new string[clueCount];
 
     private int clueNum;
 
@@ -30,6 +34,15 @@ public class ClueManager : MonoBehaviour
         {
             isObtain[i] = false;
         }
+
+        obtainSciptContent[0] = "";
+        obtainSciptContent[1] = "";
+        obtainSciptContent[2] = "( 역시! 이거라면, 내가 별로 움직이지 않았다는 걸 증명해줄 수 있겠어! )";
+        obtainSciptContent[3] = "( 없지! )";
+
+        // 트리거 없는 증거들을 시작부터 획득
+        //ObtainClue(0, "selfie"); // 셀카
+        //ObtainClue(1, "mud shoes"); // 진흙이 묻은 신발
     }
 
 
@@ -60,6 +73,7 @@ public class ClueManager : MonoBehaviour
                 switch (i)
                 {
                     case 1:
+                        obtainScript.GetComponentInChildren<Text>().text = obtainSciptContent[clueNum];
                         obtainScript.SetActive(true);
                         break;
                     case 2:
