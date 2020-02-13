@@ -39,10 +39,13 @@ public class ClueManager : MonoBehaviour
         obtainSciptContent[1] = "";
         obtainSciptContent[2] = "( 역시! 이거라면, 내가 별로 움직이지 않았다는 걸 증명해줄 수 있겠어! )";
         obtainSciptContent[3] = "( 없지! )";
+    }
 
-        // 트리거 없는 증거들을 시작부터 획득
-        //ObtainClue(0, "selfie"); // 셀카
-        //ObtainClue(1, "mud shoes"); // 진흙이 묻은 신발
+    private void Start()
+    {
+        // 획득 트리거 없는 증거들을 시작부터 획득
+        ClueUI.inst.clueSlots[0].GetComponent<ClueSlot>().OpenButton("Selfie"); // 셀카
+        ClueUI.inst.clueSlots[1].GetComponent<ClueSlot>().OpenButton("Mud Shoes"); // 진흙이 묻은 신발
     }
 
 
