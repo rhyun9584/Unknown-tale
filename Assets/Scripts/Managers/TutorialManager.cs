@@ -144,9 +144,7 @@ public class TutorialManager : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
-        if(scriptName == "Tutorial1" || scriptName == "Tutorial2")
-        {
-            GameManager.inst.ChangeState(State.ClueSearch);
-        }
+
+        GameManager.inst.ChangeState(State.ClueSearch);
     }
 }
