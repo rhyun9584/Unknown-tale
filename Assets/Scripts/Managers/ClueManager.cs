@@ -9,7 +9,7 @@ public class ClueManager : MonoBehaviour
 
     public static int clueCount = 4;
     
-    public GameObject obtainUI, obtainScript, obtainPopUp; // 스크립트로 매핑
+    public GameObject obtainUI, obtainScript, obtainPopUp, obtainImage; // 스크립트로 매핑
     [HideInInspector]
     public bool[] isObtain = new bool[clueCount];
 
@@ -28,6 +28,7 @@ public class ClueManager : MonoBehaviour
         obtainUI = GameObject.Find("ObtainUI").gameObject;
         obtainScript = GameObject.Find("Script").gameObject;
         obtainPopUp = GameObject.Find("Popup").gameObject;
+        obtainImage = GameObject.Find("ObtainUI/Image").gameObject;
     
         obtainUI.SetActive(false);
         obtainScript.SetActive(false);
@@ -77,6 +78,7 @@ public class ClueManager : MonoBehaviour
         bool next = true;
 
         obtainUI.SetActive(true);
+        obtainImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/clue/obtain" + clueNum.ToString());
 
         for (int i = 0; i < 3;)
         {
