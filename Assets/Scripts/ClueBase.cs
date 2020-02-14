@@ -11,7 +11,7 @@ public class ClueBase : MonoBehaviour
 
     public void Obtain()
     {
-        if (ClueManager.inst.isObtain[clueNumber] == false)
+        if (ClueManager.inst.isObtain[clueNumber] == false && GameManager.inst.ReturnState() == State.ClueSearch)
         {
             ClueManager.inst.ObtainClue(clueNumber, clueName);
 
