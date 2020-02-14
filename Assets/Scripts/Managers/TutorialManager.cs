@@ -8,6 +8,7 @@ public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager inst;
     public TemporaryImage TemporaryImage;
+    public NPCManager NPCManager;
 
     private string scriptName;
     private int dialogueState;
@@ -112,13 +113,17 @@ public class TutorialManager : MonoBehaviour
                         TemporaryImage.gameObject.SetActive(true);
                     else if (i == 19)
                         TemporaryImage.gameObject.SetActive(false);
-                } else if (checkClueObtain[0] != checkClueObtain[1])
+                }
+                else if (checkClueObtain[0] != checkClueObtain[1])
                 {
                     if (i == 2)
                         TemporaryImage.gameObject.SetActive(true);
                     else if (i == 3)
                         TemporaryImage.gameObject.SetActive(false);
                 }
+                else if (checkClueObtain[1] != checkClueObtain[2])
+                    if (i == 6)
+                        NPCManager.npcActive[7] = true;
                 next = false;
             }
             else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
