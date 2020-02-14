@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detailUI: {fileID: 2193390541274326082}
-  detailImage: {fileID: 2193390542676229108}
+  detailImage: {fileID: 2193390543143489537}
   detailName: {fileID: 2193390542016029014}
   detailExplain: {fileID: 2193390541892688271}
   clueSlots:
