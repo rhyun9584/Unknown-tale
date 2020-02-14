@@ -33,7 +33,8 @@ public class TutorialManager : MonoBehaviour
         if (ClueManager.inst.isObtain[2] && checkClueObtain[0]) // 2 -> foot print
         {
             TutorialSecond();
-        }else if (ClueManager.inst.isObtain[3] && checkClueObtain[1]) // 3 -> clean floor 
+        }
+        else if (ClueManager.inst.isObtain[3] && checkClueObtain[1]) // 3 -> clean floor 
         {
             TutorialThird();
         }
@@ -143,7 +144,7 @@ public class TutorialManager : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
-        if(scriptName == "Tutorial1")
+        if(scriptName == "Tutorial1" || scriptName == "Tutorial2")
         {
             GameManager.inst.ChangeState(State.ClueSearch);
         }
