@@ -6,7 +6,8 @@ using Newtonsoft.Json;
 
 public class LoadDialogue
 {
-    private static int npcCount = 2; //System.Enum.GetValues(typeof(NPCCode)).Length;
+    /*
+    private static int npcCount = 3; //System.Enum.GetValues(typeof(NPCCode)).Length;
     public static Dialogue[] dialogues = new Dialogue[npcCount];
 
     /// <summary>
@@ -21,5 +22,19 @@ public class LoadDialogue
         dialogues[(int)npcCode] = data;
 
         Debug.Log("Load Complete " + name + "'s dialogues");
+    }
+    */
+
+    public static Dialogue dialogues;
+
+    public static Dialogue LoadDialogueData(string fileName)
+    {
+        string loadString = Resources.Load<TextAsset>("Dialogue/" + fileName).text;
+        var data = JsonConvert.DeserializeObject<Dialogue>(loadString);
+        dialogues = data;
+        
+        Debug.Log("Load Complete " + fileName);
+
+        return dialogues;
     }
 }

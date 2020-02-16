@@ -16,39 +16,59 @@ public class NPCBase : MonoBehaviour
 
     void Start()
     {
-        LoadDialogue.LoadDialogueData(npcname, npccode);
-        dialogue = LoadDialogue.dialogues[(int)npccode];
+        //LoadDialogue.LoadDialogueData(npcname, npccode);
+        //dialogue = LoadDialogue.dialogues[(int)npccode];
+        dialogue = LoadDialogue.LoadDialogueData(npcname);
         dialogueState = 0;
     }
 
     public void OpenDialog()
     {
         GameManager.inst.ChangeState(State.Talk);
-        DialogueUI.inst.OnOffDialogue();
+        DialogueUI.inst.OnDialogue();
         
         StartCoroutine(Talking());
     }
 
     IEnumerator Talking()
     {
+        GameManager.inst.ChangeState(State.Talk);
+        DialogueUI.inst.OnDialogue();
+
         bool next = true;
 
-        for(int i = 0; i < dialogue.sentences[this.dialogueState].Length;)
+        for (int i = 0; i < dialogue.talks[dialogueState].Length;)
         {
             if (next)
             {
-                DialogueUI.inst.ChangeDialogueText(npcname, dialogue.sentences[this.dialogueState][i]);
+                if (dialogue.talks[dialogueState][i].portrait == "left")
+                {
+                    DialogueUI.inst.leftPortrait.SetActive(true);
+                    DialogueUI.inst.rightPortrait.SetActive(false);
+                }
+                else if (dialogue.talks[dialogueState][i].portrait == "right")
+                {
+                    DialogueUI.inst.leftPortrait.SetActive(false);
+                    DialogueUI.inst.rightPortrait.SetActive(true);
+                }
+
+                DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
+                DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
                 next = false;
             }
-            else if(!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
+            else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
             {
-                next = true;
-                i++;
+                // UI 버튼 클릭 시 대화가 넘어가지 않도록, 대화창은 Raycast Target을 false로 전환하여 제외
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                {
+                    next = true;
+                    i++;
+                }
             }
 
             yield return null;
         }
-        
+
         if (dialogueState == 0)
         {
             NPCManager.inst.SetNpcActive(npccode);
@@ -56,7 +76,7 @@ public class NPCBase : MonoBehaviour
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;
 
-        DialogueUI.inst.OnOffDialogue();
-        GameManager.inst.ChangeState(State.Search);
+        DialogueUI.inst.OffDialogue();
+        GameManager.inst.ChangeState(State.NpcSearch);
     }
 }

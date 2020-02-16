@@ -1,0 +1,23 @@
+﻿{
+	"MaxState": 2,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 상당히 화가 나있어 보여. 가까이 가지 않는게 좋을것 같아. )"
+      }
+    ],[
+
+    {
+      "portrait": "left",
+      "npccode": 0,
+      "face": 0,
+      "speaker": "주인공",
+      "sentence": "( 상당히 화가 나있어 보여. 가까이 가지 않는게 좋을것 같아. )"
+    }
+  ]
+	]
+}

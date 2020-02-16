@@ -8,6 +8,8 @@ public class LocationBase : MonoBehaviour
     private LocationCode locationCode;
     [SerializeField]
     private string locationName;
+    [SerializeField]
+    private int viewCount; // 해당 맵 속 시점의 총 수
 
     // 한 번이라도 활성화된 적 있는지
     private bool isActive;
@@ -27,6 +29,11 @@ public class LocationBase : MonoBehaviour
     public void SetActive()
     {
         isActive = true;
+    }
+
+    public int GetViewCount()
+    {
+        return viewCount;
     }
 
     public LocationCode GetLocationCode()

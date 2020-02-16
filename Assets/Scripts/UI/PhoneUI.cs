@@ -17,6 +17,12 @@ public class PhoneUI : MonoBehaviour
     private void Awake()
     {
         inst = this;
+
+        isActive = true;
+
+        ClueUI.inst.CloseClueUI();
+        CharacterUI.inst.CloseCharacterUI();
+        OpenClosePhoneUI();
     }
 
     /// <summary>
@@ -24,13 +30,13 @@ public class PhoneUI : MonoBehaviour
     /// </summary>
     public void OpenClosePhoneUI()
     {
-        if(GameManager.inst.ReturnState() != State.Phone)
-        {
-            beforeState = GameManager.inst.ReturnState();
-        }
-
         if (!isActive)
         {
+            if(GameManager.inst.ReturnState() != State.Phone)
+            {
+                beforeState = GameManager.inst.ReturnState();
+            }
+
             isActive = true;
             isMainActive = true;
             isBackgroundActive = true;
@@ -96,7 +102,7 @@ public class PhoneUI : MonoBehaviour
         }        
     }
 
-    public void ShowBackround()
+    public void ShowBackground()
     {
         if (!isBackgroundActive)
         {
@@ -106,7 +112,7 @@ public class PhoneUI : MonoBehaviour
         }
     }
 
-    public void HideBackround()
+    public void HideBackground()
     {
         if (isBackgroundActive)
         {

@@ -12,7 +12,7 @@ public class CharacterUI : MonoBehaviour
 
     //private ScrollRect scrollRect;
     private Text detailNameText, detailContentText;
-    private bool isActive = false;
+    private bool isActive = true;
     private bool detailActive = false;
 
     private void Awake()
@@ -45,6 +45,8 @@ public class CharacterUI : MonoBehaviour
         if (isActive)
         {
             isActive = false;
+
+            OffDetailUI();
 
             PhoneUI.inst.ShowMain();
             gameObject.SetActive(isActive);

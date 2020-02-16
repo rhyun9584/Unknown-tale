@@ -7,32 +7,26 @@ public class MoveLocationButton : MonoBehaviour
     [SerializeField]
     private LocationCode nextLocation;
 
+    /// <summary>
+    /// 인게임에서 장소 이동 버튼(ex 문)
+    /// </summary>
     public void MoveLocation()
     {
+        State currentState = GameManager.inst.ReturnState();
         // 조사 상태에서만 이동 가능
-        if(GameManager.inst.ReturnState() == State.Search)
+        if (currentState == State.ClueSearch || currentState == State.NpcSearch)
         {
             GameManager.inst.ChangeLocation(nextLocation);
         }
     }
 
-    public void MoveLocationInMap()
+    /// <summary>
+    /// Map UI 내 Location Button의 동작을 담당하는 함수
+    /// simple UI를 켬
+    /// </summary>
+    public void OpenSimpleUI()
     {
-        // Debug.Log(GameManager.inst.ReturnState() + " " + LocationManager.inst.locationScript[(int)nextLocation].GetActive()
-        //     + " " + LocationManager.inst.location[(int)nextLocation].GetComponent<LocationBase>().GetActive());
-        if(GameManager.inst.ReturnLocation() == nextLocation) // current Location == next Location
-        {
-            Debug.Log(nextLocation.ToString() + " is here");
-        }
-        else if(GameManager.inst.ReturnState() == State.Map && LocationManager.inst.locationScript[(int)nextLocation].GetActive() == true)
-        {
-            GameManager.inst.ChangeLocation(nextLocation);
-            //MapUI.inst.CloseMapUI();
-            PhoneUI.inst.ClosePhoneUI();
-        }
-        else // next Location is not activated 한 번도 방문한 적 없는 장소로 이동 시에
-        {
-            Debug.Log(nextLocation.ToString() + " is not activated");
-        }
+        MapUI.inst.OnSimpleUI(nextLocation);
     }
+
 }
