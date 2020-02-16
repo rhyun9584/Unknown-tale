@@ -17,10 +17,7 @@ public class PhoneUI : MonoBehaviour
     private void Awake()
     {
         inst = this;
-    }
 
-    private void Start()
-    {
         isActive = true;
 
         ClueUI.inst.CloseClueUI();

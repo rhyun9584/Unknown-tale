@@ -6,22 +6,24 @@ public class NPCManager : MonoBehaviour
 {
     public static NPCManager inst;
 
-    public static int npcCount = System.Enum.GetValues(typeof(NPCCode)).Length;
+    public static int npcCount = 9;//System.Enum.GetValues(typeof(NPCCode)).Length;
 
     public GameObject[] characterButtons;
 
     // npc가 한 번이라도 대화를 진행한 적이 있는지
     [HideInInspector]
-    public bool[] npcActive = new bool[npcCount];
+    public bool[] npcActive;// = new bool[npcCount];
 
     private void Awake()
     {
         inst = this;
+        npcActive = new bool[npcCount];
     }
 
     void Start()
     {
-        for (int i = 0; i < npcCount; i++)
+        // dummy 뛰어넘고 4번부터
+        for (int i = 4; i < npcCount; i++)
         {
             npcActive[i] = false;
         }
@@ -35,7 +37,17 @@ public class NPCManager : MonoBehaviour
     /// <param name="npccode"></param>
     public void SetNpcActive(NPCCode npccode)
     {
-        CharacterButton characterButtonScript = characterButtons[(int)npccode].GetComponent<CharacterButton>();
+        int code;
+
+        if((int)npccode == 0)
+        {
+            code = (int)npccode;
+        }
+        else
+        {
+            code = (int)npccode - 3;
+        }
+        CharacterButton characterButtonScript = characterButtons[code].GetComponent<CharacterButton>();
         
         npcActive[(int)npccode] = true;
 

@@ -43,9 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ea1914dadc6af4bb5433deaf363689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues: []
-  obtainUI: {fileID: 1307889810572223751, guid: e5b1390ce8582b347bc3181c48fc028b,
-    type: 3}
-  obtainImage: {fileID: 0}
+  obtainUI: {fileID: 0}
   obtainScript: {fileID: 0}
   obtainPopUp: {fileID: 0}

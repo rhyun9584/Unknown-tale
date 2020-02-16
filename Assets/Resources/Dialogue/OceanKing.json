@@ -1,0 +1,38 @@
+﻿{
+	"MaxState": 2,
+	"Talks":
+	[
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "이 분이 용왕님인가? 어쩌다가 이렇게 되셨대.."
+      },
+      {
+        "portrait": "right",
+        "npccode": 5,
+        "face": 0,
+        "speaker": "문어대장",
+        "sentence": "용왕님에게서 떨어지지 못할까!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아으.. 네, 네."
+      }
+    ],
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 가까이 가면 또 문어가 뭐라고 하겠지. 일단은 다가가지 말자. )"
+      }
+    ]
+	]
+}

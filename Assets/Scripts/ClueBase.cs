@@ -7,15 +7,15 @@ public class ClueBase : MonoBehaviour
     public string clueName;
     public int clueNumber;
 
-    private bool isObtain = false;
+    //public bool isObtain = false;
 
     public void Obtain()
     {
-        if (!isObtain)
+        if (ClueManager.inst.isObtain[clueNumber] == false && GameManager.inst.ReturnState() == State.ClueSearch)
         {
             ClueManager.inst.ObtainClue(clueNumber, clueName);
-            
-            isObtain = true;
+
+            //ClueManager.inst.isObtain[clueNumber] = true;
         }
     }
 }
