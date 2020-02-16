@@ -1,15 +1,29 @@
-{
-	"MaxState": 1,
-	"Talks":
-	[
-		[
-			{
-				"portrait": "left",
-				"npccode" : 0,
-				"face": 0,
-				"speaker": "용왕",
-				"sentence": "용왕"
-			}
-		]
+﻿{
+	"MaxState": 2,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "혹시 연회 도중에 저를 본 기억이 있으신가요?"
+      },
+      {
+        "portrait": "right",
+        "npccode": 8,
+        "face": 0,
+        "speaker": "멸치 시종",
+        "sentence": "아뇨, 저는 시중을 드느라 정시닝 없어서.. 못본것 같네요."
+      }
+    ],[
+    {
+      "portrait": "left",
+      "npccode": 0,
+      "face": 0,
+      "speaker": "주인공",
+      "sentence": "( 여전히 일하느라 바빠보인다, 말걸지 말아야지. )"
+    }
+  ]
 	]
 }

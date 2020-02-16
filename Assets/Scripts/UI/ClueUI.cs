@@ -11,6 +11,7 @@ public class ClueUI : MonoBehaviour
     public GameObject[] clueSlots;
 
     private Text nameText, explainText;
+    private Image detailImageSprite;
 
     private bool isActive = true;
     private bool isDetail = false;
@@ -24,6 +25,7 @@ public class ClueUI : MonoBehaviour
     {
         nameText = detailName.GetComponent<Text>();
         explainText = detailExplain.GetComponent<Text>();
+        detailImageSprite = detailImage.GetComponent<Image>();
     }
 
     public void OpenClueUI()
@@ -62,6 +64,8 @@ public class ClueUI : MonoBehaviour
             isDetail = true;
 
             nameText.text = clueName;
+            explainText.text = ClueManager.inst.clueExplainTexts[clueNumber];
+            detailImageSprite.sprite = Resources.Load<Sprite>("UI/clue/" + clueNumber.ToString());
 
             detailUI.SetActive(isDetail);
         }

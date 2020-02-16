@@ -1,15 +1,38 @@
-{
-	"MaxState": 1,
+﻿{
+	"MaxState": 2,
 	"Talks":
 	[
-		[
-			{
-				"portrait": "left",
-				"npccode" : 0,
-				"face": 0,
-				"speaker": "용왕",
-				"sentence": "용왕"
-			}
-		]
+    [
+      {
+        "portrait": "right",
+        "npccode": 7,
+        "face": 0,
+        "speaker": "아귀 대신",
+        "sentence": "왜 또 뭐 물어볼거 있는가?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아, 아니에요"
+      }
+    ],
+    [
+      {
+        "portrait": "right",
+        "npccode": 7,
+        "face": 0,
+        "speaker": "아귀 대신",
+        "sentence": "왜 또 뭐 물어볼거 있는가?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아, 아니에요"
+      }
+    ]
 	]
 }

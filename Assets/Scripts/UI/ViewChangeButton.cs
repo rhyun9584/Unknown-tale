@@ -8,6 +8,11 @@ public class ViewChangeButton : MonoBehaviour
 
     public void ChangeView()
     {
-        LocationManager.inst.SetView(nextViewNum);
+        State currentState = GameManager.inst.ReturnState();
+
+        if(currentState == State.ClueSearch || currentState == State.NpcSearch)
+        {
+            LocationManager.inst.SetView(nextViewNum);
+        }
     }
 }
