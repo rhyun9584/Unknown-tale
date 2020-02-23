@@ -84,56 +84,56 @@
         "npccode": 2,
         "face": 0,
         "speaker": " ",
-        "sentence": "현재의 수사 방식은 위의 아이콘으로 표시 됩니다."
+        "sentence": "[Image:Search]현재의 수사 방식은 위의 아이콘으로 표시 됩니다."
       },
       {
         "portrait": "left",
         "npccode": 2,
         "face": 0,
         "speaker": " ",
-        "sentence": "현장 수사는 현장을 수사하여 증거물을 찾는 수사 방식입니다."
+        "sentence": "[Image:Clue Search]현장 수사는 현장을 수사하여 증거물을 찾는 수사 방식입니다."
       },
       {
         "portrait": "left",
         "npccode": 2,
         "face": 0,
         "speaker": " ",
-        "sentence": "배경에 보이는 수상한 부분을 확대하여 볼 수 있으며, 올바르게 증거를 찾았다면 증거물을 획득하게 됩니다."
+        "sentence": "[Image:Clue Search]배경에 보이는 수상한 부분을 확대하여 볼 수 있으며, 올바르게 증거를 찾았다면 증거물을 획득하게 됩니다."
       },
       {
         "portrait": "left",
         "npccode": 2,
         "face": 0,
         "speaker": " ",
-        "sentence": "탐문 수사는 인물들에게 질문을 걸거나 대화를 하며 여러 유용한 정보들을 얻는 수사 방식입니다."
+        "sentence": "[Image:Npc Search]탐문 수사는 인물들에게 질문을 걸거나 대화를 하며 여러 유용한 정보들을 얻는 수사 방식입니다."
       },
       {
         "portrait": "left",
         "npccode": 2,
         "face": 0,
         "speaker": " ",
-        "sentence": "배경에 있는 인물들에게 말을 걸어 대화를 진행할 수 있고, 대화 도중 얻게 된 증언은 자동으로 기록됩니다."
+        "sentence": "[Image:Npc Search]배경에 있는 인물들에게 말을 걸어 대화를 진행할 수 있고, 대화 도중 얻게 된 증언은 자동으로 기록됩니다."
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( 으, 끈적거려. )"
+        "sentence": "[Image:Mud Shoes]( 으, 끈적거려. )"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( 신발에 진흙이 잔뜩.. 그러고보니 비가 엄청 왔었지.. )"
+        "sentence": "[Image:Mud Shoes]( 신발에 진흙이 잔뜩.. 그러고보니 비가 엄청 왔었지.. )"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( ?! 그렇다면, 내 발자국이 바닥에 찍혔지 않았을까? )"
+        "sentence": "[Image:Mud Shoes]( ?! 그렇다면, 내 발자국이 바닥에 찍혔지 않았을까? )"
       },
       {
         "portrait": "left",

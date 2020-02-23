@@ -54,12 +54,15 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void OnDialogueImage()
+    public void OnDialogueImage(string imageFileName)
     {
+        //Debug.Log(imageFileName);
+        dialogueImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Dialogue/Image/" + imageFileName);
+
         if (!isImageActive)
         {
             isImageActive = true;
-
+            
             dialogueImage.SetActive(isImageActive);
         }
     }
@@ -95,8 +98,4 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void ChangeDialogueImage(string imageName)
-    {
-        dialogueImage.GetComponent<Image>().sprite = Resources.Load<Sprite>(imageName);
-    }
 }

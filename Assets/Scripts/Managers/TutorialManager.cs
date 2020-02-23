@@ -92,8 +92,25 @@ public class TutorialManager : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
+                if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))
+                {
+                    int lastFlagIndex = dialogue.talks[dialogueState][i].sentence.IndexOf("]"); // flag의 마지막의 index
+
+                    string imageFileName = dialogue.talks[dialogueState][i].sentence.Substring(7, lastFlagIndex - 7);
+                    DialogueUI.inst.OnDialogueImage(imageFileName);
+
+                    dialogue.talks[dialogueState][i].sentence = dialogue.talks[dialogueState][i].sentence.Substring(lastFlagIndex + 1);
+                }
+                else
+                {
+                    DialogueUI.inst.OffDialogueImage();
+                }
+
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
+                
+                /*
                 if (checkClueObtain[0])
                 {
                     if (i == 11)
@@ -125,6 +142,8 @@ public class TutorialManager : MonoBehaviour
                 else if (checkClueObtain[1] != checkClueObtain[2])
                     if (i == 6)
                         NPCManager.npcActive[7] = true;
+                        
+    */
                 next = false;
             }
             else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
