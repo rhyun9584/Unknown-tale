@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI inst;
-    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait;
+
+    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage;
 
     private Text nameText, sentenceText;
     private Image leftPortraitImage, rightPortraitImage;
 
     private bool isActive = true;
+    private bool isImageActive = true;
 
     void Awake()
     {
@@ -24,17 +26,8 @@ public class DialogueUI : MonoBehaviour
         rightPortraitImage = rightPortrait.GetComponent<Image>();
         
         OffDialogue();
+        OffDialogueImage();
     }
-
-    /// <summary>
-    /// dialogue UI ON/OFF
-    /// </summary>
-//    public void OnOffDialogue()
-//    {
-//        isActive = !isActive;
-//        dialogueName.SetActive(isActive);
-//        dialogueSentence.SetActive(isActive);
-//    }
 
     public void OnDialogue()
     {
@@ -61,6 +54,26 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
+    public void OnDialogueImage()
+    {
+        if (!isImageActive)
+        {
+            isImageActive = true;
+
+            dialogueImage.SetActive(isImageActive);
+        }
+    }
+
+    public void OffDialogueImage()
+    {
+        if (isImageActive)
+        {
+            isImageActive = false;
+
+            dialogueImage.SetActive(isImageActive);
+        }
+    }
+
     /// <summary>
     /// change dialogue UI name, text
     /// </summary>
@@ -80,5 +93,10 @@ public class DialogueUI : MonoBehaviour
         {
             rightPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString());
         }
+    }
+
+    public void ChangeDialogueImage(string imageName)
+    {
+        dialogueImage.GetComponent<Image>().sprite = Resources.Load<Sprite>(imageName);
     }
 }
