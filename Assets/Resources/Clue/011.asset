@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: 011
   m_EditorClassIdentifier: 
   name: "\uC9C4\uD759\uC774 \uBB3B\uC740 \uC2E0\uBC1C"
-  explain:
-  - "\uBE44\uAC00 \uC628 \uB545\uC744 \uAC78\uC5B4 \uC9C4\uD759\uC774 \uBB3B\uC740
+  explain: "\uBE44\uAC00 \uC628 \uB545\uC744 \uAC78\uC5B4 \uC9C4\uD759\uC774 \uBB3B\uC740
     \uC2E0\uBC1C\uC774\uB2E4."
   phonePosition: 1
   obtainScript:

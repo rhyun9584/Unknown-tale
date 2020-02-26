@@ -46,3 +46,15 @@ MonoBehaviour:
   obtainUI: {fileID: 0}
   obtainScript: {fileID: 0}
   obtainPopUp: {fileID: 0}
+  obtainImage: {fileID: 0}
+  clue:
+  - {fileID: 11400000, guid: 57f8d84f6a129284dac9c803c865b7a4, type: 2}
+  - {fileID: 11400000, guid: 3e75c1c47e02b1c49861937e4b1c618a, type: 2}
+  - {fileID: 11400000, guid: 6bce1692794925947a7d9738eb2868a6, type: 2}
+  - {fileID: 11400000, guid: 509e35513b27e9e47bb5e482a401efd1, type: 2}
+  isObtain: 00000000
+  clueExplainTexts:
+  - 
+  - 
+  - 
+  - 
