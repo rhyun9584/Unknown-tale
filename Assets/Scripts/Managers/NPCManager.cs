@@ -6,7 +6,7 @@ public class NPCManager : MonoBehaviour
 {
     public static NPCManager inst;
 
-    public static int npcCount = 9;//System.Enum.GetValues(typeof(NPCCode)).Length;
+    public static int npcCount = System.Enum.GetValues(typeof(NPCCode)).Length;
 
     public GameObject[] characterButtons;
 

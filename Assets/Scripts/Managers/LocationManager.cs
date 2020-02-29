@@ -6,7 +6,7 @@ public class LocationManager : MonoBehaviour
 {
     public static LocationManager inst;
 
-    public static int locationCount = 1; //System.Enum.GetValues(typeof(LocationCode)).Length;
+    public static int locationCount = System.Enum.GetValues(typeof(LocationCode)).Length;
 
     [Tooltip("LocationCode 순서대로 Scene에서 매칭")]
     public GameObject[] location;
