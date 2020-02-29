@@ -11,7 +11,7 @@ public class ClueBase : MonoBehaviour
     {
         if (ClueManager.inst.isObtain[clueData.phonePosition] == false && GameManager.inst.ReturnState() == State.ClueSearch)
         {
-            ClueManager.inst.ObtainClue(clueData.phonePosition, clueData.code);
+            ClueManager.inst.ObtainClue(clueData);
 
             //ClueManager.inst.isObtain[clueNumber] = true;
         }

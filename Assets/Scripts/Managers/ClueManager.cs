@@ -17,8 +17,6 @@ public class ClueManager : MonoBehaviour
     //clue 획득 시 뜨는 획득 스크립트
     private string[,] obtainSciptContent = new string[clueCount, 3];
 
-    private int clueNum;
-
     private void Awake()
     {
         inst = this;
@@ -62,20 +60,20 @@ public class ClueManager : MonoBehaviour
     /// 2. 획득하는 화면 표시
     /// </summary>
     /// <param name="Clue"></param>
-    public void ObtainClue(int clueNumber, string clueCode)
+    public void ObtainClue(Clue clue)
     {
-        ClueUI.inst.clueSlots[clueNumber].GetComponent<ClueSlot>().OpenButton(clueCode);
-
-        clueNum = clueNumber; // OpenObtainUI에 clue number 정보를 넘기기 위한 값
-        StartCoroutine(OpenObtainUI());
+        ClueUI.inst.clueSlots[clue.phonePosition].GetComponent<ClueSlot>().OpenButton(clue.code);
+        
+        StartCoroutine(OpenObtainUI(clue));
     }
     
-    IEnumerator OpenObtainUI()
+    IEnumerator OpenObtainUI(Clue clue)
     {
         bool next = true;
 
         obtainUI.SetActive(true);
-        obtainImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/clue/obtain" + clueNum.ToString());
+        obtainImage.GetComponent<Image>().sprite = clue.clueImage;
+        //나중에 획득 이미지도 스크립터블로 관리
 
         for (int i = 0; i < 3;)
         {
@@ -84,7 +82,7 @@ public class ClueManager : MonoBehaviour
                 switch (i)
                 {
                     case 1:
-                        obtainScript.GetComponentInChildren<Text>().text = obtainSciptContent[clueNum, 0]; 
+                        obtainScript.GetComponentInChildren<Text>().text = obtainSciptContent[clue.phonePosition, 0]; 
                         /*
                         여러개의 스크립트도 띄울수 있도록 수정 필요 &&&&&&
                         */
@@ -106,7 +104,7 @@ public class ClueManager : MonoBehaviour
             yield return null;
         }
 
-        isObtain[clueNum] = true;
+        isObtain[clue.phonePosition] = true;
 
         obtainUI.SetActive(false);
         obtainScript.SetActive(false);

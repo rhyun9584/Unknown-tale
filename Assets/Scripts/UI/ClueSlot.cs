@@ -22,13 +22,10 @@ public class ClueSlot : MonoBehaviour
     /// </summary>
     public void OpenButton(string Code)
     {
-        // 임시로 컬러 변경으로 활성화 표현, 이후 이미지 교체로 변경
-        clueImage.sprite = Resources.Load<Sprite>("UI/clue/" + clueNumber.ToString());
         Debug.Log("clue" + clueNumber + "open");
-        /*
-         위의 것도 스크립터블 오브젝트로 담기게 변경
-        */
         clue = Resources.Load<Clue>("Clue/" + Code);
+
+        clueImage.sprite = clue.clueImage;
 
         isObtain = true;
     }

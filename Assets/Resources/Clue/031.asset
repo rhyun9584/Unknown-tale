@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d919bba0457054d86d4d2e51067f0f, type: 3}
   m_Name: 031
   m_EditorClassIdentifier: 
+  code: 031
   name: "\uC2DC\uCCB4 \uADFC\uCC98 \uBC14\uB2E5"
   explain: "\uC6A9\uC655\uC758 \uC2DC\uCCB4 \uC8FC\uBCC0 \uBC14\uB2E5\uC73C\uB85C
     \uC544\uBB34\uB7F0 \uD754\uC801 \uC5C6\uC774 \uAE54\uB054\uD558\uB2E4."

@@ -65,8 +65,7 @@ public class ClueUI : MonoBehaviour
 
             nameText.text = clue.name;
             explainText.text = clue.explain;
-            detailImageSprite.sprite = Resources.Load<Sprite>("UI/clue/" + clue.phonePosition.ToString());
-            // 위 역시 스크립터블 오브젝트에 담기게 수정
+            detailImageSprite.sprite = clue.clueImage;
 
             detailUI.SetActive(isDetail);
         }

@@ -15,4 +15,6 @@ public class Clue : ScriptableObject
     [TextArea]
     public string[] obtainScript;
 
+    public Sprite clueImage;
+
 }
