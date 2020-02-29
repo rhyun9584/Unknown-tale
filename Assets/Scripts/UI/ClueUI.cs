@@ -57,15 +57,15 @@ public class ClueUI : MonoBehaviour
 
     }
 
-    public void OpenDetailUI(int clueNumber, string clueName)
+    public void OpenDetailUI(Clue clue)
     {
         if (!isDetail)
         {
             isDetail = true;
 
-            nameText.text = clueName;
-            explainText.text = ClueManager.inst.clueExplainTexts[clueNumber];
-            detailImageSprite.sprite = Resources.Load<Sprite>("UI/clue/" + clueNumber.ToString());
+            nameText.text = clue.name;
+            explainText.text = clue.explain;
+            detailImageSprite.sprite = clue.clueImage;
 
             detailUI.SetActive(isDetail);
         }

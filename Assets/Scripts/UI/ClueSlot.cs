@@ -7,9 +7,10 @@ public class ClueSlot : MonoBehaviour
 {
     public int clueNumber;
     
-    private string clueName;
     private Image clueImage;
     private bool isObtain = false;
+
+    private Clue clue;
 
     private void Awake()
     {
@@ -19,12 +20,12 @@ public class ClueSlot : MonoBehaviour
     /// <summary>
     /// 증거 획득시 버튼 활성화
     /// </summary>
-    public void OpenButton(string name)
+    public void OpenButton(string Code)
     {
-        // 임시로 컬러 변경으로 활성화 표현, 이후 이미지 교체로 변경
-        clueImage.sprite = Resources.Load<Sprite>("UI/clue/" + clueNumber.ToString());
+        Debug.Log("clue" + clueNumber + "open");
+        clue = Resources.Load<Clue>("Clue/" + Code);
 
-        clueName = name;
+        clueImage.sprite = clue.clueImage;
 
         isObtain = true;
     }
@@ -33,7 +34,7 @@ public class ClueSlot : MonoBehaviour
     {
         if (isObtain)
         {
-            ClueUI.inst.OpenDetailUI(clueNumber, clueName);
+            ClueUI.inst.OpenDetailUI(clue);
         }
     }
 }

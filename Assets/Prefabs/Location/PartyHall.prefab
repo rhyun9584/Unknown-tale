@@ -84,8 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f233cdb6706252a4f8d93c06132d9eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueName: Clear Floor
-  clueNumber: 3
+  clueData: {fileID: 11400000, guid: 509e35513b27e9e47bb5e482a401efd1, type: 2}
 --- !u!222 &162579307975924105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1022,8 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f233cdb6706252a4f8d93c06132d9eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueName: Foot Print
-  clueNumber: 2
+  clueData: {fileID: 11400000, guid: 6bce1692794925947a7d9738eb2868a6, type: 2}
 --- !u!222 &3177677312957847696
 CanvasRenderer:
   m_ObjectHideFlags: 0

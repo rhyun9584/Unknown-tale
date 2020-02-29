@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d919bba0457054d86d4d2e51067f0f, type: 3}
+  m_Name: 031
+  m_EditorClassIdentifier: 
+  code: 031
+  name: "\uC2DC\uCCB4 \uADFC\uCC98 \uBC14\uB2E5"
+  explain: "\uC6A9\uC655\uC758 \uC2DC\uCCB4 \uC8FC\uBCC0 \uBC14\uB2E5\uC73C\uB85C
+    \uC544\uBB34\uB7F0 \uD754\uC801 \uC5C6\uC774 \uAE54\uB054\uD558\uB2E4."
+  phonePosition: 3
+  obtainScript:
+  - "( \uC5C6\uC9C0! \uC774\uAC83\uB3C4 \uC5B4\uC11C \uCC0D\uC5B4\uB193\uC544\uC57C\uACA0\uB2E4.
+    )"
