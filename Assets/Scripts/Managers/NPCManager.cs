@@ -37,17 +37,7 @@ public class NPCManager : MonoBehaviour
     /// <param name="npccode"></param>
     public void SetNpcActive(NPCCode npccode)
     {
-        int code;
-
-        if((int)npccode == 0)
-        {
-            code = (int)npccode;
-        }
-        else
-        {
-            code = (int)npccode - 3;
-        }
-        CharacterButton characterButtonScript = characterButtons[code].GetComponent<CharacterButton>();
+        CharacterButton characterButtonScript = characterButtons[(int)npccode].GetComponent<CharacterButton>();
         
         npcActive[(int)npccode] = true;
 

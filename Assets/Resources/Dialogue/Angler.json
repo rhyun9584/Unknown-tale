@@ -5,7 +5,7 @@
     [
       {
         "portrait": "right",
-        "npccode": 7,
+        "npccode": 4,
         "face": 0,
         "speaker": "아귀 대신",
         "sentence": "왜 또 뭐 물어볼거 있는가?"
@@ -21,7 +21,7 @@
     [
       {
         "portrait": "right",
-        "npccode": 7,
+        "npccode": 4,
         "face": 0,
         "speaker": "아귀 대신",
         "sentence": "왜 또 뭐 물어볼거 있는가?"

@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ChangeLocation(LocationCode.LOCATION1);
+        ChangeLocation(LocationCode.PartyHall);
     }
 
     /// <summary>

@@ -11,14 +11,14 @@
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "' ㅈ '키를 눌러 탐문 수사로 수사 방식을 변경하세요."
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "앞에 보이는 아귀 대신에게 말을 걸어 보세요."
@@ -32,7 +32,7 @@
       },
       {
         "portrait": "right",
-        "npccode": 7,
+        "npccode": 4,
         "face": 0,
         "speaker": "아귀 대신",
         "sentence": "내가 눈이 잘 안보이긴 하지만- 확실히 본 기억은 없네. "
@@ -46,35 +46,35 @@
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "아귀 대신을(를) 기록했습니다."
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "증언을 기록했습니다."
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "인물과 대화를 하거나, 그 인물에 대한 정보를 얻으면 해당 인물이 핸드폰에 자동으로 기록됩니다."
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "핸드폰을 열어 확인해봅시다, 위의 아이콘을 눌러주세요."
       },
       {
         "portrait": "left",
-        "npccode": 2,
+        "npccode": -1,
         "face": 0,
         "speaker": " ",
         "sentence": "핸드폰에 저장된 인물에 대한 정보는 연락처에 들어가 확인 가능합니다."

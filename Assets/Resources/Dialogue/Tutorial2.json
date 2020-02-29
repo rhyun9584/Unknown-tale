@@ -4,21 +4,21 @@
   [
     {
       "portrait": "left",
-      "npccode": 2,
+      "npccode": -1,
       "face": 0,
       "speaker": " ",
       "sentence": "수사 중 획득한 증거나 증언은 핸드폰에 자동으로 저장됩니다."
     },
     {
       "portrait": "left",
-      "npccode": 2,
+      "npccode": -1,
       "face": 0,
       "speaker": " ",
       "sentence": "핸드폰을 열어 확인해 봅시다, 위의 아이콘을 눌러주세요."
     },
     {
       "portrait": "left",
-      "npccode": 2,
+      "npccode": -1,
       "face": 0,
       "speaker": " ",
       "sentence": "[Image:Foot Print]핸드폰에 저장된 증거는 앨범에 들어가 확인 가능합니다."
@@ -32,7 +32,7 @@
     },
     {
       "portrait": "left",
-      "npccode": 2,
+      "npccode": -1,
       "face": 0,
       "speaker": " ",
       "sentence": "용왕 근처의 바닥을 확인해 보세요."
