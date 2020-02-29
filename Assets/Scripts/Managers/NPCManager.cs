@@ -8,10 +8,8 @@ public class NPCManager : MonoBehaviour
 
     public static int npcCount = System.Enum.GetValues(typeof(NPCCode)).Length;
 
-    public GameObject[] characterButtons;
-
     // npc가 한 번이라도 대화를 진행한 적이 있는지
-    [HideInInspector]
+    [HideInInspector] 
     public bool[] npcActive;// = new bool[npcCount];
 
     private void Awake()
@@ -28,20 +26,17 @@ public class NPCManager : MonoBehaviour
             npcActive[i] = false;
         }
 
-        SetNpcActive(NPCCode.MAIN); // 주인공은 바로 active
+        // 주인공은 바로 active
+        SetNpcActive(NPCCode.MAIN); 
+        CharacterUI.inst.characterSlots[0].GetComponent<CharacterButton>().OpenButton("주인공");
     }
 
     /// <summary>
-    /// npcActive를 true로 변경하고 Phone 내부 character UI의 button을 활성화 시킴
+    /// npcActive를 true로 변경
     /// </summary>
     /// <param name="npccode"></param>
     public void SetNpcActive(NPCCode npccode)
     {
-        CharacterButton characterButtonScript = characterButtons[(int)npccode].GetComponent<CharacterButton>();
-        
         npcActive[(int)npccode] = true;
-
-        characterButtonScript.OpenButton();
     }
-
 }

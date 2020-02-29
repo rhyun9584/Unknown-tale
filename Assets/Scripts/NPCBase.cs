@@ -6,20 +6,23 @@ using UnityEngine.EventSystems;
 
 public class NPCBase : MonoBehaviour
 {
-    [SerializeField]
-    private NPCCode npccode;
-    [SerializeField]
-    private string npcname;
+    public Npc npcData;
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;
+
+    void Awake()
+    {
+        npcData = Resources.Load<Npc>("NPC/" + ((int)GameManager.inst.ReturnLocation()).ToString() + "_" + this.gameObject.name);
+    }
 
     void Start()
     {
         //LoadDialogue.LoadDialogueData(npcname, npccode);
         //dialogue = LoadDialogue.dialogues[(int)npccode];
-        dialogue = LoadDialogue.LoadDialogueData(npcname);
+        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.npcCode).ToString());
         dialogueState = 0;
+
     }
 
     public void OpenDialog()
@@ -86,7 +89,10 @@ public class NPCBase : MonoBehaviour
 
         if (dialogueState == 0)
         {
-            NPCManager.inst.SetNpcActive(npccode);
+            NPCManager.inst.SetNpcActive(npcData.npcCode);
+            
+            //Phone 내부 character UI의 button을 활성화 시킴
+            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData.npcName);
         }
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;

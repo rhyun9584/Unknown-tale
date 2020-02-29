@@ -878,8 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 3
-  npcname: OceanSon
+  npcData: {fileID: 0}
 --- !u!222 &163705557279512064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1166,8 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 2
-  npcname: Octopus
+  npcData: {fileID: 0}
 --- !u!222 &7051199921173463554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1453,8 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 5
-  npcname: Anchovy
+  npcData: {fileID: 0}
 --- !u!222 &613053485809896151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1824,8 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 1
-  npcname: OceanKing
+  npcData: {fileID: 0}
 --- !u!222 &6265969752156725440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1966,7 +1962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3195edf6fb8a1744d9771eab3ee38c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationCode: 2
+  locationCode: 0
   locationName: Party Hall
   viewCount: 2
 --- !u!1 &6265969752388687253
@@ -2241,8 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 4
-  npcname: Angler
+  npcData: {fileID: 0}
 --- !u!222 &2548450383914893933
 CanvasRenderer:
   m_ObjectHideFlags: 0

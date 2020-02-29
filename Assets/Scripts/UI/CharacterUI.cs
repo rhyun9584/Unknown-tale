@@ -9,6 +9,13 @@ public class CharacterUI : MonoBehaviour
 
     public GameObject detailView;
     public GameObject detailName, detailContent;
+    public GameObject[] characterSlots;
+
+    // npc에 대한 explain을 한 번에 관리
+    [TextArea]
+    public string[,] npcExplains;
+    [HideInInspector]
+    public int[] explainState;
 
     //private ScrollRect scrollRect;
     private Text detailNameText, detailContentText;
@@ -18,7 +25,9 @@ public class CharacterUI : MonoBehaviour
     private void Awake()
     {
         inst = this;
-        //scrollRect = GetComponent<ScrollRect>();
+
+        npcExplains = new string[NPCManager.npcCount, 10];
+        explainState = new int[NPCManager.npcCount];
     }
 
     private void Start()
@@ -55,7 +64,7 @@ public class CharacterUI : MonoBehaviour
         }
     }
 
-    public void OnDetailUI(NPCCode npccode)
+    public void OnDetailUI(NPCCode npccode, string npcname)
     {
         if (!detailActive)
         {
@@ -63,8 +72,13 @@ public class CharacterUI : MonoBehaviour
 
             detailView.SetActive(detailActive);
 
-            detailNameText.text = npccode.ToString();
-            // detailContentText.text
+            detailNameText.text = npcname;
+
+            detailContentText.text = "";
+            for (int i = 0; i < explainState[(int)npccode]; i++)
+            {
+                detailContentText.text = npcExplains[(int)npccode,i];
+            }
         }
     }
 
