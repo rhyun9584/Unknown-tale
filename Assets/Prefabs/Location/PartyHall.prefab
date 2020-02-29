@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 6
+  npccode: 3
   npcname: OceanSon
 --- !u!222 &163705557279512064
 CanvasRenderer:
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 5
+  npccode: 2
   npcname: Octopus
 --- !u!222 &7051199921173463554
 CanvasRenderer:
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 8
+  npccode: 5
   npcname: Anchovy
 --- !u!222 &613053485809896151
 CanvasRenderer:
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 4
+  npccode: 1
   npcname: OceanKing
 --- !u!222 &6265969752156725440
 CanvasRenderer:
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f11812d6bbd74f94e06b6831cdc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 7
+  npccode: 4
   npcname: Angler
 --- !u!222 &2548450383914893933
 CanvasRenderer:
