@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager inst;
 
     private LocationCode currentLocation;     // 인게임에서 현재 위치
-    public State currentState;
+    private State currentState;
 
     void Awake()
     {
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ChangeLocation(LocationCode.LOCATION1);
+        ChangeLocation(LocationCode.PartyHall);
     }
 
     /// <summary>

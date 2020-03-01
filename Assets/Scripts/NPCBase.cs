@@ -6,20 +6,23 @@ using UnityEngine.EventSystems;
 
 public class NPCBase : MonoBehaviour
 {
-    [SerializeField]
-    private NPCCode npccode;
-    [SerializeField]
-    private string npcname;
+    public Npc npcData;
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;
+
+    void Awake()
+    {
+        npcData = Resources.Load<Npc>("NPC/" + ((int)GameManager.inst.ReturnLocation()).ToString() + "_" + this.gameObject.name);
+    }
 
     void Start()
     {
         //LoadDialogue.LoadDialogueData(npcname, npccode);
         //dialogue = LoadDialogue.dialogues[(int)npccode];
-        dialogue = LoadDialogue.LoadDialogueData(npcname);
+        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.npcCode).ToString());
         dialogueState = 0;
+
     }
 
     public void OpenDialog()
@@ -52,6 +55,21 @@ public class NPCBase : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
+                if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))
+                {
+                    int lastFlagIndex = dialogue.talks[dialogueState][i].sentence.IndexOf("]"); // flag의 마지막의 index
+
+                    string imageFileName = dialogue.talks[dialogueState][i].sentence.Substring(7, lastFlagIndex - 7);
+                    DialogueUI.inst.OnDialogueImage(imageFileName);
+
+                    dialogue.talks[dialogueState][i].sentence = dialogue.talks[dialogueState][i].sentence.Substring(lastFlagIndex + 1);
+                }
+                else
+                {
+                    DialogueUI.inst.OffDialogueImage();
+                }
+
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
                 DialogueUI.inst.ChangeDialogueText(dialogue.talks[dialogueState][i].speaker, dialogue.talks[dialogueState][i].sentence);
                 next = false;
@@ -71,7 +89,10 @@ public class NPCBase : MonoBehaviour
 
         if (dialogueState == 0)
         {
-            NPCManager.inst.SetNpcActive(npccode);
+            NPCManager.inst.SetNpcActive(npcData.npcCode);
+            
+            //Phone 내부 character UI의 button을 활성화 시킴
+            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData.npcName);
         }
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;

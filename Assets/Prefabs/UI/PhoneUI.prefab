@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 7380185431407105462}
   - component: {fileID: 3667568669659564405}
   m_Layer: 5
-  m_Name: Slot (2)
+  m_Name: Slot 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4b9d33192944745affe01f045820c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 6
+  npccode: 3
 --- !u!222 &5090870600338117532
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 2193390541315891575}
   - component: {fileID: 2193390541315891574}
   m_Layer: 5
-  m_Name: Slot (1)
+  m_Name: Slot 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4b9d33192944745affe01f045820c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 5
+  npccode: 2
 --- !u!222 &2193390541315891572
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ GameObject:
   - component: {fileID: 2193390541492574000}
   - component: {fileID: 2193390541492573998}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: Slot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4b9d33192944745affe01f045820c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 4
+  npccode: 1
 --- !u!222 &2193390541492574001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2814,6 +2814,13 @@ MonoBehaviour:
   detailView: {fileID: 2193390542249504487}
   detailName: {fileID: 2193390541877570244}
   detailContent: {fileID: 2193390542503004884}
+  characterSlots:
+  - {fileID: 2193390543240516136}
+  - {fileID: 2193390541492574002}
+  - {fileID: 2193390541315891576}
+  - {fileID: 677657663441660978}
+  - {fileID: 6058620399072416504}
+  - {fileID: 5980851360337727317}
 --- !u!1 &2193390541892688271
 GameObject:
   m_ObjectHideFlags: 0
@@ -9110,7 +9117,7 @@ GameObject:
   - component: {fileID: 2621093987408726289}
   - component: {fileID: 2048220277932568340}
   m_Layer: 5
-  m_Name: Slot (4)
+  m_Name: Slot 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9149,7 +9156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4b9d33192944745affe01f045820c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 8
+  npccode: 5
 --- !u!222 &6353967618347354846
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9254,7 +9261,7 @@ GameObject:
   - component: {fileID: 1549551271680402586}
   - component: {fileID: 6551273197834876477}
   m_Layer: 5
-  m_Name: Slot (3)
+  m_Name: Slot 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9293,7 +9300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4b9d33192944745affe01f045820c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npccode: 7
+  npccode: 4
 --- !u!222 &775947695343567593
 CanvasRenderer:
   m_ObjectHideFlags: 0
