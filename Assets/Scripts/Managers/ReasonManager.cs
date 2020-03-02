@@ -13,6 +13,7 @@ public class ReasonManager : MonoBehaviour
 
     public Button choice0, choice1, test;
     public Image errorText;
+    public Sprite forText;
 
     private void Awake()
     {
@@ -38,8 +39,7 @@ public class ReasonManager : MonoBehaviour
             choice0.gameObject.SetActive(true);
             if (image == "")
             {
-                //choice0.image = 
-                //ui 브랜치와 머지후 핸드폰 갤러리 칸으로 대체
+                choice0.image.sprite = forText;
             }
             else
                 choice0.image.sprite = Resources.Load<Sprite>("UI/clue/" + image);
@@ -51,8 +51,7 @@ public class ReasonManager : MonoBehaviour
             choice1.gameObject.SetActive(true);
             if (image == "")
             {
-                //choice0.image = 
-                //ui 브랜치와 머지후 핸드폰 갤러리 칸으로 대체
+                choice0.image.sprite = forText; 
             }
             else
                 choice1.image.sprite = Resources.Load<Sprite>("UI/clue/" + image);
