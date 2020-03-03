@@ -20,7 +20,7 @@ public class NPCBase : MonoBehaviour
     {
         //LoadDialogue.LoadDialogueData(npcname, npccode);
         //dialogue = LoadDialogue.dialogues[(int)npccode];
-        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.npcCode).ToString());
+        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.locationCode).ToString() + "_" + ((int)npcData.npcCode).ToString());
         dialogueState = 0;
 
     }
