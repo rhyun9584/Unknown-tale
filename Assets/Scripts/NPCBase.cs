@@ -94,8 +94,18 @@ public class NPCBase : MonoBehaviour
             //Phone 내부 character UI의 button을 활성화 시킴
             CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData);
         }
+        for(int i = 0; i < npcData.npcExplains.Count; i++)
+        {
+            if(npcData.npcExplains[i].state == dialogueState)
+            {
+                CharacterUI.inst.AddExplain((int)npcData.npcCode, npcData.npcExplains[i].explain);
+                break;
+            }
+        }
         if (dialogueState < dialogue.maxState - 1)
+        {
             dialogueState++;
+        }
 
         DialogueUI.inst.OffDialogue();
         GameManager.inst.ChangeState(State.NpcSearch);

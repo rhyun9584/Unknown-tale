@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Ocean Son
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 3
   npcName: "\uC6A9\uC655 \uC544\uB4E4"
+  npcExplains:
+  - state: 0
+    explain: "\uD654\uAC00 \uB098\uC788\uB294 \uAC83 \uAC19\uB2E4. \uAC74\uB4E4\uBA74
+      \uD070 \uC77C \uB0A0 \uAC83 \uAC19\uB2E4."

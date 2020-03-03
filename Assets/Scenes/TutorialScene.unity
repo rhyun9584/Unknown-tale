@@ -1185,6 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCManager: {fileID: 512787545}
+  anglerData: {fileID: 11400000, guid: 2dfb8b9517aa4e3409bf075c6a512d0d, type: 2}
   footprint: {fileID: 577534749}
   clear: {fileID: 1154272494}
 --- !u!1 &1624193857 stripped
