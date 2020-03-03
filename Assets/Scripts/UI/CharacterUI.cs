@@ -8,7 +8,7 @@ public class CharacterUI : MonoBehaviour
     public static CharacterUI inst;
 
     public GameObject detailView;
-    public GameObject detailName, detailContent;
+    public GameObject detailName, detailContent, detailImage;
     public GameObject[] characterSlots;
 
     // npc에 대한 explain을 한 번에 관리
@@ -73,8 +73,9 @@ public class CharacterUI : MonoBehaviour
             detailView.SetActive(detailActive);
 
             detailNameText.text = npcname;
-
             detailContentText.text = "";
+            detailImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/npc icon/" + ((int)npccode).ToString()) as Sprite;
+
             for (int i = 0; i < explainState[(int)npccode]; i++)
             {
                 detailContentText.text = npcExplains[(int)npccode,i];
