@@ -1,0 +1,105 @@
+﻿{
+  "MaxState": 1,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "저는..!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "그 첫번째 이유는..!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "제 신발에는 진흙이 잔뜩 묻어있어요. 그 때문에 제가 발을 디딜때마다, 바닥에 발자국이 생기겠죠."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "[Image:Clue1]그렇기에 이 사진을 보면 제가 얼마 움직이지도, 용왕님 근처에 다가가지도 않았음을 증명할 수 있어요! "
+      },
+      {
+        "portrait": "right",
+        "npccode": 2,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "과연 그렇군.. 잠깐, 그 물체는 무엇이냐? 범인이 아니라는 것은 알겠으나, 여간 의심가는 것이 한두개가 아니다. 정체를 밝혀라!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 2,
+        "speaker": "주인공",
+        "sentence": "이것들을 보시죠."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "[Image:Clue1]제 발자국을 보시면 알 수 있듯이, 저는 정문으로 들어온 것도. 옆문으로 들어온 것도 아니에요. 갑자기 연회장에 나타났죠."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "일반적인 인간이라면 당연히 불가능한 일이지 않을까요?"
+      },
+      {
+        "portrait": "right",
+        "npccode": 2,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "그렇다면, 네놈은 일반적인 사람이 아니라는 소리냐?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 2,
+        "speaker": "주인공",
+        "sentence": "[Image:Clue2]네, 저는.. 하늘에서 내려온 사자 입니다!"
+      },
+      {
+        "portrait": "right",
+        "npccode": 1,
+        "face": 0,
+        "speaker": "용궁 무리들",
+        "sentence": "웅성 웅성 소란 소란"
+      },
+      {
+        "portrait": "right",
+        "npccode": 3,
+        "face": 1,
+        "speaker": "용왕 아들",
+        "sentence": "어쩐지 범상치 않더라니, 그렇다면 내 아비를 죽인 자가 누군지 찾아줄 수 있겠나?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "( 으음, 나도 누가 범인인지 궁금하기도 하고.. )"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "네, 도와드릴게요!"
+      }
+    ]
+  ]
+}

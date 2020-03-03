@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
-  m_Name: locationCode_npcNumber_npcName
+  m_Name: locationCode_npcName
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 0
   npcName: 
