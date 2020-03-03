@@ -12,17 +12,28 @@ public class CharacterButton : MonoBehaviour
     private Text characterName;
     private Image characterImage;
 
+    private void Awake()
+    {
+        characterName = GetComponentInChildren<Text>();
+        characterImage = transform.Find("Image").gameObject.GetComponentInChildren<Image>();
+    }
+
     /// <summary>
     /// 버튼의 image와 text를 해당 npc에 맞게 교체
     /// </summary>
-    public void OpenButton(string npcName)
+    public void OpenButton(Npc npcData)
     {
-        characterName = GetComponentInChildren<Text>();
-        characterImage = GetComponentInChildren<Image>();
+        npcname = npcData.npcName;
+        npccode = npcData.npcCode;
 
-        characterName.text = npcName;
-        npcname = npcName;
-        //characterImage.sprite = Resources.Load("/Detail/" + npccode.ToString() + ".png") as Sprite; // npc detail 내 image 파일이름 정해야함
+        characterName.text = npcname;
+        characterImage.sprite = Resources.Load<Sprite>("UI/npc icon/" + ((int)npccode).ToString()) as Sprite;
+    }
+
+    public void OpenButtonMain()
+    {
+        npcname = "주인공";
+        npccode = NPCCode.MAIN;
     }
 
     public void OpenDetailUI()

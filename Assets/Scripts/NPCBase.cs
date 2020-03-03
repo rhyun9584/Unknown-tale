@@ -92,7 +92,7 @@ public class NPCBase : MonoBehaviour
             NPCManager.inst.SetNpcActive(npcData.npcCode);
             
             //Phone 내부 character UI의 button을 활성화 시킴
-            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData.npcName);
+            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData);
         }
         if (dialogueState < dialogue.maxState - 1)
             dialogueState++;
