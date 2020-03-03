@@ -1,29 +1,38 @@
 ﻿{
 	"MaxState": 2,
-  "Talks": [
+	"Talks":
+	[
     [
+      {
+        "portrait": "right",
+        "npccode": 4,
+        "face": 0,
+        "speaker": "아귀 대신",
+        "sentence": "왜 또 뭐 물어볼거 있는가?"
+      },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "혹시 연회 도중에 저를 본 기억이 있으신가요?"
-      },
+        "sentence": "아, 아니에요"
+      }
+    ],
+    [
       {
         "portrait": "right",
-        "npccode": 5,
+        "npccode": 4,
         "face": 0,
-        "speaker": "멸치 시종",
-        "sentence": "아뇨, 저는 시중을 드느라 정시닝 없어서.. 못본것 같네요."
+        "speaker": "아귀 대신",
+        "sentence": "왜 또 뭐 물어볼거 있는가?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "아, 아니에요"
       }
-    ],[
-    {
-      "portrait": "left",
-      "npccode": 0,
-      "face": 0,
-      "speaker": "주인공",
-      "sentence": "( 여전히 일하느라 바빠보인다, 말걸지 말아야지. )"
-    }
-  ]
+    ]
 	]
 }
