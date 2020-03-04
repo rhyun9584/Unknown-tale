@@ -2513,7 +2513,6 @@ MonoBehaviour:
   - {fileID: 677657663441660978}
   - {fileID: 6058620399072416504}
   - {fileID: 5980851360337727317}
-  explainState: 
 --- !u!1 &2193390541892688271
 GameObject:
   m_ObjectHideFlags: 0
