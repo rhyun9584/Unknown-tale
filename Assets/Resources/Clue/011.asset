@@ -19,3 +19,4 @@ MonoBehaviour:
   phonePosition: 1
   obtainScript:
   - "( \uC73C, \uB048\uC801\uAC70\uB824. )"
+  clueImage: {fileID: 21300000, guid: eac115c248bccdc42800577468906c1e, type: 3}

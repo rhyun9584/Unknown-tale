@@ -119,16 +119,16 @@ public class ReasonManager : MonoBehaviour
                     continue;
                 }else if(i == 1)
                 {
-                    ButtonSetting(0, "0", "");
-                    ButtonSetting(1, "1", "");
+                    ButtonSetting(0, "1", "");
+                    ButtonSetting(1, "3", "");
                     yield return StartCoroutine(waitChoice());
                     next = true;
                     i++;
                     continue;
                 }else if(i == 5)
                 {
-                    ButtonSetting(0, "1", "");
-                    ButtonSetting(1, "3", "");
+                    ButtonSetting(0, "01", "");
+                    ButtonSetting(1, "1", "");
                     yield return StartCoroutine(waitChoice());
                     next = true;
                     i++;

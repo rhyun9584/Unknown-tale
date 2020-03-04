@@ -28,10 +28,10 @@
       },
       {
         "portrait": "left",
-        "npccode": 0,
+        "npccode": 2,
         "face": 0,
-        "speaker": "주인공",
-        "sentence": "아니요. 조금만 더 시간을 주세요."
+        "speaker": "문어 대장",
+        "sentence": "찾아 왔다면, 오른쪽의 추리 시작 버튼을 눌러 결백을 증명해라."
       }
 		]
 	]

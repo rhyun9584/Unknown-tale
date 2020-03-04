@@ -243,21 +243,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PartyHall
       objectReference: {fileID: 0}
-    - target: {fileID: 8091447610357576454, guid: 5b51c6965948c864fbeb56608c3cc1c5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -396
-      objectReference: {fileID: 0}
-    - target: {fileID: 8091447610357576454, guid: 5b51c6965948c864fbeb56608c3cc1c5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 121
-      objectReference: {fileID: 0}
-    - target: {fileID: 9044659946960841877, guid: 5b51c6965948c864fbeb56608c3cc1c5,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b51c6965948c864fbeb56608c3cc1c5, type: 3}
 --- !u!1 &214777652
@@ -905,10 +890,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -916,7 +901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uCD94\uB9AC \uC2DC\uC791"
 --- !u!222 &1095720787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1367,10 +1352,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220713714}
     m_Modifications:
+    - target: {fileID: 103091715941867561, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -57.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091715941867561, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 231.7
+      objectReference: {fileID: 0}
     - target: {fileID: 103091715941867566, guid: cc07004b121665d47b55c35bb133e7b1,
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717062774297, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c32e931bcb9d30340ba252e4f56742ec,
+        type: 3}
+    - target: {fileID: 103091717062774297, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717062774297, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717062774297, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717062774297, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 103091717062774303, guid: cc07004b121665d47b55c35bb133e7b1,
         type: 3}
@@ -1496,6 +1517,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717335760327, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -219
+      objectReference: {fileID: 0}
+    - target: {fileID: 103091717335760327, guid: cc07004b121665d47b55c35bb133e7b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -541.7
       objectReference: {fileID: 0}
     - target: {fileID: 2491048891425059804, guid: cc07004b121665d47b55c35bb133e7b1,
         type: 3}

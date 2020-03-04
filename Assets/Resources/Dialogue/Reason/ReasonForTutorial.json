@@ -14,7 +14,7 @@
         "npccode": 0,
         "face": 1,
         "speaker": "주인공",
-        "sentence": "그 첫번째 이유는..!"
+        "sentence": "그 첫번째 이유는..! ( 올바른 단서를 선택하세요. )"
       },
       {
         "portrait": "left",
@@ -42,7 +42,7 @@
         "npccode": 0,
         "face": 2,
         "speaker": "주인공",
-        "sentence": "이것들을 보시죠."
+        "sentence": "이것을 보시죠. ( 올바른 단서를 선택하세요. )"
       },
       {
         "portrait": "left",
