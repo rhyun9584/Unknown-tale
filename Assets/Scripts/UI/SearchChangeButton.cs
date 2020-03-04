@@ -21,13 +21,13 @@ public class SearchChangeButton : MonoBehaviour
         {
             GameManager.inst.ChangeState(State.ClueSearch);
             LocationManager.inst.SearchUIChange();
-            iconImage.sprite = Resources.Load<Sprite>("UI/icon/field investigation");
+            iconImage.sprite = Resources.Load<Sprite>("UI/icon/Legwork");
         }
         else if(currentState == State.ClueSearch)
         {
             GameManager.inst.ChangeState(State.NpcSearch);
             LocationManager.inst.SearchUIChange();
-            iconImage.sprite = Resources.Load<Sprite>("UI/icon/Legwork");
+            iconImage.sprite = Resources.Load<Sprite>("UI/icon/field investigation");
         }
     }
 }
