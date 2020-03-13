@@ -103,4 +103,11 @@ public class LocationManager : MonoBehaviour
 
         currentViewNum = viewNum;
     }
+
+    // 대화 진행 시 npc와 clue object를 전부 끔
+    public void OffObject()
+    {
+        currentNPC.SetActive(false);
+        currentClue.SetActive(false);
+    }
 }

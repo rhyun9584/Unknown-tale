@@ -29,9 +29,6 @@ public class NPCBase : MonoBehaviour
     {
         if(GameManager.inst.ReturnState() == State.NpcSearch)
         {
-            GameManager.inst.ChangeState(State.Talk);
-            DialogueUI.inst.OnDialogue();
-        
             StartCoroutine(Talking());
         }
     }

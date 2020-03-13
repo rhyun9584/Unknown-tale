@@ -78,6 +78,8 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator Talking()
     {
+        LocationManager.inst.OffObject();   // 대화 전 clue와 npc 오브젝트 전부 끔
+
         GameManager.inst.ChangeState(State.Talk);
         DialogueUI.inst.OnDialogue();
 
@@ -127,7 +129,6 @@ public class TutorialManager : MonoBehaviour
                     i++;
                 }
             }
-
             yield return null;
         }
 
@@ -137,5 +138,7 @@ public class TutorialManager : MonoBehaviour
         DialogueUI.inst.OffDialogue();
 
         GameManager.inst.ChangeState(State.ClueSearch);
+
+        LocationManager.inst.SearchUIChange();  // 다시 적절한 clue 혹은 npc 오브젝트 활성화
     }
 }

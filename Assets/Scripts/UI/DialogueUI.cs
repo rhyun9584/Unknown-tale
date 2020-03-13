@@ -7,7 +7,7 @@ public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI inst;
 
-    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage;
+    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage, background;
 
     private Text nameText, sentenceText;
     private Image leftPortraitImage, rightPortraitImage;
@@ -37,6 +37,7 @@ public class DialogueUI : MonoBehaviour
 
             dialogueName.SetActive(isActive);
             dialogueSentence.SetActive(isActive);
+            background.SetActive(isActive);
         }
     }
 
@@ -48,6 +49,7 @@ public class DialogueUI : MonoBehaviour
 
             dialogueName.SetActive(isActive);
             dialogueSentence.SetActive(isActive);
+            background.SetActive(isActive);
 
             leftPortrait.SetActive(isActive);
             rightPortrait.SetActive(isActive);
