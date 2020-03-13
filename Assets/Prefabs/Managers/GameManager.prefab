@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08e3156db05a464988269ddc3e7a715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clueCursor: {fileID: 2800000, guid: a57b5641ac303c0459c1c2d7ac34aaf3, type: 3}
+  npcCursor: {fileID: 2800000, guid: 8dbdfd383e145934985810dd8356daa1, type: 3}
