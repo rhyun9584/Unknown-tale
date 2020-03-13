@@ -27,10 +27,13 @@ public class NPCBase : MonoBehaviour
 
     public void OpenDialog()
     {
-        GameManager.inst.ChangeState(State.Talk);
-        DialogueUI.inst.OnDialogue();
+        if(GameManager.inst.ReturnState() == State.NpcSearch)
+        {
+            GameManager.inst.ChangeState(State.Talk);
+            DialogueUI.inst.OnDialogue();
         
-        StartCoroutine(Talking());
+            StartCoroutine(Talking());
+        }
     }
 
     IEnumerator Talking()
