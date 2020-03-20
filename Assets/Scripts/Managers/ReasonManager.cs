@@ -24,6 +24,8 @@ public class ReasonManager : MonoBehaviour
 
     public void ReasonFirst() //for tutorial
     {
+        GameManager.inst.ChangeState(State.Reasoning);
+
         scriptName = "Reason/ReasonForTutorial";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
