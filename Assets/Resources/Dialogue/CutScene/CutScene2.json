@@ -1,0 +1,32 @@
+﻿{
+  "MaxState": 1,
+  "Talks": [
+    [
+      {
+        "background": "건물",
+        "speaker": "주인공",
+        "sentence": "신기한 건물이네, 보통 이런곳에 뭐가 숨겨져있던데. 나 먼저 들어가본다!"
+      },
+	  {
+        "background": "건물",
+        "speaker": "반 친구 B",
+        "sentence": "잠깐만. 들어가면 걸리지 않을까..?"
+      },
+	  {
+        "background": "건물",
+        "speaker": "반 친구 C",
+        "sentence": "안듣고 가버렸네, 따라가자."
+      },
+	  {
+        "background": "건물2",
+        "speaker": "경비원",
+        "sentence": "거기 잠깐! 금지 구역에는 들어가면 안돼."
+      },
+	  {
+        "background": "건물2",
+        "speaker": "반 친구 일동",
+        "sentence": "으악, 네 죄송해요!"
+      }
+    ]
+  ]
+}
