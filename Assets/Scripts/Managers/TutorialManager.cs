@@ -41,6 +41,8 @@ public class TutorialManager : MonoBehaviour
         {
             TutorialThird();
         }
+        //else if (checkClueObtain[2])
+        
 
     }
 
