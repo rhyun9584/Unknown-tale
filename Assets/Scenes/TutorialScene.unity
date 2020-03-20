@@ -489,6 +489,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2485146539326195440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508602322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604514055008319510, guid: 5b51c6965948c864fbeb56608c3cc1c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 211336153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &512787545 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3742597148274983161, guid: 87ecd8ca4b9531e43994e362c82b34a0,
@@ -922,7 +928,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 211336153}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 508602322}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f233cdb6706252a4f8d93c06132d9eb4, type: 3}
@@ -1172,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCManager: {fileID: 512787545}
   anglerData: {fileID: 11400000, guid: 2dfb8b9517aa4e3409bf075c6a512d0d, type: 2}
+  secondClue: {fileID: 508602322}
   footprint: {fileID: 577534749}
   clear: {fileID: 1154272494}
 --- !u!1 &1624193857 stripped

@@ -11,6 +11,8 @@ public class TutorialManager : MonoBehaviour
 
     public Npc anglerData;
 
+    public GameObject secondClue;
+
     private string scriptName;
     private int dialogueState;
     private Dialogue dialogue;
@@ -59,6 +61,8 @@ public class TutorialManager : MonoBehaviour
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        secondClue.SetActive(true); // 두 번째 단서를 얻어야 할 시점에서만 active되도록 
     }
 
     public void TutorialThird()
