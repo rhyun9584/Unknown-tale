@@ -14,14 +14,14 @@
         "npccode": -1,
         "face": 0,
         "speaker": " ",
-        "sentence": "' ㅈ '키를 눌러 탐문 수사로 수사 방식을 변경하세요."
+        "sentence": "왼쪽의 버튼을 누르면 탐문 수사로 수사 방식을 변경됩니다."
       },
       {
         "portrait": "left",
         "npccode": -1,
         "face": 0,
         "speaker": " ",
-        "sentence": "앞에 보이는 아귀 대신에게 말을 걸어 보세요."
+        "sentence": "아귀 대신에게 말을 걸어 보세요."
       },
       {
         "portrait": "left",

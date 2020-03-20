@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager inst;
 
+    public Texture2D clueCursor, npcCursor;
+
     private LocationCode currentLocation;     // 인게임에서 현재 위치
     private State currentState;
 

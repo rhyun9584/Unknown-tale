@@ -20,7 +20,8 @@ public enum State
     Map,
     Phone,
     Character,  // Phone UI 내부 Character UI를 켠 state
-    Clue        // Phone UI 내부 Clue UI를 켠 state
+    Clue,       // Phone UI 내부 Clue UI를 켠 state
+    Reasoning   // 추리 시작 버튼을 눌러 시작한 state
 }
 
 public enum LocationCode

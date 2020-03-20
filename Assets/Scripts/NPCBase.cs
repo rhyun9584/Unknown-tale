@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class NPCBase : MonoBehaviour
+public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Npc npcData;
 
     private int dialogueState; // 마지막 대화 index
     private Dialogue dialogue;
+
+    private Vector2 hotSpot;
+    private Texture2D cursor;
 
     void Awake()
     {
@@ -20,17 +23,34 @@ public class NPCBase : MonoBehaviour
     {
         //LoadDialogue.LoadDialogueData(npcname, npccode);
         //dialogue = LoadDialogue.dialogues[(int)npccode];
-        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.npcCode).ToString());
+        dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.locationCode).ToString() + "_" + ((int)npcData.npcCode).ToString());
         dialogueState = 0;
 
+        cursor = GameManager.inst.npcCursor;
+
+        hotSpot.x = cursor.width / 2;
+        hotSpot.y = cursor.height / 2;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(GameManager.inst.ReturnState() == State.NpcSearch)
+        {
+            Cursor.SetCursor(cursor, hotSpot, CursorMode.Auto);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     public void OpenDialog()
     {
-        GameManager.inst.ChangeState(State.Talk);
-        DialogueUI.inst.OnDialogue();
-        
-        StartCoroutine(Talking());
+        if(GameManager.inst.ReturnState() == State.NpcSearch)
+        {
+            StartCoroutine(Talking());
+        }
     }
 
     IEnumerator Talking()
@@ -92,10 +112,20 @@ public class NPCBase : MonoBehaviour
             NPCManager.inst.SetNpcActive(npcData.npcCode);
             
             //Phone 내부 character UI의 button을 활성화 시킴
-            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData.npcName);
+            CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData);
+        }
+        for(int i = 0; i < npcData.npcExplains.Count; i++)
+        {
+            if(npcData.npcExplains[i].state == dialogueState)
+            {
+                CharacterUI.inst.AddExplain((int)npcData.npcCode, npcData.npcExplains[i].explain);
+                break;
+            }
         }
         if (dialogueState < dialogue.maxState - 1)
+        {
             dialogueState++;
+        }
 
         DialogueUI.inst.OffDialogue();
         GameManager.inst.ChangeState(State.NpcSearch);

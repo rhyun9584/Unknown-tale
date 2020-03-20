@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneUI : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PhoneUI : MonoBehaviour
     public GameObject phoneShowButton;
     public GameObject phone, main, background, blur;
 
-    private bool isActive = false;
+    private bool isActive = true;
     private bool isMainActive = false;
     private bool isBackgroundActive = false;
     private State beforeState;
@@ -19,12 +20,14 @@ public class PhoneUI : MonoBehaviour
         inst = this;
 
         isActive = true;
+    }
 
+    private void Start()
+    {
         ClueUI.inst.CloseClueUI();
         CharacterUI.inst.CloseCharacterUI();
         OpenClosePhoneUI();
     }
-
     /// <summary>
     /// Show Button에 할당하는 함수, open->close close->open
     /// </summary>
@@ -43,6 +46,8 @@ public class PhoneUI : MonoBehaviour
 
             phone.SetActive(isActive);
             blur.SetActive(isActive);
+
+            phoneShowButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/phone/phone on") as Sprite;
 
             GameManager.inst.ChangeState(State.Phone);
         }
@@ -77,6 +82,8 @@ public class PhoneUI : MonoBehaviour
                     ClueUI.inst.CloseClueUI();
                     break;
             }
+
+            phoneShowButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/phone/phone off") as Sprite;
 
             GameManager.inst.ChangeState(beforeState);
         }

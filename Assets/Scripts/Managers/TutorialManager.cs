@@ -9,6 +9,10 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager inst;
     public NPCManager NPCManager;
 
+    public Npc anglerData;
+
+    public GameObject secondClue;
+
     private string scriptName;
     private int dialogueState;
     private Dialogue dialogue;
@@ -57,6 +61,8 @@ public class TutorialManager : MonoBehaviour
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        secondClue.SetActive(true); // 두 번째 단서를 얻어야 할 시점에서만 active되도록 
     }
 
     public void TutorialThird()
@@ -67,10 +73,17 @@ public class TutorialManager : MonoBehaviour
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        // 튜토리얼 진행 중 강제적으로 아귀대신과 말하게되어 바로 active 시킴
+        NPCManager.inst.SetNpcActive(NPCCode.Angler);
+        CharacterUI.inst.characterSlots[4].GetComponent<CharacterButton>().OpenButton(anglerData);
+        CharacterUI.inst.AddExplain(4, "나를 본 적이 없다고 한다.");
     }
 
     IEnumerator Talking()
     {
+        LocationManager.inst.OffObject();   // 대화 전 clue와 npc 오브젝트 전부 끔
+
         GameManager.inst.ChangeState(State.Talk);
         DialogueUI.inst.OnDialogue();
 
@@ -120,7 +133,6 @@ public class TutorialManager : MonoBehaviour
                     i++;
                 }
             }
-
             yield return null;
         }
 
@@ -130,5 +142,7 @@ public class TutorialManager : MonoBehaviour
         DialogueUI.inst.OffDialogue();
 
         GameManager.inst.ChangeState(State.ClueSearch);
+
+        LocationManager.inst.SearchUIChange();  // 다시 적절한 clue 혹은 npc 오브젝트 활성화
     }
 }
