@@ -22,7 +22,7 @@ public class TitleUIManager : MonoBehaviour
     public void OnSelectButtonClicked()
     {
         mainCanvas.SetActive(false);
-        selectCanvas.SetActive(true); 
+        selectCanvas.SetActive(true);
     }
 
     //설정 버튼
@@ -56,6 +56,18 @@ public class TitleUIManager : MonoBehaviour
     public void onStoryBackButtonClicked(int a)
     {
         storyCanvas[a].SetActive(false);
+    }
+
+    //임시 별주부전 시작 버튼
+    public void onGameStartButton()
+    {
+        SceneManager.LoadScene("TutorialScene");
+    }
+
+    public void Start()
+    {
+        upperCanvas.SetActive(true);
+        mainCanvas.SetActive(true);
     }
 
     public void Update()
