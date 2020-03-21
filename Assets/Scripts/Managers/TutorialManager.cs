@@ -19,7 +19,7 @@ public class TutorialManager : MonoBehaviour
     public ClueBase footprint;
     public ClueBase clear;
 
-    private bool[] checkClueObtain = {true, true, true, true, true};
+    private bool[] checkTrigger = {false, false, false, false};
 
     private void Awake()
     {
@@ -33,15 +33,18 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        if (ClueManager.inst.isObtain[2] && checkClueObtain[0]) // 2 -> foot print
+        if (ClueManager.inst.isObtain[2] && !checkTrigger[0]) // 2 -> foot print
         {
             TutorialSecond();
         }
-        else if (ClueManager.inst.isObtain[3] && checkClueObtain[1]) // 3 -> clean floor 
+        else if (ClueManager.inst.isObtain[3] && !checkTrigger[1]) // 3 -> clean floor 
         {
             TutorialThird();
         }
-        //else if (checkClueObtain[2])
+        else if (NPCManager.inst.npcActive[(int)NPCCode.Angler] && !checkTrigger[2] && GameManager.inst.ReturnState() == State.NpcSearch)
+        {
+            TutorialFourth();
+        }
         
 
     }
@@ -57,7 +60,7 @@ public class TutorialManager : MonoBehaviour
 
     public void TutorialSecond()
     {
-        checkClueObtain[0] = false;
+        checkTrigger[0] = true;
         scriptName = "Tutorial2";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
@@ -69,17 +72,28 @@ public class TutorialManager : MonoBehaviour
 
     public void TutorialThird()
     {
-        checkClueObtain[1] = false;
+        checkTrigger[1] = true;
         scriptName = "Tutorial3";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
 
         StartCoroutine(Talking());
 
+        /*
         // 튜토리얼 진행 중 강제적으로 아귀대신과 말하게되어 바로 active 시킴
         NPCManager.inst.SetNpcActive(NPCCode.Angler);
         CharacterUI.inst.characterSlots[4].GetComponent<CharacterButton>().OpenButton(anglerData);
         CharacterUI.inst.AddExplain(4, "나를 본 적이 없다고 한다.");
+        */
+    }
+    public void TutorialFourth()
+    {
+        checkTrigger[2] = true;
+        scriptName = "Tutorial4";
+        dialogue = LoadDialogue.LoadDialogueData(scriptName);
+        dialogueState = 0;
+
+        StartCoroutine(Talking());
     }
 
     IEnumerator Talking()
@@ -142,8 +156,12 @@ public class TutorialManager : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
-
-        GameManager.inst.ChangeState(State.ClueSearch);
+        if (!checkTrigger[1])
+            GameManager.inst.ChangeState(State.ClueSearch);
+        else if (!checkTrigger[2])
+            GameManager.inst.ChangeState(State.ClueSearch);
+        else
+            GameManager.inst.ChangeState(State.NpcSearch);
 
         LocationManager.inst.SearchUIChange();  // 다시 적절한 clue 혹은 npc 오브젝트 활성화
     }

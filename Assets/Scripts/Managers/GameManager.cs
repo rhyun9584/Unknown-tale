@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         if (GameManager.inst == null)
             GameManager.inst = this;
 
-        ChangeState(State.ClueSearch);
+        ChangeState(State.NpcSearch);
     }
 
     void Start()
