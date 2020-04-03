@@ -35,6 +35,8 @@ public class ClueUI : MonoBehaviour
             isActive = true;
 
             PhoneUI.inst.HideMain();
+            PhoneUI.inst.ChangeBackgroundImage("UI/phone/photo/background2");
+
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Clue);

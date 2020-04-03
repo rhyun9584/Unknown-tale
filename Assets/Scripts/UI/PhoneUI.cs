@@ -9,17 +9,21 @@ public class PhoneUI : MonoBehaviour
 
     public GameObject phoneShowButton;
     public GameObject phone, main, background, blur;
+    
+    private Image backgroundImage;
 
     private bool isActive = true;
     private bool isMainActive = false;
     private bool isBackgroundActive = false;
     private State beforeState;
 
+
     private void Awake()
     {
         inst = this;
 
         isActive = true;
+        backgroundImage = background.GetComponent<Image>();
     }
 
     private void Start()
@@ -89,12 +93,18 @@ public class PhoneUI : MonoBehaviour
         }
     }
 
+    public void ChangeBackgroundImage(string route)
+    {
+        backgroundImage.sprite = Resources.Load<Sprite>(route);
+    }
+
     public void ShowMain()
     {
         if (!isMainActive)
         {
             isMainActive = true;
-            
+            ChangeBackgroundImage("UI/phone/main/background");
+
             main.SetActive(isMainActive);
         }
     }
