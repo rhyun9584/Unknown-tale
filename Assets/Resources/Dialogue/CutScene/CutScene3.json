@@ -3,22 +3,30 @@
   "Talks": [
     [
       {
-        "background": "서고내부",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "오.. 서고인가보네. 어, 이 책은 뭐지?"
       },
 	  {
-        "background": "책이 펼쳐져있는 책상",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "..뭐야, 평범한 별주부전이잖아. 근데 왜 뒷장은 깨끗하지?"
       },
 	  {
-        "background": "서고내부2",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "? 무슨 소리가 났는데."
       },
 	  {
-        "background": "서고내부3",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "어, 어. 어??!"
       }
