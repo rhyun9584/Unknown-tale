@@ -10,12 +10,18 @@ public class TitleUIManager : MonoBehaviour
     public GameObject optionCanvas;
     public GameObject creditCanvas;
     public GameObject selectCanvas;
+    public GameObject table;
     public GameObject[] storyCanvas;
 
     //아무 키나 누르십시오
     public void OnPressAnyKey() 
     {
         upperCanvas.SetActive(false);
+    }
+
+    public void OnTableButtonClicked()
+    {
+        table.SetActive(true);
     }
 
     //이야기 선택 버튼
