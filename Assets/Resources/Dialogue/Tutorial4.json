@@ -1,0 +1,49 @@
+﻿{
+  "MaxState": 1,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": -1,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "아귀 대신을(를) 기록했습니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": -1,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "증언을 기록했습니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": -1,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "인물과 대화를 하거나, 그 인물에 대한 정보를 얻으면 해당 인물이 핸드폰에 자동으로 기록됩니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": -1,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "핸드폰에 저장된 인물에 대한 정보는 연락처에 들어가 확인 가능합니다."
+      },
+      {
+        "portrait": "left",
+        "npccode": -1,
+        "face": 0,
+        "speaker": " ",
+        "sentence": "핸드폰을 열어 확인해봅시다, 위의 아이콘을 눌러주세요."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 증언을 조금만 더 확보해보자. )"
+      }
+    ]
+  ]
+}

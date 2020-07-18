@@ -3,32 +3,44 @@
   "Talks": [
     [
       {
-        "background": "용궁내부",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "..뭐야, 무슨일이 일어난.. 어?"
       },
 	  {
-        "background": "용궁내부",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "여긴 어디야? 파티..라도 하고 있는 건가?"
       },
 	  {
-        "background": "용궁내부",
+        "portrait": "right",
+        "npccode": 1,
+        "face": 0,
         "speaker": "???",
         "sentence": "용왕님! 정신 차리십쇼 용왕님!"
       },
 	  {
-        "background": "용궁내부",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "깜짝이야, 용왕..?"
       },
 	  {
-        "background": "용궁내부",
+        "portrait": "right",
+        "npccode": 1,
+        "face": 0,
         "speaker": "???",
         "sentence": "저기 수상한 놈이 있다. 잡아라!"
       },
 	  {
-        "background": "용궁내부",
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
         "speaker": "주인공",
         "sentence": "놈? 나? 어, 어? "
       }
