@@ -9,6 +9,7 @@ public class MapUI : MonoBehaviour
 
     public GameObject mapUI;
     public GameObject exitButton, moveButton, detailButton;
+    public GameObject warningPage;
 
     // 상세히 창 이전의 정보 창 -> simple
     // 상세히 창                -> detail
@@ -42,10 +43,15 @@ public class MapUI : MonoBehaviour
         detailNameText = detailName.GetComponent<Text>();
         detailExplainText = detailExplain.GetComponent<Text>();
         detailImageSprite = detailImage.GetComponent<Image>();
+
+        warningPage.SetActive(false);
     }
 
     public void OpenMapUI()
     {
+        StartCoroutine(warning()); // MAP UI를 켜지않고 사용불가하단 팝업창 짧게 띄우기
+
+        /*
         if (!isActive)
         {
             isActive = true;
@@ -56,6 +62,18 @@ public class MapUI : MonoBehaviour
 
             GameManager.inst.ChangeState(State.Map);
         }
+        */
+    }
+
+    IEnumerator warning()
+    {
+        warningPage.SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+
+        warningPage.SetActive(false);
+
+        yield return null;
     }
 
     public void CloseMapUI()

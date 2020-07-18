@@ -37,6 +37,8 @@ public class CharacterUI : MonoBehaviour
             isActive = true;
 
             PhoneUI.inst.HideMain();
+            PhoneUI.inst.ChangeBackgroundImage("UI/phone/people1/background");
+  
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Character);
