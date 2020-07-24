@@ -66,6 +66,7 @@ public class DialogueUI : MonoBehaviour
             isImageActive = true;
             
             dialogueImage.SetActive(isImageActive);
+            dialogueImage.GetComponent<Image>().preserveAspect = true;
         }
     }
 
