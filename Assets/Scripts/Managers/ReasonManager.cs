@@ -9,9 +9,10 @@ public class ReasonManager : MonoBehaviour
     private Dialogue dialogue;
 
     public string scriptName;
+
     private int dialogueState;
 
-    public Button choice0, choice1, test;
+    public Button choice0, choice1;
     public Image errorText;
     public Sprite forText;
 
@@ -44,7 +45,10 @@ public class ReasonManager : MonoBehaviour
                 choice0.image.sprite = forText;
             }
             else
+            {
+                //choice0.image.preserveAspect = true;
                 choice0.image.sprite = Resources.Load<Sprite>("UI/clue/" + image);
+            }
             choice0.GetComponentInChildren<Text>().text = text;
         }
         else if (a == 1)
@@ -53,10 +57,13 @@ public class ReasonManager : MonoBehaviour
             choice1.gameObject.SetActive(true);
             if (image == "")
             {
-                choice0.image.sprite = forText; 
+                choice1.image.sprite = forText;
             }
             else
+            {
+                choice1.image.preserveAspect = true;
                 choice1.image.sprite = Resources.Load<Sprite>("UI/clue/" + image);
+            }
             choice1.GetComponentInChildren<Text>().text = text;
         }
     }
@@ -129,7 +136,7 @@ public class ReasonManager : MonoBehaviour
                     continue;
                 }else if(i == 5)
                 {
-                    ButtonSetting(0, "01", "");
+                    ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");
                     yield return StartCoroutine(waitChoice());
                     next = true;
@@ -160,9 +167,13 @@ public class ReasonManager : MonoBehaviour
             if (choice1.GetComponentInChildren<Choicebutton>().clk)
             {
                 errorText.gameObject.SetActive(true);
-                errorText.GetComponentInChildren<Text>().text = "잘못된 선택입니다!";
+                errorText.GetComponentInChildren<Text>().text = "이게 아니야, 다시 생각해보자.";
+                choice0.gameObject.SetActive(false);
+                choice1.gameObject.SetActive(false);
                 yield return new WaitForSeconds(1f);
                 errorText.gameObject.SetActive(false);
+                choice0.gameObject.SetActive(true);
+                choice1.gameObject.SetActive(true);
                 choice1.GetComponentInChildren<Choicebutton>().clk = false;
             }
             yield return new WaitForSeconds(0.01f);
