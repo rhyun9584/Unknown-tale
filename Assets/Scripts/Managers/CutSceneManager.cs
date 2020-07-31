@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class CutSceneManager : MonoBehaviour
 {
 
@@ -18,6 +20,8 @@ public class CutSceneManager : MonoBehaviour
     private bool check = false;
     private int sceneNum = 1;
 
+    public GameObject[] background;
+
 
     private void Awake()
     {
@@ -31,11 +35,16 @@ public class CutSceneManager : MonoBehaviour
 
     private void Update()
     {
+        if (sceneNum > 5)
+        {
+            SceneManager.LoadScene("TutorialScene");
+        }
         if (check)
         {
             CutSceneNum(++sceneNum);
             check = false;
         }
+        
     }
 
     public void CutSceneNum(int a)
@@ -44,6 +53,8 @@ public class CutSceneManager : MonoBehaviour
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
 
+        background[a-1].SetActive(true);
+        
         StartCoroutine(Talking());
     }
 
