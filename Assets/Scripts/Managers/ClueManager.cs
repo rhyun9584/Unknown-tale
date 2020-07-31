@@ -73,6 +73,7 @@ public class ClueManager : MonoBehaviour
 
         obtainUI.SetActive(true);
         obtainImage.GetComponent<Image>().sprite = clue.clueImage;
+        obtainImage.GetComponent<Image>().preserveAspect = true;
         //나중에 획득 이미지도 스크립터블로 관리
 
         for (int i = 0; i < 3;)
