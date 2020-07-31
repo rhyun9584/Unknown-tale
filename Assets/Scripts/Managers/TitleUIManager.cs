@@ -67,7 +67,7 @@ public class TitleUIManager : MonoBehaviour
     //임시 별주부전 시작 버튼
     public void onGameStartButton()
     {
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("CutScene");
     }
 
     public void Start()
