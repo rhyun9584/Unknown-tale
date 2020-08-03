@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Ocean King
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 1
   npcName: "\uC6A9\uC655"
+  npcExplains:
+  - state: 0
+    explain: "\uC774 \uC5F0\uD68C\uC7A5\uC774 \uC704\uCE58\uD55C \uC6A9\uAD81\uC758
+      \uC8FC\uC778\uC778\uB4EF \uD558\uB2E4."
+  - state: 0
+    explain: "\uB3C4\uCC29\uD588\uC744 \uB54C\uB294 \uC774\uBBF8 \uC8FD\uC5B4\uC788\uB358
+      \uAC83 \uAC19\uB2E4."
