@@ -4,14 +4,14 @@
     [
       {
         "portrait": "right",
-        "npccode": 1,
+        "npccode": -2,
         "face": 0,
         "speaker": "선생님",
         "sentence": "자 이제부터 1시간동안 자유시간! 자유롭게 둘러보고 여기 정문에서 모이자!"
       },
 	  {
 		"portrait": "left",
-        "npccode": 1,
+        "npccode": -3,
         "face": 0,
         "speaker": "반 아이들",
         "sentence": "네에!"
@@ -25,21 +25,21 @@
       },
 	  {
 		"portrait": "right",
-        "npccode": 1,
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 A",
         "sentence": "그러니까. 아 맞다, 아까 출입 금지 구역 있던데 한번 구경하러 가볼래?"
       },
       {
-		"portrait": "right",
-        "npccode": 1,
+		"portrait": "left",
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 B",
         "sentence": "금지 구역이잖아. 가면 안되는거 아니야?"
       },
 	  {
 		"portrait": "right",
-        "npccode": 1,
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 C",
         "sentence": "얘가 뭘 모르네. 하지 말라면 더 하고 싶은거 몰라?"
@@ -53,7 +53,7 @@
       },
 	  {
 		"portrait": "right",
-        "npccode": 1,
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 A",
         "sentence": "이쪽이야!"
