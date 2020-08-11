@@ -1,0 +1,47 @@
+﻿{
+	"MaxState": 2,
+  "Talks": 
+  [
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "저기 혹시, 연회 도중에 저를 본 기억이 있으신가요?"
+      },
+      {
+        "portrait": "right",
+        "npccode": 6,
+        "face": 0,
+        "speaker": "산왕",
+        "sentence": "난 누구에게도 관심을 가지지 않는다."
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "그게 무슨 의미죠?"
+	  },
+      {
+        "portrait": "right",
+        "npccode": 6,
+        "face": 0,
+        "speaker": "산왕",
+        "sentence": "있었는지 없었는지 모른다는 말이다."
+      }
+
+
+    ],
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "( 질문을 해봤자 별 도움이 안 될 것 같다. )"
+      }
+    ]
+  ]
+}
