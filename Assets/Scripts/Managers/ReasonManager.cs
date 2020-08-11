@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ReasonManager : MonoBehaviour
 {
@@ -158,6 +159,9 @@ public class ReasonManager : MonoBehaviour
         DialogueUI.inst.OffDialogue();
 
         GameManager.inst.ChangeState(State.ClueSearch);
+
+        // 튜토리얼 끝나고 바로 엔딩으로
+        SceneManager.LoadScene("EndingScene");
     }
 
     IEnumerator waitChoice() //only zero is correct
