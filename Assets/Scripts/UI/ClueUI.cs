@@ -68,6 +68,7 @@ public class ClueUI : MonoBehaviour
             nameText.text = clue.name;
             explainText.text = clue.explain;
             detailImageSprite.sprite = clue.clueImage;
+            detailImageSprite.preserveAspect = true;
 
             detailUI.SetActive(isDetail);
         }
