@@ -11,28 +11,28 @@
       },
 	  {
         "portrait": "right",
-        "npccode": 1,
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 B",
         "sentence": "잠깐만. 들어가면 걸리지 않을까..?"
       },
 	  {
-        "portrait": "right",
+        "portrait": "left",
         "npccode": 1,
         "face": 0,
         "speaker": "반 친구 C",
         "sentence": "안듣고 가버렸네, 따라가자."
       },
 	  {
-        "portrait": "left",
-        "npccode": 1,
+        "portrait": "right",
+        "npccode": -5,
         "face": 0,
         "speaker": "경비원",
         "sentence": "거기 잠깐! 금지 구역에는 들어가면 안돼."
       },
 	  {
-        "portrait": "right",
-        "npccode": 1,
+        "portrait": "left",
+        "npccode": -3,
         "face": 0,
         "speaker": "반 친구 일동",
         "sentence": "으악, 네 죄송해요!"
