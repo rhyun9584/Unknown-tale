@@ -13,6 +13,14 @@ public class SearchChangeButton : MonoBehaviour
         iconImage.sprite = Resources.Load<Sprite>("UI/icon/Legwork");
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeSearchState();
+        }
+    }
+
     public void ChangeSearchState()
     {
         State currentState = GameManager.inst.ReturnState();
