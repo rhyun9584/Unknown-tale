@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 0_Mountain King
   m_EditorClassIdentifier: 
   locationCode: 0
-  npcCode: 0
-  npcName: 
+  npcCode: 6
+  npcName: "\uC0B0\uC655"
   npcExplains: []
