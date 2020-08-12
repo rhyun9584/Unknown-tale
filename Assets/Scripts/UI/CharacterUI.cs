@@ -22,6 +22,16 @@ public class CharacterUI : MonoBehaviour
         inst = this;
 
         npcExplains = new string[NPCManager.npcCount];
+        characterSlots = new GameObject[NPCManager.npcCount];
+
+        // 주인공 slot
+        characterSlots[0] = transform.Find("Main").Find("MainChar Slot").gameObject;
+
+        // npc slot
+        for(int i = 1; i < NPCManager.npcCount; i++)
+        {
+            characterSlots[i] = transform.Find("Main").Find("Scroll View").Find("Viewport").Find("Content").Find("Slot " + i.ToString()).gameObject;
+        }
     }
 
     private void Start()

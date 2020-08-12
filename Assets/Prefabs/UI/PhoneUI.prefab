@@ -2716,14 +2716,7 @@ MonoBehaviour:
   detailName: {fileID: 2193390541877570244}
   detailContent: {fileID: 2193390542503004884}
   detailImage: {fileID: 2193390541525027613}
-  characterSlots:
-  - {fileID: 2193390543240516136}
-  - {fileID: 2193390541492574002}
-  - {fileID: 2193390541315891576}
-  - {fileID: 677657663441660978}
-  - {fileID: 6058620399072416504}
-  - {fileID: 5980851360337727317}
-  - {fileID: 6888026288923271787}
+  characterSlots: []
 --- !u!1 &2193390541892688271
 GameObject:
   m_ObjectHideFlags: 0
