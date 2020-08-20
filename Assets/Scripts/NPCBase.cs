@@ -14,6 +14,11 @@ public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Vector2 hotSpot;
     private Texture2D cursor;
 
+    protected NPCCode[] reasonNPC =
+        {NPCCode.Octopus};
+
+    public Button[] reasonStart;
+    
     void Awake()
     {
         npcData = Resources.Load<Npc>("NPC/" + ((int)GameManager.inst.ReturnLocation()).ToString() + "_" + this.gameObject.name);
@@ -121,6 +126,11 @@ public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 CharacterUI.inst.AddExplain((int)npcData.npcCode, npcData.npcExplains[i].explain);
                 break;
             }
+        }
+        if (npcData.npcCode == reasonNPC[(int)npcData.locationCode] && dialogueState == dialogue.maxState - 1) //추리 넘어가기
+        {
+            GameManager.inst.reasonManager.DecideReason();
+            Debug.Log("추리 시작!");
         }
         if (dialogueState < dialogue.maxState - 1)
         {
