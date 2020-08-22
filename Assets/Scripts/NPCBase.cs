@@ -9,12 +9,16 @@ public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Npc npcData;
 
     private int dialogueState; // 마지막 대화 index
-    private int explainState;
     private Dialogue dialogue;
 
     private Vector2 hotSpot;
     private Texture2D cursor;
 
+    protected NPCCode[] reasonNPC =
+        {NPCCode.Octopus};
+
+    public Button[] reasonStart;
+    
     void Awake()
     {
         npcData = Resources.Load<Npc>("NPC/" + ((int)GameManager.inst.ReturnLocation()).ToString() + "_" + this.gameObject.name);
@@ -26,7 +30,6 @@ public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         //dialogue = LoadDialogue.dialogues[(int)npccode];
         dialogue = LoadDialogue.LoadDialogueData("npc/" + ((int)npcData.locationCode).ToString() + "_" + ((int)npcData.npcCode).ToString());
         dialogueState = 0;
-        explainState = 0;
 
         cursor = GameManager.inst.npcCursor;
 
@@ -116,22 +119,24 @@ public class NPCBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             //Phone 내부 character UI의 button을 활성화 시킴
             CharacterUI.inst.characterSlots[(int)npcData.npcCode].GetComponent<CharacterButton>().OpenButton(npcData);
         }
-
-        for(int i = explainState; i < npcData.npcExplains.Count; i++)
+        for(int i = 0; i < npcData.npcExplains.Count; i++)
         {
             if(npcData.npcExplains[i].state == dialogueState)
             {
                 CharacterUI.inst.AddExplain((int)npcData.npcCode, npcData.npcExplains[i].explain);
-                explainState++;
                 break;
             }
         }
-
+        if (npcData.npcCode == reasonNPC[(int)npcData.locationCode] && dialogueState == dialogue.maxState - 1) //추리 넘어가기
+        {
+            GameManager.inst.reasonManager.DecideReason();
+            Debug.Log("추리 시작!");
+        }
         if (dialogueState < dialogue.maxState - 1)
         {
             dialogueState++;
         }
- 
+
         DialogueUI.inst.OffDialogue();
         GameManager.inst.ChangeState(State.NpcSearch);
     }

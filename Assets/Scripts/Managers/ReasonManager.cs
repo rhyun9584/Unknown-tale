@@ -13,6 +13,8 @@ public class ReasonManager : MonoBehaviour
 
     private int dialogueState;
 
+    private LocationCode currentLocation;
+
     public Button choice0, choice1;
     public Image errorText;
     public Sprite forText;
@@ -22,6 +24,53 @@ public class ReasonManager : MonoBehaviour
         choice0.gameObject.SetActive(false);
         choice1.gameObject.SetActive(false);
         errorText.gameObject.SetActive(false);
+    }
+
+    public void DecideReason()
+    {
+        StartCoroutine(CheckDecideReason());
+    }
+
+    IEnumerator CheckDecideReason() //decide start reason or not
+    {
+        bool reasonStart = false;
+
+        ButtonSetting(0, "", "추리 시작!");
+        ButtonSetting(1, "", "지금은 아닌것 같다.");
+        yield return StartCoroutine(waitChoice());
+        if(choice0.gameObject.GetComponentInChildren<Choicebutton>().clk)
+        {
+            reasonStart = true;
+        }
+        else if(choice1.gameObject.GetComponentInChildren<Choicebutton>().clk)
+        {
+            reasonStart = false;
+        }
+        yield return new WaitForSeconds(0.1f);
+
+        if(reasonStart)
+        {
+            errorText.gameObject.SetActive(true);
+            errorText.GetComponentInChildren<Text>().text = "추리를 시작 하자!";
+            yield return new WaitForSeconds(0.5f);
+            errorText.gameObject.SetActive(false);
+
+            currentLocation = GameManager.inst.ReturnLocation();
+
+            switch (currentLocation)
+            {
+                case LocationCode.PartyHall: ReasonFirst();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+
+        }
+        yield return null;
     }
 
     public void ReasonFirst() //for tutorial
@@ -123,7 +172,7 @@ public class ReasonManager : MonoBehaviour
                 {
                     ButtonSetting(0, "", "범인이 아닙니다!");
                     ButtonSetting(1, "", "범인 입니다!");
-                    yield return StartCoroutine(waitChoice());
+                    yield return StartCoroutine(waitChoiceWithOnlyCorrect());
                     next = true;
                     i++;
                     continue;
@@ -131,7 +180,7 @@ public class ReasonManager : MonoBehaviour
                 {
                     ButtonSetting(0, "1", "");
                     ButtonSetting(1, "3", "");
-                    yield return StartCoroutine(waitChoice());
+                    yield return StartCoroutine(waitChoiceWithOnlyCorrect());
                     next = true;
                     i++;
                     continue;
@@ -139,7 +188,7 @@ public class ReasonManager : MonoBehaviour
                 {
                     ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");
-                    yield return StartCoroutine(waitChoice());
+                    yield return StartCoroutine(waitChoiceWithOnlyCorrect());
                     next = true;
                     i++;
                 }
@@ -164,7 +213,7 @@ public class ReasonManager : MonoBehaviour
         SceneManager.LoadScene("EndingScene");
     }
 
-    IEnumerator waitChoice() //only zero is correct
+    IEnumerator waitChoiceWithOnlyCorrect() //only zero is correct
     {
         while (!choice0.GetComponentInChildren<Choicebutton>().clk)
         {
@@ -180,6 +229,15 @@ public class ReasonManager : MonoBehaviour
                 choice1.gameObject.SetActive(true);
                 choice1.GetComponentInChildren<Choicebutton>().clk = false;
             }
+            yield return new WaitForSeconds(0.01f);
+        }
+        turnOffButton();
+    }
+
+    IEnumerator waitChoice()
+    {
+        while (!choice0.GetComponentInChildren<Choicebutton>().clk & !choice1.GetComponentInChildren<Choicebutton>().clk)
+        {
             yield return new WaitForSeconds(0.01f);
         }
         turnOffButton();
