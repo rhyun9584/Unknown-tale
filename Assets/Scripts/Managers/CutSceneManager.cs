@@ -9,9 +9,6 @@ public class CutSceneManager : MonoBehaviour
 {
 
     public static CutSceneManager inst;
-    public NPCManager NPCManager;
-
-    public Npc anglerData;
 
 
     private string scriptName;
@@ -20,7 +17,7 @@ public class CutSceneManager : MonoBehaviour
     private bool check = false;
     private int sceneNum = 1;
 
-    public GameObject[] background;
+    public GameObject[] background = new GameObject[4];
 
 
     private void Awake()
@@ -30,18 +27,19 @@ public class CutSceneManager : MonoBehaviour
 
     private void Start()
     {
-        CutSceneNum(1);
+        CutSceneNum(sceneNum);
     }
 
     private void Update()
     {
-        if (sceneNum > 5)
+        if (sceneNum > 4)
         {
             SceneManager.LoadScene("TutorialScene");
         }
         if (check)
         {
             CutSceneNum(++sceneNum);
+           
             check = false;
         }
         
@@ -53,7 +51,9 @@ public class CutSceneManager : MonoBehaviour
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
 
-        background[a-1].SetActive(true);
+        Debug.Log(a);
+        if(a > 0)
+            background[a - 1].SetActive(true);
         
         StartCoroutine(Talking());
     }
@@ -61,7 +61,6 @@ public class CutSceneManager : MonoBehaviour
 
     IEnumerator Talking()
     {
-        GameManager.inst.ChangeState(State.Talk);
         DialogueUI.inst.OnDialogue();
 
         bool next = true;
@@ -102,7 +101,7 @@ public class CutSceneManager : MonoBehaviour
 
                 next = false;
             }
-            else if (!next && Input.GetMouseButtonUp(0) && GameManager.inst.ReturnState() == State.Talk)
+            else if (!next && Input.GetMouseButtonUp(0))
             {
                 // UI 버튼 클릭 시 대화가 넘어가지 않도록, 대화창은 Raycast Target을 false로 전환하여 제외
                 if (EventSystem.current.IsPointerOverGameObject() == false)

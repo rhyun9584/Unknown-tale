@@ -12,6 +12,7 @@ public class TitleUIManager : MonoBehaviour
     public GameObject selectCanvas;
     public GameObject table;
     public GameObject[] storyCanvas;
+    public SoundManager soundManager; 
 
     //아무 키나 누르십시오
     public void OnPressAnyKey() 
@@ -29,6 +30,7 @@ public class TitleUIManager : MonoBehaviour
     {
         mainCanvas.SetActive(false);
         selectCanvas.SetActive(true);
+        soundManager.PlayDrawerOpenSound();
     }
 
     //설정 버튼
@@ -36,6 +38,7 @@ public class TitleUIManager : MonoBehaviour
     {
         mainCanvas.SetActive(false);
         optionCanvas.SetActive(true);
+        soundManager.PlayDrawerOpenSound();
     }
 
     //만든이들 버튼
@@ -43,6 +46,7 @@ public class TitleUIManager : MonoBehaviour
     {
         mainCanvas.SetActive(false);
         creditCanvas.SetActive(true);
+        soundManager.PlayDrawerOpenSound();
     }
 
     //뒤로가기 버튼
@@ -52,6 +56,7 @@ public class TitleUIManager : MonoBehaviour
         optionCanvas.SetActive(false);
         creditCanvas.SetActive(false);
         selectCanvas.SetActive(false);
+        soundManager.PlayDrawerCloseSound();
     }
 
     public void onStoryButtonClicked(int a)
