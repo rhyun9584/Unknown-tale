@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationCode: 0
   npcCode: 6
-  npcName: "\uC0B0\uC655"
-  npcExplains: []
+  npcName: 
+  npcExplains:
+  - state: 0
+    explain: "\uB2E4\uB978 \uC778\uBB3C\uB4E4\uACFC \uC5B4\uC6B8\uB9AC\uC9C0 \uC54A\uB294
+      \uC720\uC77C\uD55C \uC9C0\uC0C1\uB3D9\uBB3C\uC774\uB2E4."

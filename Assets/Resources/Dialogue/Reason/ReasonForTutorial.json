@@ -74,7 +74,7 @@
       },
       {
         "portrait": "right",
-        "npccode": 1,
+        "npccode": -5,
         "face": 0,
         "speaker": "용궁 무리들",
         "sentence": "웅성 웅성 소란 소란"

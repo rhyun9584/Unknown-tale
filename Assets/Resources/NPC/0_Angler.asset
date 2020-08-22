@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Angler
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 4
   npcName: "\uC544\uADC0 \uB300\uC2E0"
+  npcExplains:
+  - state: 0
+    explain: "\uB0A0 \uBCF8 \uC801\uC774 \uC5C6\uB2E4\uACE0 \uB2F5\uBCC0\uD574\uC900
+      \uC720\uC77C\uD55C \uC99D\uC778\uC774\uB2E4."

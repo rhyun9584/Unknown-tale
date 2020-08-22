@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationCode: 0
   npcCode: 5
-  npcName: "\uBA78\uCE58 \uB300\uC2E0"
+  npcName: "\uBA78\uCE58 \uC2DC\uC885"
   npcExplains:
   - state: 0
-    explain: "\uC2DC\uC911\uC744 \uB4DC\uB290\uB77C \uC815\uC2E0\uC774 \uC5C6\uC5B4
-      \uC544\uBB34\uAC83\uB3C4 \uBCF4\uC9C0 \uBABB\uD558\uC600\uB2E4\uACE0 \uB9D0\uD588\uB2E4."
+    explain: "\uD3C9\uBC94\uD55C \uC2DC\uC885\uC73C\uB85C \uBCF4\uC778\uB2E4."
   - state: 1
-    explain: "\uC5EC\uC804\uD788 \uC815\uC2E0\uC774 \uC5C6\uB2E4."
+    explain: "\uC9C0\uAE08 \uBC8C\uC5B4\uC9C4 \uC77C\uB85C \uC815\uC2E0\uC774 \uC5C6\uC5B4\uBCF4\uC778\uB2E4."
