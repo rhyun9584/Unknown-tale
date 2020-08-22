@@ -1361,11 +1361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 7872193171351668786, guid: 2a263ee1ce881764aa9ed1ea51576cf1,
-        type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8351561052391950040, guid: 2a263ee1ce881764aa9ed1ea51576cf1,
         type: 3}
       propertyPath: m_LocalPosition.x
