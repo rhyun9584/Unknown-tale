@@ -94,10 +94,12 @@ public class DialogueUI : MonoBehaviour
         if (isLeft)
         {
             leftPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString() + "_L");
+            leftPortraitImage.preserveAspect = true;
         }
         else
         {
             rightPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString() + "_R");
+            rightPortraitImage.preserveAspect = true;
         }
     }
 
