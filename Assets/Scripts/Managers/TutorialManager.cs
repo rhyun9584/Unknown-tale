@@ -12,18 +12,20 @@ public class TutorialManager : MonoBehaviour
     public Npc anglerData;
 
     public GameObject secondClue;
+    public GameObject block;
 
     private string scriptName;
     private int dialogueState;
     private Dialogue dialogue;
     public ClueBase footprint;
     public ClueBase clear;
-
+    
     private bool[] checkTrigger = {false, false, false, false};
 
     private void Awake()
     {
         inst = this;
+        block.SetActive(false);
     }
 
     private void Start()
@@ -133,6 +135,15 @@ public class TutorialManager : MonoBehaviour
                 else
                 {
                     DialogueUI.inst.OffDialogueImage();
+                }
+
+                // 클릭을 막아야하는 경우 block 추가
+                if (dialogue.talks[dialogueState][i].sentence.Contains("[Block]"))
+                {
+                    int lastFlagIndex = dialogue.talks[dialogueState][i].sentence.IndexOf("]"); // flag의 마지막의 index
+                    dialogue.talks[dialogueState][i].sentence = dialogue.talks[dialogueState][i].sentence.Substring(lastFlagIndex + 1);
+
+                    block.SetActive(true);
                 }
 
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);

@@ -53,6 +53,8 @@ public class PhoneUI : MonoBehaviour
 
             phoneShowButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/phone/phone on") as Sprite;
 
+            TutorialManager.inst.block.SetActive(false); // 강제로 폰을 열도록 만든 블락 이미지 끄기
+
             GameManager.inst.ChangeState(State.Phone);
         }
         else
