@@ -18,7 +18,7 @@
       },
 	  {
         "portrait": "left",
-        "npccode": 1,
+        "npccode": -4,
         "face": 0,
         "speaker": "반 친구 C",
         "sentence": "안듣고 가버렸네, 따라가자."
