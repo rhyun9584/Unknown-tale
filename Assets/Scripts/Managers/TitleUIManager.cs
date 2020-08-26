@@ -7,7 +7,7 @@ public class TitleUIManager : MonoBehaviour
 {
     public GameObject upperCanvas;
     public GameObject mainCanvas;
-    public GameObject optionCanvas;
+ //   public GameObject optionCanvas;
     public GameObject creditCanvas;
     public GameObject selectCanvas;
     public GameObject table;
@@ -37,7 +37,7 @@ public class TitleUIManager : MonoBehaviour
     public void OnOptionButtonClicked()
     {
         mainCanvas.SetActive(false);
-        optionCanvas.SetActive(true);
+    //    optionCanvas.SetActive(true);
         soundManager.PlayDrawerOpenSound();
     }
 
@@ -53,7 +53,7 @@ public class TitleUIManager : MonoBehaviour
     public void OnBackButtonClicked()
     {
         mainCanvas.SetActive(true);
-        optionCanvas.SetActive(false);
+       // optionCanvas.SetActive(false);
         creditCanvas.SetActive(false);
         selectCanvas.SetActive(false);
         soundManager.PlayDrawerCloseSound();

@@ -163,8 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73f42d920aaa9f4da38f4932282668f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCManager: {fileID: 0}
-  anglerData: {fileID: 0}
   background:
   - {fileID: 1366418015}
   - {fileID: 937253333}
