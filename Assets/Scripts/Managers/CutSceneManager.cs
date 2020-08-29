@@ -19,6 +19,10 @@ public class CutSceneManager : MonoBehaviour
 
     public GameObject[] background = new GameObject[4];
 
+    public AudioClip[] BGM = new AudioClip[2];
+
+    private AudioSource MP3;
+
 
     private void Awake()
     {
@@ -28,6 +32,9 @@ public class CutSceneManager : MonoBehaviour
     private void Start()
     {
         CutSceneNum(sceneNum);
+        MP3 = gameObject.GetComponent<AudioSource>();
+        MP3.clip = BGM[0];
+        MP3.Play();
     }
 
     private void Update()
@@ -38,10 +45,16 @@ public class CutSceneManager : MonoBehaviour
         }
         if (check)
         {
+            if(sceneNum == 2)
+            {
+                MP3.clip = BGM[1];
+                MP3.Play();
+            }
             CutSceneNum(++sceneNum);
            
             check = false;
         }
+
         
     }
 

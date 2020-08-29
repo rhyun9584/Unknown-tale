@@ -9,6 +9,7 @@ public class ReasonManager : MonoBehaviour
 {
     private Dialogue dialogue;
 
+    [HideInInspector]
     public string scriptName;
 
     private int dialogueState;
