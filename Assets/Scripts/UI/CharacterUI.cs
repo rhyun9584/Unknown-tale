@@ -32,6 +32,8 @@ public class CharacterUI : MonoBehaviour
         {
             characterSlots[i] = transform.Find("Main").Find("Scroll View").Find("Viewport").Find("Content").Find("Slot " + i.ToString()).gameObject;
         }
+
+        AddExplain(0, "현장학습으로 온 고궁에서 서고에 들어갔다가 이상한 곳으로 빨려 들어온 불쌍한 고등학생이다.");
     }
 
     private void Start()

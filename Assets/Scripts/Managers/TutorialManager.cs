@@ -96,6 +96,8 @@ public class TutorialManager : MonoBehaviour
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        CharacterUI.inst.AddExplain(0, "어째서인지 용왕이라는 사람..이 죽어있고 그 범인으로 지목 당했다. 어서 결백을 증명하자.");
     }
 
     IEnumerator Talking()

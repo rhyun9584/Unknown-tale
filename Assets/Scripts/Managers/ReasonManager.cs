@@ -61,6 +61,7 @@ public class ReasonManager : MonoBehaviour
             switch (currentLocation)
             {
                 case LocationCode.PartyHall: ReasonFirst();
+                    CharacterUI.inst.AddExplain(0, "결백이 증명되었다. 용궁 태자의 부탁으로 용왕을 죽인 범인을 찾아주기로 했다.");
                     break;
 
                 default:
