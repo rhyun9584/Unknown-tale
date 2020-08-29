@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Ocean Son
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 3
-  npcName: "\uC6A9\uC655 \uC544\uB4E4"
+  npcName: "\uC6A9\uAD81 \uD0DC\uC790"
+  charaFont: {fileID: 12800000, guid: 244f5699732079c4fb3c22459fba0bf3, type: 3}
+  npcExplains:
+  - state: 0
+    explain: "\uAF64\uB098 \uB192\uC740 \uC9C1\uC704\uB97C \uAC00\uC9C0\uACE0 \uC788\uB294
+      \uAC83\uC73C\uB85C \uBCF4\uC778\uB2E4."
+  - state: 0
+    explain: "\uC6A9\uC655\uACFC \uD53C\uBD80\uC0C9\uC774 \uAC19\uB2E4."
+  - state: 1
+    explain: "\uC6A9\uC655\uC758 \uC544\uB4E4\uC774\uB2E4. \uB098\uC5D0\uAC8C \uC0AC\uAC74\uC744
+      \uBD80\uD0C1\uD588\uB2E4."

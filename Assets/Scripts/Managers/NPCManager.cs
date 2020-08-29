@@ -27,8 +27,8 @@ public class NPCManager : MonoBehaviour
         }
 
         // 주인공은 바로 active
-        SetNpcActive(NPCCode.MAIN); 
-        CharacterUI.inst.characterSlots[0].GetComponent<CharacterButton>().OpenButton("주인공");
+        SetNpcActive(NPCCode.MAIN);
+        CharacterUI.inst.characterSlots[0].GetComponent<CharacterButton>().OpenButtonMain();
     }
 
     /// <summary>

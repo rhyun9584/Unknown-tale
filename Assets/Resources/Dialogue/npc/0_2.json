@@ -1,0 +1,38 @@
+﻿{
+	"MaxState": 2,
+	"Talks":
+	[
+		[
+      {
+        "portrait": "right",
+        "npccode": 2,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "도망갈 생각은 꿈에도 꾸지 말아라 네 이놈!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "조금만 시간을 더 주세요.."
+      }
+		],
+		[
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "그래서 네놈이 범인이 아니라는 증거를 찾아 온거냐?"
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "찾아 왔다면, 어디 한번 얘기해 보거라!"
+      }
+		]
+	]
+}

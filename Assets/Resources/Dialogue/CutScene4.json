@@ -1,0 +1,49 @@
+﻿{
+  "MaxState": 1,
+  "Talks": [
+    [
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "..뭐야, 무슨일이 일어난.. 어?"
+      },
+	  {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "여긴 어디야? 파티..라도 하고 있는 건가?"
+      },
+	  {
+        "portrait": "right",
+        "npccode": -5,
+        "face": 0,
+        "speaker": "???",
+        "sentence": "용왕님! 정신 차리십쇼 용왕님!"
+      },
+	  {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "깜짝이야, 용왕..?"
+      },
+	  {
+        "portrait": "right",
+        "npccode": -5,
+        "face": 0,
+        "speaker": "???",
+        "sentence": "저기 수상한 놈이 있다. 잡아라!"
+      },
+	  {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 0,
+        "speaker": "주인공",
+        "sentence": "놈? 나? 어, 어? "
+      }
+    ]
+  ]
+}

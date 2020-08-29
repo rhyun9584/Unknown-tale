@@ -9,34 +9,50 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager inst;
     public NPCManager NPCManager;
 
+    public Npc anglerData;
+
+    public GameObject secondClue;
+    public GameObject block;
+
     private string scriptName;
     private int dialogueState;
     private Dialogue dialogue;
     public ClueBase footprint;
     public ClueBase clear;
 
-    private bool[] checkClueObtain = {true, true, true, true, true};
+    public AudioClip[] BGM = new AudioClip[2];
+    
+    private bool[] checkTrigger = {false, false, false, false};
 
     private void Awake()
     {
         inst = this;
+        block.SetActive(false);
     }
 
     private void Start()
     {
         TutorialStart();
+
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().clip = BGM[0];
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().Play();
     }
 
     private void Update()
     {
-        if (ClueManager.inst.isObtain[2] && checkClueObtain[0]) // 2 -> foot print
+        if (ClueManager.inst.isObtain[2] && !checkTrigger[0]) // 2 -> foot print
         {
             TutorialSecond();
         }
-        else if (ClueManager.inst.isObtain[3] && checkClueObtain[1]) // 3 -> clean floor 
+        else if (ClueManager.inst.isObtain[3] && !checkTrigger[1]) // 3 -> clean floor 
         {
             TutorialThird();
         }
+        else if (NPCManager.inst.npcActive[(int)NPCCode.Angler] && !checkTrigger[2] && GameManager.inst.ReturnState() == State.NpcSearch)
+        {
+            TutorialFourth();
+        }
+        
 
     }
 
@@ -51,26 +67,48 @@ public class TutorialManager : MonoBehaviour
 
     public void TutorialSecond()
     {
-        checkClueObtain[0] = false;
+        checkTrigger[0] = true;
         scriptName = "Tutorial2";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        secondClue.SetActive(true); // 두 번째 단서를 얻어야 할 시점에서만 active되도록 
     }
 
     public void TutorialThird()
     {
-        checkClueObtain[1] = false;
+        checkTrigger[1] = true;
         scriptName = "Tutorial3";
         dialogue = LoadDialogue.LoadDialogueData(scriptName);
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        /*
+        // 튜토리얼 진행 중 강제적으로 아귀대신과 말하게되어 바로 active 시킴
+        NPCManager.inst.SetNpcActive(NPCCode.Angler);
+        CharacterUI.inst.characterSlots[4].GetComponent<CharacterButton>().OpenButton(anglerData);
+        CharacterUI.inst.AddExplain(4, "나를 본 적이 없다고 한다.");
+        */
+    }
+    public void TutorialFourth()
+    {
+        checkTrigger[2] = true;
+        scriptName = "Tutorial4";
+        dialogue = LoadDialogue.LoadDialogueData(scriptName);
+        dialogueState = 0;
+
+        StartCoroutine(Talking());
+
+        CharacterUI.inst.AddExplain(0, "어째서인지 용왕이라는 사람..이 죽어있고 그 범인으로 지목 당했다. 어서 결백을 증명하자.");
     }
 
     IEnumerator Talking()
     {
+        LocationManager.inst.OffObject();   // 대화 전 clue와 npc 오브젝트 전부 끔
+
         GameManager.inst.ChangeState(State.Talk);
         DialogueUI.inst.OnDialogue();
 
@@ -91,6 +129,9 @@ public class TutorialManager : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                //폰트 변경
+                DialogueUI.inst.ChangeDialogueTextFont(((int)GameManager.inst.ReturnLocation()).ToString(), dialogue.talks[dialogueState][i].npccode);
+
                 // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
                 if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))
                 {
@@ -104,6 +145,15 @@ public class TutorialManager : MonoBehaviour
                 else
                 {
                     DialogueUI.inst.OffDialogueImage();
+                }
+
+                // 클릭을 막아야하는 경우 block 추가
+                if (dialogue.talks[dialogueState][i].sentence.Contains("[Block]"))
+                {
+                    int lastFlagIndex = dialogue.talks[dialogueState][i].sentence.IndexOf("]"); // flag의 마지막의 index
+                    dialogue.talks[dialogueState][i].sentence = dialogue.talks[dialogueState][i].sentence.Substring(lastFlagIndex + 1);
+
+                    block.SetActive(true);
                 }
 
                 DialogueUI.inst.ChangePortraitImage(dialogue.talks[dialogueState][i].portrait == "left", dialogue.talks[dialogueState][i].npccode, dialogue.talks[dialogueState][i].face);
@@ -120,7 +170,6 @@ public class TutorialManager : MonoBehaviour
                     i++;
                 }
             }
-
             yield return null;
         }
 
@@ -128,7 +177,13 @@ public class TutorialManager : MonoBehaviour
             dialogueState++;
 
         DialogueUI.inst.OffDialogue();
+        if (!checkTrigger[1])
+            GameManager.inst.ChangeState(State.ClueSearch);
+        else if (!checkTrigger[2])
+            GameManager.inst.ChangeState(State.ClueSearch);
+        else
+            GameManager.inst.ChangeState(State.NpcSearch);
 
-        GameManager.inst.ChangeState(State.ClueSearch);
+        LocationManager.inst.SearchUIChange();  // 다시 적절한 clue 혹은 npc 오브젝트 활성화
     }
 }

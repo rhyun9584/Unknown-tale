@@ -12,5 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Octopus
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 2
   npcName: "\uBB38\uC5B4 \uB300\uC655"
+  charaFont: {fileID: 12800000, guid: b2ae2596e90601d4ba9d742ad8edce2b, type: 3}
+  npcExplains:
+  - state: 0
+    explain: "\uB9D0\uC744 \uD558\uB294 \uBB38\uC5B4\uC774\uB2E4."
+  - state: 0
+    explain: "\uC774 \uBB38\uC5B4\uB97C \uBCF4\uC544\uD558\uB2C8 \uC774\uC0C1\uD55C
+      \uACF3\uC73C\uB85C \uC628 \uAC83 \uAC19\uB2E4."
+  - state: 1
+    explain: "\uC6A9\uC655\uC758 \uC218\uD638\uB300\uC7A5\uC774\uB2E4."
+  - state: 1
+    explain: "\uAF64\uB098 \uBD88\uAC19\uC740 \uC131\uACA9\uC744 \uAC00\uC9C0\uACE0
+      \uC788\uB2E4."

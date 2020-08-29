@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneUI : MonoBehaviour
 {
@@ -8,23 +9,29 @@ public class PhoneUI : MonoBehaviour
 
     public GameObject phoneShowButton;
     public GameObject phone, main, background, blur;
+    
+    private Image backgroundImage;
 
-    private bool isActive = false;
+    private bool isActive = true;
     private bool isMainActive = false;
     private bool isBackgroundActive = false;
     private State beforeState;
+
 
     private void Awake()
     {
         inst = this;
 
         isActive = true;
+        backgroundImage = background.GetComponent<Image>();
+    }
 
+    private void Start()
+    {
         ClueUI.inst.CloseClueUI();
         CharacterUI.inst.CloseCharacterUI();
         OpenClosePhoneUI();
     }
-
     /// <summary>
     /// Show Button에 할당하는 함수, open->close close->open
     /// </summary>
@@ -43,6 +50,10 @@ public class PhoneUI : MonoBehaviour
 
             phone.SetActive(isActive);
             blur.SetActive(isActive);
+
+            phoneShowButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/phone/phone on") as Sprite;
+
+            TutorialManager.inst.block.SetActive(false); // 강제로 폰을 열도록 만든 블락 이미지 끄기
 
             GameManager.inst.ChangeState(State.Phone);
         }
@@ -78,8 +89,15 @@ public class PhoneUI : MonoBehaviour
                     break;
             }
 
+            phoneShowButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("UI/phone/phone off") as Sprite;
+
             GameManager.inst.ChangeState(beforeState);
         }
+    }
+
+    public void ChangeBackgroundImage(string route)
+    {
+        backgroundImage.sprite = Resources.Load<Sprite>(route);
     }
 
     public void ShowMain()
@@ -87,7 +105,8 @@ public class PhoneUI : MonoBehaviour
         if (!isMainActive)
         {
             isMainActive = true;
-            
+            ChangeBackgroundImage("UI/phone/main/background");
+
             main.SetActive(isMainActive);
         }
     }

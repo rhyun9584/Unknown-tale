@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9db36bd5ea8e54cbb90b9894185ff2, type: 3}
   m_Name: 0_Anchovy
   m_EditorClassIdentifier: 
+  locationCode: 0
   npcCode: 5
-  npcName: "\uBA78\uCE58 \uB300\uC2E0"
+  npcName: "\uBA78\uCE58 \uC2DC\uC885"
+  charaFont: {fileID: 12800000, guid: f5daf43b8660a57419d85e034f7b9736, type: 3}
+  npcExplains:
+  - state: 0
+    explain: "\uD3C9\uBC94\uD55C \uC2DC\uC885\uC73C\uB85C \uBCF4\uC778\uB2E4."
+  - state: 1
+    explain: "\uC9C0\uAE08 \uBC8C\uC5B4\uC9C4 \uC77C\uB85C \uC815\uC2E0\uC774 \uC5C6\uC5B4\uBCF4\uC778\uB2E4."

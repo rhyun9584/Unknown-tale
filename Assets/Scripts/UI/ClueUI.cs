@@ -35,6 +35,8 @@ public class ClueUI : MonoBehaviour
             isActive = true;
 
             PhoneUI.inst.HideMain();
+            PhoneUI.inst.ChangeBackgroundImage("UI/phone/photo/background2");
+
             gameObject.SetActive(isActive);
 
             GameManager.inst.ChangeState(State.Clue);
@@ -66,6 +68,7 @@ public class ClueUI : MonoBehaviour
             nameText.text = clue.name;
             explainText.text = clue.explain;
             detailImageSprite.sprite = clue.clueImage;
+            detailImageSprite.preserveAspect = true;
 
             detailUI.SetActive(isDetail);
         }

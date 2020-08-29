@@ -7,7 +7,9 @@ public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI inst;
 
-    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage;
+    public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage, background;
+
+    public Font baseFont;
 
     private Text nameText, sentenceText;
     private Image leftPortraitImage, rightPortraitImage;
@@ -37,6 +39,7 @@ public class DialogueUI : MonoBehaviour
 
             dialogueName.SetActive(isActive);
             dialogueSentence.SetActive(isActive);
+            background.SetActive(isActive);
         }
     }
 
@@ -48,6 +51,7 @@ public class DialogueUI : MonoBehaviour
 
             dialogueName.SetActive(isActive);
             dialogueSentence.SetActive(isActive);
+            background.SetActive(isActive);
 
             leftPortrait.SetActive(isActive);
             rightPortrait.SetActive(isActive);
@@ -64,6 +68,7 @@ public class DialogueUI : MonoBehaviour
             isImageActive = true;
             
             dialogueImage.SetActive(isImageActive);
+            dialogueImage.GetComponent<Image>().preserveAspect = true;
         }
     }
 
@@ -86,15 +91,47 @@ public class DialogueUI : MonoBehaviour
         sentenceText.text = sentence;
     }
 
+    public void ChangeDialogueTextFont(string location, int code)
+    {
+        if (code < 1)
+        {
+            sentenceText.font = baseFont;
+        }
+        else
+        {
+            string[] npcName = {
+            "MAIN",
+            "Ocean King",
+            "Octopus",
+            "Ocean Son",
+            "Angler",
+            "Anchovy",
+            "Mountain King" };
+
+            Font charaFont = Resources.Load<Npc>("NPC/" + (location + "_" + npcName[code])).charaFont;
+
+            if (charaFont == null)
+            {
+                sentenceText.font = baseFont;
+            }
+            else
+            {
+                sentenceText.font = charaFont;
+            }
+        }
+    }
+
     public void ChangePortraitImage(bool isLeft, int npcCode, int face)
     {
         if (isLeft)
         {
-            leftPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString());
+            leftPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString() + "_L");
+            leftPortraitImage.preserveAspect = true;
         }
         else
         {
-            rightPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString());
+            rightPortraitImage.sprite = Resources.Load<Sprite>("Portrait/" + npcCode.ToString() + "_" + face.ToString() + "_R");
+            rightPortraitImage.preserveAspect = true;
         }
     }
 
