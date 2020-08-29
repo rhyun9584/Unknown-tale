@@ -18,6 +18,7 @@ public class TitleUIManager : MonoBehaviour
     public void OnPressAnyKey() 
     {
         upperCanvas.SetActive(false);
+        soundManager.PlayOpenDoorSound();
     }
 
     public void OnTableButtonClicked()
@@ -62,6 +63,7 @@ public class TitleUIManager : MonoBehaviour
     public void onStoryButtonClicked(int a)
     {
         storyCanvas[a].SetActive(true);
+        soundManager.PlayDrawScrollSound();
     }
 
     public void onStoryBackButtonClicked(int a)
@@ -83,7 +85,7 @@ public class TitleUIManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKey && upperCanvas.activeSelf)
         {
             OnPressAnyKey();
         }

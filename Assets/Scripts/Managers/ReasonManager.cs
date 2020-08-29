@@ -184,7 +184,7 @@ public class ReasonManager : MonoBehaviour
                     next = true;
                     i++;
                     continue;
-                }else if(i == 5)
+                }else if(i == 8)
                 {
                     ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");

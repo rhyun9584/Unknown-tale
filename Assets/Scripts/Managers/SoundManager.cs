@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip soundDrawerClose;
     public AudioClip soundPhoneOn;
     public AudioClip soundClick;
+    public AudioClip OpenDoor;
+    public AudioClip DrawScroll;
 
 
     private void Awake()
@@ -47,6 +49,16 @@ public class SoundManager : MonoBehaviour
     public void PlayPhoneOnSound()
     {
         audioSource.PlayOneShot(soundPhoneOn);
+    }
+
+    public void PlayOpenDoorSound()
+    {
+        audioSource.PlayOneShot(OpenDoor);
+    }
+
+    public void PlayDrawScrollSound()
+    {
+        audioSource.PlayOneShot(DrawScroll);
     }
     // Update is called once per frame
     void Update()

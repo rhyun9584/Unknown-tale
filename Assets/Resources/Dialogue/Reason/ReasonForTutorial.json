@@ -40,6 +40,27 @@
       {
         "portrait": "left",
         "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "'정체? 어떡하지. 미래에서 왔다고 해도 안믿어줄텐데.'"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "'으으, 진짜로 하늘에서 뚝 떨어졌는데. 과연 믿어줄까.'"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "'..하늘? 모르겠다. 한번 질러보자!'"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
         "face": 2,
         "speaker": "주인공",
         "sentence": "이것을 보시죠. ( 올바른 단서를 선택하세요. )"
@@ -56,14 +77,14 @@
         "npccode": 0,
         "face": 1,
         "speaker": "주인공",
-        "sentence": "일반적인 인간이라면 당연히 불가능한 일이지 않을까요?"
+        "sentence": "(꿀꺽) 일반적인 인간이라면 당연히 불가능한 일이지 않을까요?"
       },
       {
         "portrait": "right",
         "npccode": 2,
-        "face": 1,
+        "face": 0,
         "speaker": "문어 대장",
-        "sentence": "그렇다면, 네놈은 일반적인 사람이 아니라는 소리냐?"
+        "sentence": "그렇지, 뭐 네놈이 하늘에서 오기라도 했다는 소리냐?"
       },
       {
         "portrait": "left",
@@ -81,24 +102,73 @@
       },
       {
         "portrait": "right",
+        "npccode": 2,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "지금 여기가 어느 안전이라고 그런 거짓말을 하는겐가!"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "'으으, 망했다. 어떡하지, 어떡하지.'"
+      },
+      {
+        "portrait": "right",
+        "npccode": 2,
+        "face": 1,
+        "speaker": "문어 대장",
+        "sentence": "여봐라! 이놈을 당장 끌고 감옥에다가 집어 넣.."
+      },
+      {
+        "portrait": "right",
         "npccode": 3,
         "face": 1,
         "speaker": "용왕 아들",
-        "sentence": "어쩐지 범상치 않더라니, 그렇다면 내 아비를 죽인 자가 누군지 찾아줄 수 있겠나?"
+        "sentence": "어쩐지 범상치 않더라니, 하늘에서 온 양반이라면 이해가 되는군."
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 2,
+        "speaker": "문어 대장",
+        "sentence": "아니, 태자님?"
+      },
+      {
+        "portrait": "right",
+        "npccode": 3,
+        "face": 0,
+        "speaker": "용왕 아들",
+        "sentence": "시끄럽다 이놈. 사자님에게 예의를 못 갖출 망정 소리나 지르고 있고."
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 1,
         "speaker": "주인공",
-        "sentence": "( 으음, 나도 누가 범인인지 궁금하기도 하고.. )"
+        "sentence": "'사, 산건가?'"
+      },
+      {
+        "portrait": "left",
+        "npccode": 2,
+        "face": 2,
+        "speaker": "문어 대장",
+        "sentence": "그, 그것이.."
+      },
+      {
+        "portrait": "right",
+        "npccode": 3,
+        "face": 2,
+        "speaker": "용왕 아들",
+        "sentence": "아무튼 됐고. 그렇다면 내 아비를 죽인 자가 누군지 찾아주지 않겠나?"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 1,
         "speaker": "주인공",
-        "sentence": "네, 도와드릴게요!"
+        "sentence": "어, 저. 아니, 네! 도와드리도록 할게요!"
       }
     ]
   ]
