@@ -15,6 +15,7 @@ MonoBehaviour:
   locationCode: 0
   npcCode: 1
   npcName: "\uC6A9\uC655"
+  charaFont: {fileID: 12800000, guid: 244f5699732079c4fb3c22459fba0bf3, type: 3}
   npcExplains:
   - state: 0
     explain: "\uC774 \uC5F0\uD68C\uC7A5\uC774 \uC704\uCE58\uD55C \uC6A9\uAD81\uC758

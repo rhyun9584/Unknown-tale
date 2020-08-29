@@ -17,5 +17,7 @@ public class Npc : ScriptableObject
     public NPCCode npcCode;
     public string npcName;
 
+    public Font charaFont; 
+
     public List<NpcExplain> npcExplains = new List<NpcExplain>();
 }
