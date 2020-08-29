@@ -9,6 +9,8 @@ public class DialogueUI : MonoBehaviour
 
     public GameObject dialogueName, dialogueSentence, leftPortrait, rightPortrait, dialogueImage, background;
 
+    public Font baseFont;
+
     private Text nameText, sentenceText;
     private Image leftPortraitImage, rightPortraitImage;
 
@@ -87,6 +89,36 @@ public class DialogueUI : MonoBehaviour
     {
         nameText.text = name;
         sentenceText.text = sentence;
+    }
+
+    public void ChangeDialogueTextFont(string location, int code)
+    {
+        if (code < 1)
+        {
+            sentenceText.font = baseFont;
+        }
+        else
+        {
+            string[] npcName = {
+            "MAIN",
+            "Ocean King",
+            "Octopus",
+            "Ocean Son",
+            "Angler",
+            "Anchovy",
+            "Mountain King" };
+
+            Font charaFont = Resources.Load<Npc>("NPC/" + (location + "_" + npcName[code])).charaFont;
+
+            if (charaFont == null)
+            {
+                sentenceText.font = baseFont;
+            }
+            else
+            {
+                sentenceText.font = charaFont;
+            }
+        }
     }
 
     public void ChangePortraitImage(bool isLeft, int npcCode, int face)

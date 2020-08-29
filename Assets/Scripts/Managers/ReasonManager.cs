@@ -147,6 +147,9 @@ public class ReasonManager : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                //폰트 변경
+                DialogueUI.inst.ChangeDialogueTextFont(((int)GameManager.inst.ReturnLocation()).ToString(), dialogue.talks[dialogueState][i].npccode);
+
                 // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
                 if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))
                 {
