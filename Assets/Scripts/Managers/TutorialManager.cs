@@ -19,6 +19,8 @@ public class TutorialManager : MonoBehaviour
     private Dialogue dialogue;
     public ClueBase footprint;
     public ClueBase clear;
+
+    public AudioClip[] BGM = new AudioClip[2];
     
     private bool[] checkTrigger = {false, false, false, false};
 
@@ -31,6 +33,9 @@ public class TutorialManager : MonoBehaviour
     private void Start()
     {
         TutorialStart();
+
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().clip = BGM[0];
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().Play();
     }
 
     private void Update()

@@ -51,6 +51,9 @@ public class ReasonManager : MonoBehaviour
 
         if(reasonStart)
         {
+            GameManager.inst.MainCamera.GetComponent<AudioSource>().clip = TutorialManager.inst.BGM[1];
+            GameManager.inst.MainCamera.GetComponent<AudioSource>().Play();
+
             errorText.gameObject.SetActive(true);
             errorText.GetComponentInChildren<Text>().text = "추리를 시작 하자!";
             yield return new WaitForSeconds(0.5f);

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public Texture2D clueCursor, npcCursor;
     public ReasonManager reasonManager;
+    public Camera MainCamera;
 
     private LocationCode currentLocation;     // 인게임에서 현재 위치
     private State currentState;

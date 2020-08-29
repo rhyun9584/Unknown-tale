@@ -544,9 +544,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac880b546b36d3b4cae97e69775ff889, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1120,6 +1120,9 @@ MonoBehaviour:
   block: {fileID: 1687419479}
   footprint: {fileID: 577534749}
   clear: {fileID: 1154272494}
+  BGM:
+  - {fileID: 8300000, guid: 302241368e17d504bae4fa4349c91a6b, type: 3}
+  - {fileID: 8300000, guid: ac880b546b36d3b4cae97e69775ff889, type: 3}
 --- !u!4 &1349587521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2982377132056859338, guid: 440e6c292bfd3a144a919f86c90adcc5,
@@ -2549,6 +2552,11 @@ PrefabInstance:
       propertyPath: reasonManager
       value: 
       objectReference: {fileID: 1349587522}
+    - target: {fileID: 6412632342922199126, guid: 24fa1014595bfce40bc05d3587668be9,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24fa1014595bfce40bc05d3587668be9, type: 3}
 --- !u!224 &7245421051550912828
