@@ -184,12 +184,12 @@ public class ReasonManager : MonoBehaviour
                 }else if(i == 1)
                 {
                     ButtonSetting(0, "1", "");
-                    ButtonSetting(1, "3", "");
+                    ButtonSetting(1, "0", "");
                     yield return StartCoroutine(waitChoiceWithOnlyCorrect());
                     next = true;
                     i++;
                     continue;
-                }else if(i == 8)
+                }else if(i == 9)
                 {
                     ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");

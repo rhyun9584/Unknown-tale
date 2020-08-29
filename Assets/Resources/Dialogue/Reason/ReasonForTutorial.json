@@ -28,14 +28,28 @@
         "npccode": 0,
         "face": 1,
         "speaker": "주인공",
-        "sentence": "[Image:Clue1]그렇기에 이 사진을 보면 제가 얼마 움직이지도, 용왕님 근처에 다가가지도 않았음을 증명할 수 있어요! "
+        "sentence": "[Image:Clue1]그렇기에 이 사진들을 보면 제가 얼마 움직이지도,"
+      },
+      {
+        "portrait": "left",
+        "npccode": 0,
+        "face": 1,
+        "speaker": "주인공",
+        "sentence": "[Image:Clue3]용왕님 근처에 다가가지도 않았음을 증명할 수 있어요! "
+      },
+      {
+        "portrait": "right",
+        "npccode": 2,
+        "face": 0,
+        "speaker": "문어 대장",
+        "sentence": "네 말을 들어보니, 어느정도 납득이 되는군.."
       },
       {
         "portrait": "right",
         "npccode": 2,
         "face": 1,
         "speaker": "문어 대장",
-        "sentence": "과연 그렇군.. 잠깐, 그 물체는 무엇이냐? 범인이 아니라는 것은 알겠으나, 여간 의심가는 것이 한두개가 아니다. 정체를 밝혀라!"
+        "sentence": "잠깐, 손에 든 그 물체는 무엇이냐? 범인이 아니라는 것은 알겠으나, 여간 의심가는 것이 한두개가 아니다. 정체를 밝혀라!"
       },
       {
         "portrait": "left",
