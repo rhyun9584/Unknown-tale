@@ -9,6 +9,7 @@ public class ReasonManager : MonoBehaviour
 {
     private Dialogue dialogue;
 
+    [HideInInspector]
     public string scriptName;
 
     private int dialogueState;
@@ -50,6 +51,9 @@ public class ReasonManager : MonoBehaviour
 
         if(reasonStart)
         {
+            GameManager.inst.MainCamera.GetComponent<AudioSource>().clip = TutorialManager.inst.BGM[1];
+            GameManager.inst.MainCamera.GetComponent<AudioSource>().Play();
+
             errorText.gameObject.SetActive(true);
             errorText.GetComponentInChildren<Text>().text = "추리를 시작 하자!";
             yield return new WaitForSeconds(0.5f);
@@ -60,6 +64,7 @@ public class ReasonManager : MonoBehaviour
             switch (currentLocation)
             {
                 case LocationCode.PartyHall: ReasonFirst();
+                    CharacterUI.inst.AddExplain(0, "결백이 증명되었다. 용궁 태자의 부탁으로 용왕을 죽인 범인을 찾아주기로 했다.");
                     break;
 
                 default:
@@ -146,6 +151,9 @@ public class ReasonManager : MonoBehaviour
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
 
+                //폰트 변경
+                DialogueUI.inst.ChangeDialogueTextFont(((int)GameManager.inst.ReturnLocation()).ToString(), dialogue.talks[dialogueState][i].npccode);
+
                 // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
                 if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))
                 {
@@ -179,12 +187,12 @@ public class ReasonManager : MonoBehaviour
                 }else if(i == 1)
                 {
                     ButtonSetting(0, "1", "");
-                    ButtonSetting(1, "3", "");
+                    ButtonSetting(1, "0", "");
                     yield return StartCoroutine(waitChoiceWithOnlyCorrect());
                     next = true;
                     i++;
                     continue;
-                }else if(i == 8)
+                }else if(i == 10)
                 {
                     ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");

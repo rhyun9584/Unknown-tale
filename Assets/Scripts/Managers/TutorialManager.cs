@@ -19,6 +19,8 @@ public class TutorialManager : MonoBehaviour
     private Dialogue dialogue;
     public ClueBase footprint;
     public ClueBase clear;
+
+    public AudioClip[] BGM = new AudioClip[2];
     
     private bool[] checkTrigger = {false, false, false, false};
 
@@ -31,6 +33,9 @@ public class TutorialManager : MonoBehaviour
     private void Start()
     {
         TutorialStart();
+
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().clip = BGM[0];
+        GameManager.inst.MainCamera.GetComponent<AudioSource>().Play();
     }
 
     private void Update()
@@ -96,6 +101,8 @@ public class TutorialManager : MonoBehaviour
         dialogueState = 0;
 
         StartCoroutine(Talking());
+
+        CharacterUI.inst.AddExplain(0, "어째서인지 용왕이라는 사람..이 죽어있고 그 범인으로 지목 당했다. 어서 결백을 증명하자.");
     }
 
     IEnumerator Talking()
@@ -121,6 +128,9 @@ public class TutorialManager : MonoBehaviour
                     DialogueUI.inst.leftPortrait.SetActive(false);
                     DialogueUI.inst.rightPortrait.SetActive(true);
                 }
+
+                //폰트 변경
+                DialogueUI.inst.ChangeDialogueTextFont(((int)GameManager.inst.ReturnLocation()).ToString(), dialogue.talks[dialogueState][i].npccode);
 
                 // Image를 포함하는 경우 sentence의 첫 부분에 [Image:(이미지파일이름)]을 flag로 추가
                 if (dialogue.talks[dialogueState][i].sentence.Contains("[Image:"))

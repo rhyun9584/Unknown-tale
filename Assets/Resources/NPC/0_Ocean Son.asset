@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationCode: 0
   npcCode: 3
-  npcName: "\uC6A9\uC655 \uC544\uB4E4"
+  npcName: "\uC6A9\uAD81 \uD0DC\uC790"
   charaFont: {fileID: 12800000, guid: 244f5699732079c4fb3c22459fba0bf3, type: 3}
   npcExplains:
   - state: 0

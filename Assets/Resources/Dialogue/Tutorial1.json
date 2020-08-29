@@ -56,14 +56,14 @@
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( 여긴 대체 어디야? 웬 문어가 사람 말을 하고.. )"
+        "sentence": "'여긴 대체 어디야? 웬 문어가 사람 말을 하고..'"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "( 일단 빨리 무죄를 입증할 증거를 찾아보자. )"
+        "sentence": "'일단 빨리 무죄를 입증할 증거를 찾아보자.'"
       },
       {
         "portrait": "left",
@@ -119,21 +119,21 @@
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "[Image:Mud Shoes]( 으, 끈적거려. )"
+        "sentence": "[Image:Mud Shoes]'으, 끈적거려.'"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "[Image:Mud Shoes]( 신발에 진흙이 잔뜩.. 그러고보니 비가 엄청 왔었지.. )"
+        "sentence": "[Image:Mud Shoes]'신발에 진흙이 잔뜩.. 그러고보니 비가 엄청 왔었지..'"
       },
       {
         "portrait": "left",
         "npccode": 0,
         "face": 0,
         "speaker": "주인공",
-        "sentence": "[Image:Mud Shoes]( ?! 그렇다면, 내 발자국이 바닥에 찍혔지 않았을까? )"
+        "sentence": "[Image:Mud Shoes]'?! 그렇다면, 내 발자국이 바닥에 찍혔지 않았을까?'"
       },
       {
         "portrait": "left",
