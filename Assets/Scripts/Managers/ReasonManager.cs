@@ -189,7 +189,7 @@ public class ReasonManager : MonoBehaviour
                     next = true;
                     i++;
                     continue;
-                }else if(i == 9)
+                }else if(i == 10)
                 {
                     ButtonSetting(0, "2", "");
                     ButtonSetting(1, "1", "");
