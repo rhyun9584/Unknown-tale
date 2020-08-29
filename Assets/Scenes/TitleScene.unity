@@ -2413,8 +2413,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9716981, g: 0.9378747, b: 0.5729352, a: 0.7764706}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3050,6 +3050,8 @@ MonoBehaviour:
   soundDrawerClose: {fileID: 8300000, guid: 35da3c552b936974298ca9ab634bd73b, type: 3}
   soundPhoneOn: {fileID: 8300000, guid: 11c9c1a6ffc4e0041b6b95b75e67aea6, type: 3}
   soundClick: {fileID: 8300000, guid: 47ffcd479fc3cbf4bb6edb6a75d69469, type: 3}
+  OpenDoor: {fileID: 8300000, guid: fadf3feaa615d7f4f87b6297d5389493, type: 3}
+  DrawScroll: {fileID: 8300000, guid: 5ac89b6506c05c24884ccbc596ae487a, type: 3}
 --- !u!82 &1631692143
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3521,7 +3523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 339, y: -542}
+  m_AnchoredPosition: {x: 339, y: -522.95}
   m_SizeDelta: {x: 150.1, y: 579.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841707975
@@ -3543,7 +3545,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 979964f3aed48ed42a13124654cffce8, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -3632,7 +3634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC8C\uC784 \uC2DC\uC791 \uBC84\uD2BC\n(\uC784\uC2DC)"
+  m_Text: "\uC774\uC57C\uAE30 \uC77D\uAE30"
 --- !u!222 &1929428806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3697,7 +3699,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 979964f3aed48ed42a13124654cffce8, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -3709,7 +3711,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB300\uCDA9\n\uBCC4\uC8FC\uBD80\uC804\n\uC904\uAC70\uB9AC"
+  m_Text: "\uD070 \uBCD1\uC5D0 \uAC78\uB9B0 \uC6A9\uC655, \uD558\uC9C0\uB9CC\n\uCDA9\uC2E0
+    \uBCC4\uC8FC\uBD80\uB85C \uC778\uD574 \uBCD1\uC774\n\uB0AB\uAC8C\uB418\uACE0,
+    \uC794\uCE58\uAC00 \uC5F4\uB9AC\uAC8C \uB418\uB294\uB370.."
 --- !u!222 &1943814989
 CanvasRenderer:
   m_ObjectHideFlags: 0
